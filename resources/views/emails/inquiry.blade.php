@@ -269,6 +269,17 @@
                         </td>
                     </tr>
 
+                    <tr>
+                        <td align="center" valign="top" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 6.25%; padding-right: 6.25%; width: 87.5%; font-size: 17px; font-weight: 400; line-height: 160%;
+			padding-top: 20px;
+			padding-bottom: 25px;
+			color: #000000;
+			font-family: sans-serif;" class="paragraph">
+                            <img border="0" vspace="0" hspace="0" style="padding: 0; margin: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none; display: block;
+					color: #000000;" src="https://i.imgur.com/vjSWt6A.png" alt="D" title="Designer friendly" width="50" height="50">
+                            <br> <a href="{{$validated['phonenumber'] ? $validated['phonenumber'] : 'Keine Angabe'}}" target="_blank" style="color: #127DB3; font-family: sans-serif; font-size: 17px; font-weight: 400; line-height: 160%;">{{$validated['phonenumber']}}</a>
+                        </td>
+                    </tr>
                     <!-- End of WRAPPER -->
                 </table>
 

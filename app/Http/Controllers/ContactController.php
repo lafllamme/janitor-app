@@ -18,10 +18,13 @@ class ContactController extends Controller
                 'email' => 'bail| email| required',
                 'service' => 'bail|required',
                 'description' => 'bail|required|max:255'
+
             ]);
 
             if ($request->phonenumber) {
                 $validated['phonenumber'] = $request->phonenumber;
+            } else {
+                $validated['phonenumber'] = 'Keine Angabe';
             }
             Mail::to('teke900@gmail.com')->send(new NewUserNotification($validated));
 

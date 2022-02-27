@@ -722,9 +722,13 @@
                         <div class="input-group  mb-3 input-group-lg">
                             <select name="service" class="form-select" id="inputGroupSelect02" required>
                                 <option selected value="">Auswählen...</option>
-                                <option value="Aufräumen">Aufräumen</option>
-                                <option value="Putzen">Putzen</option>
-                                <option value="Transport">Transport</option>
+                                <option value="Gartenpflege">Gartenpflege</option>
+                                <option value="Winterdienst">Winterdienst</option>
+                                <option value="Objektbetreung">Objektbetreung</option>
+                                <option value="Entrümpelung">Entrümpelung</option>
+                                <option value="Klein Reparaturen">Klein Reparaturen</option>
+                                <option value="Objektreinigung">Objektreinigung</option>
+                                <option value="Sonstiges">Sonstiges</option>
                             </select>
                             <label class="input-group-text" for="inputGroupSelect02">Service</label>
                         </div>
