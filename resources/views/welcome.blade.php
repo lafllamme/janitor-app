@@ -333,6 +333,12 @@
             text-decoration: none;
             cursor: pointer;
         }
+        h1 {
+            font-size: 3rem !important;
+            bottom: 50px !important;
+            position: relative  !important;
+
+        }
     </style>
 
     <link rel="stylesheet" href="{{ mix('css/app.css') }}" type="text/css">
