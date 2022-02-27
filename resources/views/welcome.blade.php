@@ -108,6 +108,7 @@
             display: none;
 
         }
+
         .navbar-toggler {
             background-image: linear-gradient(110.3deg, rgba(238, 179, 123, 1) 8.7%, rgba(216, 103, 77, 1) 47.5%, rgba(114, 43, 54, 1) 89.1%) !important;
             border: 2px solid black !important;
@@ -116,6 +117,7 @@
             display: none;
 
         }
+
         .navbar-toggler-icon>p {
             font-size: 1.5em;
             background-color: white;
@@ -209,7 +211,7 @@
         #about,
         #services,
         #portfolio,
-        #contact {
+        #gallery #contact {
             margin-top: 4rem;
             padding-top: 4rem;
         }
@@ -221,7 +223,7 @@
         #services,
         #about,
         #contact,
-        #portfolio {
+        #gallery #portfolio {
             font-family: 'secondFont';
             font-size: 1rem;
 
@@ -333,11 +335,58 @@
             text-decoration: none;
             cursor: pointer;
         }
+
         h1 {
             font-size: 3rem !important;
-            bottom: 50px !important;
-            position: relative  !important;
+            margin-bottom: 50px !important;
+            position: relative !important;
 
+        }
+
+        .cardcontainer {
+            max-width: 800px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            margin-top: 2em;
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .cards {
+            border-radius: 10px;
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            width: 33.33%;
+            transition: all 400ms ease;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .cards:hover:not(.active).left {
+            transform: translateX(-50%) rotate(-10deg) scale(0.9);
+        }
+
+        .cards:hover:not(.active).right {
+            transform: translateX(50%) rotate(10deg) scale(0.9);
+        }
+
+        .cards.left {
+            transform: translateX(-50%) scale(0.9);
+        }
+
+        .cards.right {
+            transform: translateX(50%) scale(0.9);
+        }
+
+        .cards.active {
+            z-index: 5;
+            position: relative;
+        }
+
+        .cards__inner {
+            position: relative;
+            padding-bottom: 158.8235294118%;
         }
     </style>
 
@@ -359,9 +408,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#about">Team</a>
                     </li>
@@ -370,6 +416,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Galerie</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Kontakt</a>
@@ -397,7 +446,7 @@
     <!-- about section-->
     <section id="about">
         <div id="aboutText" class="container mt-4 pt-4">
-            <h1 class="text-center">Über Uns&nbsp;<i class="fa-solid fa-people-carry-box"></i></h1>
+            <h1 class="text-center"><u>Über Uns</u>&nbsp;<i class="fa-solid fa-people-carry-box"></i></h1>
             <div class="row mt-4">
                 <div class="col-lg-4">
                     <img src="https://img.freepik.com/free-photo/team-janitors-cleaning-office_392895-8040.jpg?size=626&ext=jpg" class="imageAboutPage" alt="">
@@ -448,7 +497,7 @@
     <!-- services section-->
     <section id="services">
         <div class="container">
-            <h1 class="text-center">Unsere Dienstleistungen &nbsp;<i class="fa-solid fa-briefcase"></i></h1>
+            <h1 class="text-center"><u>Unsere Dienstleistungen </u>&nbsp;<i class="fa-solid fa-briefcase"></i></h1>
             <div class="row align-items-end">
                 <div class="col-lg-4 mt-4">
                     <div class="card servicesText" style="height: 470px;">
@@ -580,7 +629,7 @@
     <!-- portfolio section-->
     <section id="portfolio">
         <div class="container mt-3">
-            <h1 class="text-center">Portfolio&nbsp;<i id="hoverme" onclick="document.getElementById('myModal').style.display = 'block';" class="fa-solid fa-circle-info"></i></h1>
+            <h1 class="text-center" style="margin-top: -75px;"><u>Portfolio</u>&nbsp;<i id="hoverme" onclick="document.getElementById('myModal').style.display = 'block';" class="fa-solid fa-circle-info"></i></h1>
             <div class="row">
                 <div id="smaller" class="col-sm-4 mt-4">
                     <div id="card" class="card">
@@ -668,11 +717,6 @@
                     </div>
                 </div>
 
-                <!-- Button trigger modal
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                    Launch demo modal
-                </button> -->
-
                 <!-- Modal -->
                 <div id="myModal" class="modal">
 
@@ -686,10 +730,31 @@
             </div>
     </section>
 
+    <section id="gallery">
+        <div class="container mt-4 pt-4">
+            <h1 class="text-center"><u>Galerie</u>&nbsp;<i class="fa-solid fa-images"></i></h1>
+            <div class="row mt-4">
+                <div class="col">
+                    <div class="cardcontainer">
+                        <div class="cards" style="background-image: url('https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')">
+                            <div class="cards__inner"></div>
+                        </div>
+                        <div class="cards" style="background-image: url('https://images.pexels.com/photos/5231138/pexels-photo-5231138.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')">
+                            <div class="cards__inner"></div>
+                        </div>
+                        <div class="cards" style="background-image: url('https://images.pexels.com/photos/209271/pexels-photo-209271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')">
+                            <div class="cards__inner"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
     <!-- contact section-->
     <section id="contact">
         <div class="container mt-3 contactContent">
-            <h1 class="text-center">Kontakt&nbsp;<i class="fa-solid fa-address-card"></i></h1>
+            <h1 class="text-center"><u>Kontakt</u>&nbsp;<i class="fa-solid fa-address-card"></i></h1>
 
             <div class="row mt-4">
                 <div class="col-lg-6" id="spacedown">
@@ -711,13 +776,13 @@
                     <!-- form fields -->
 
                     @if(Session::has('error'))
-                    <div class="alert alert-danger">
+                    <div id="error" class="alert alert-danger">
                         {{ Session::get('error')}}
                     </div>
                     @endif
 
                     @if(Session::has('success'))
-                    <div class="alert alert-success">
+                    <div id="success" class="alert alert-success">
                         {{ Session::get('success')}}
                     </div>
                     @endif
@@ -764,8 +829,6 @@
             </div>
         </div>
     </section>
-
-
     <!-- footer section-->
     <footer id="footer">
         <div class="container-fluid">
@@ -867,19 +930,40 @@
         modal.style.display = "none";
     }
 
-    // When the user clicks anywhere outside of the modal, close it
-    /*   window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
+    if ((document.getElementById("success") || document.getElementById("error"))) {
+        console.log('its there')
+        var msg;
+        document.getElementById("success") ? msg = document.getElementById("success") : ''
+        document.getElementById("error") ? msg = document.getElementById("error") : ''
+
+        const error = document.getElementById("error")
+        setTimeout(() => {
+            msg.style.display = 'none';
+        }, 3500)
     }
- */
-    // var highlight = document.querySelector("#highlight");
 
-    // window.addEventListener('scroll', function(e) {
-    //     var y = window.scrollY;
-    //     var offset = y % 30;
-    //     highlight.style.marginTop = -y % 30 + "px";
+    const cards = document.querySelectorAll('.cards');
 
-    // });
+    const setClasses = () => {
+        const classes = ['left', 'active', 'right'];
+        cards.forEach((card, index) => card.classList.add(classes[index]))
+    }
+
+
+    const changePositions = (e) => {
+        const clickedCard = e.currentTarget
+        const activeCard = document.querySelector('.cards.active')
+        if (clickedCard.classList.contains('active')) return;
+        const classesFrom = e.currentTarget.className
+        const classesTo = activeCard.className
+        clickedCard.className = classesTo
+        activeCard.className = classesFrom
+    }
+
+    cards.forEach((card) => {
+        card
+            .addEventListener('click', changePositions)
+    })
+
+    setClasses();
 </script>
