@@ -16,9 +16,7 @@ use Illuminate\Support\Facades\URL;
 */
 
 Route::get('/', function () {
-    Artisan::call('optimize:clear');
     return view('welcome');
 });
 
 Route::post('sendFormular', [ContactController::class, 'index']);
-URL::forceScheme('https');
