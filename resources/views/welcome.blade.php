@@ -38,7 +38,7 @@
         /* hero background image */
         .bgimage {
             height: 100vh;
-            background: url('https://cdn.dribbble.com/users/1129235/screenshots/10725431/media/df2f0777d2a22828ca67f19f1f2cec47.gif');
+            background: url('https://s10.gifyu.com/images/ezgif-5-1d9d0951bf.gif');
             background-size: cover;
             position: relative;
 
