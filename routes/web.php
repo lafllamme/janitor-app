@@ -3,6 +3,7 @@
 use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\URL;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +21,4 @@ Route::get('/', function () {
 });
 
 Route::post('sendFormular', [ContactController::class, 'index']);
+URL::forceScheme('https');
