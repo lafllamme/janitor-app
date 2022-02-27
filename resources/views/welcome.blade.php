@@ -4,8 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="http://csshake.surge.sh/csshake-slow.min.css">
+
     <title>Hausmeisterservice</title>
 
     <!-- Fonts -->
@@ -120,7 +122,7 @@
 
         /* services section css */
         .servicesText.card {
-            height: 720px;
+            height: 740px;
             cursor: pointer;
         }
 
@@ -135,15 +137,21 @@
         }
 
         .card:hover .servicesIcon {
-            color: rgba(245, 82, 39, 0.52)
+            background-color: #FF9A8B;
+            background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
+
         .card:hover {
-            color: darkorange;
-            background-color: #4158D0;
-background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+            color: #a85032;
+            -webkit-text-stroke: 0.5px black;
+            background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 229, 168, 1) 0%, rgba(251, 174, 222, 1) 100.7%);
+
 
         }
-
 
         .servicesText:hover {
             background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 229, 168, 1) 0%, rgba(251, 174, 222, 1) 100.7%);
@@ -209,9 +217,11 @@ background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
             font-size: 1rem;
 
         }
-        .card-text{
+
+        .card-text {
             text-align: center;
         }
+
         @keyframes visible {
             0% {
                 opacity: 0;
@@ -267,7 +277,53 @@ background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
             z-index: -1;
         }
 
-       
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
     </style>
 
     <link rel="stylesheet" href="{{ mix('css/app.css') }}" type="text/css">
@@ -326,7 +382,7 @@ background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
     <!-- about section-->
     <section id="about">
         <div id="aboutText" class="container mt-4 pt-4">
-            <h1 class="text-center">Über Uns</h1>
+            <h1 class="text-center">Über Uns&nbsp;<i class="fa-solid fa-people-carry-box"></i></h1>
             <div class="row mt-4">
                 <div class="col-lg-4">
                     <img src="https://img.freepik.com/free-photo/team-janitors-cleaning-office_392895-8040.jpg?size=626&ext=jpg" class="imageAboutPage" alt="">
@@ -370,19 +426,19 @@ background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
                             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                         </p>
                     </div> --}}
-                </div>  
+                </div>
             </div>
     </section>
 
     <!-- services section-->
     <section id="services">
         <div class="container">
-            <h1 class="text-center">Unsere Dienstleistungen</h1>
-            <div class="row">
+            <h1 class="text-center">Unsere Dienstleistungen &nbsp;<i class="fa-solid fa-briefcase"></i></h1>
+            <div class="row align-items-end">
                 <div class="col-lg-4 mt-4">
-                    <div class="card servicesText">
+                    <div class="card servicesText" style="height: 470px;">
                         <div class="card-body">
-                            <i class="fas servicesIcon fa-clock"></i>
+                            <i class="fas servicesIcon fa-solid fa-hand-sparkles"></i>
                             <h4 class="card-title mt-3">Gartenpflege</h4>
                             <h5 class="card-title mt-3"> <i>Wir wissen mit dem Grünen Daumen umzugehen</i></h5>
                             <p class="card-text mt-3">Gartenanlagen sind auf eine adäquate Pflege und Betreuung angewiesen. Auch
@@ -394,10 +450,12 @@ background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
                     </div>
                 </div>
                 <div class="col-lg-4 mt-4">
-                    <div class="card servicesText">
+                    <div class="card servicesText" style="height: 690px;">
                         <div class="card-body">
-                            <i class='fas servicesIcon fa-layer-group'></i>
+                            <i class="fas servicesIcon fa-solid fa-snowflake"></i>
                             <h4 class="card-title mt-3">Winterdienst</h4>
+                            <h5 class="card-title mt-3"> <i>Ein sicherer Winter</i></h5>
+
                             <p class="card-text mt-3">Die Schaffung eines sicheren Gehwegs rund um Ihr Gebäude ist eine große
                                 Verantwortung. Durch die Übernahme dieser Verantwortung sorgen wir mit unserer
                                 Arbeit, dass Sie sicher durch den Winter kommen. Der zunehmende Klimawandel
@@ -413,11 +471,25 @@ background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
                 </div>
 
                 <div class="col-lg-4 mt-4">
-                    <div class="card servicesText">
+                    <div class="card servicesText" style="height: 870px;">
                         <div class="card-body">
-                            <i class='far servicesIcon fa-check-circle'></i>
-                            <h4 class="card-title mt-3">Gartenpflege</h4>
-                            <p class="card-text mt-3">Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße. Ich bin allein und freue mich</p>
+                            <i class="fas servicesIcon fa-solid fa-user-shield"></i>
+                            <h4 class="card-title mt-3">Objektbetreung</h4>
+                            <p class="card-text mt-3">Im Rahmen der Betreuung Ihres Objektes machen wir uns zu Beginn mit der
+                                Technik Ihrer gesamten Immobilie vertraut, sodass wir diese bedienen und adäquat
+                                betreuen können. Im Regelmäßen Intervallen führen wir Wartungsarbeiten an den
+                                technischen Geräten Ihrer Immobilie durch. Hierdurch wird die Vermeidung von
+                                Ausfällen sowie die langfristige Reduktion von Reparatur- und
+                                Instandhaltungskosten sichergestellt.
+                                Sollten Sie Projekte an bzw. in Ihrer Immobilie durchführen, steht Ihnen unsere
+                                Dienstleistung als Projektmanagement ebenfalls zur Verfügung. Im Rahmen von
+                                der Modernisierung Ihrer Anlagen, Renovierungs- und Umbauarbeiten unterstützen
+                                wir Sie bei der Einholung von Angeboten sowie der Kalkulation von Fachfirmen.
+                                Hierbei arbeiten wir sowohl mit den von Ihnen beauftragten Firmen als auch mit
+                                unseren Partnern. Unter der Kategorie Objektbetreuung stellen wir ebenfalls die
+                                Überwachung und die Sicherheit Ihrer Immobilie sicher und begutachten
+                                unterschiedliche Anlagen, wie beispielsweise Aufzüge, Heizungen und viele weitere
+                                Anlagen.</p>
                         </div>
                     </div>
                 </div>
@@ -425,26 +497,55 @@ background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 
             <div class="row">
                 <div class="col-lg-4 mt-4">
-                    <div class="card servicesText">
+                    <div class="card servicesText" style="height: 370px;">
                         <div class="card-body">
-                            <i class='fas servicesIcon fa-search'></i>
-                            <h4 class="card-title mt-3">Handwerklich</h4>
-                            <p class="card-text mt-3">Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße. Ich bin allein und freue mich</p>
+                            <i class="fas servicesIcon fa-solid fa-broom"></i>
+
+                            <h4 class="card-title mt-3">Entrümpelung</h4>
+                            <h5 class="card-title mt-3"> <i>Auch bei den unangenehmen Arbeiten können Sie auf uns zählen</i></h5>
+                            <p class="card-text mt-3">Es tritt nicht allzu selten auf, dass in einem Haus oder einer Wohnung eine Vielzahl
+                                an Dingen über viele Jahre hinweg gesammelt werden. Hierbei übernehmen wir die
+                                häufig aufwendigen und mühsamen Entrümpelungsarbeiten.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4 mt-4">
+                    <div class="card servicesText" style="height: 370px;">
+                        <div class="card-body">
+                            <i class="as servicesIcon fa-solid fa-circle-question"></i>
+                            <h4 class="card-title mt-3">Dienstleistung jeglicher Art</h4>
+                            <p class="card-text mt-3">Ist in unserem Dienstleistungsportfolio nicht das richtige dabei gewesen?
+                                Dann senden Sie uns eine Anfrage über unser Anfragenformular oder kontaktieren
+                                Sie uns einfach und lassen Sie sich ein unverbindliches Angebot zu der von Ihnen
+                                gewünschten Dienstleistung zukommen.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-4 mt-4">
+                    <div class="card servicesText" style="height: 370px;">
+                        <div class="card-body">
+                            <i class='fas servicesIcon fa-wrench'></i>
+                            <h4 class="card-title mt-3">Kleine Reparaturen</h4>
+                            <p class="card-text mt-3">Egal, ob kleinere Malerarbeiten (Ausbessern), die Montage einer Waschmaschine
+                                oder die Einstellung der Heizung. Kleine Reparaturarbeiten werden von uns im
+                                Handumdrehen schnell und kompetent durchgeführt.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-4 offset-md-4 ">
                     <div class="card servicesText">
                         <div class="card-body">
-                            <i class='fas servicesIcon fa-shield-alt'></i>
+                            <i class="fas servicesIcon fa-solid fa-spray-can-sparkles"></i>
                             <h4 class="card-title mt-3">Objektreinigung</h4>
                             <h5 class="card-title mt-3"><i>Ein gepflegter Zustand führt zu Zufriedenheit</i></h5>
 
                             <p class="card-text mt-3">Dieser Leitsatz gilt sowohl am Arbeitsplatz als auch in Ihrem Eigenheim. Gepflegte
                                 Räumlichkeiten sorgen nicht nur für Ihr Wohlbefinden. Vielmehr trägt es zu einem
                                 positiven Eindruck Ihrer Immobilie bei. Durch die Reinigung von Treppenhäusern,
-                                
+
                                 Tiefgaragen, Kellern und weiteren Allgemeinflächen übernehmen wir die
                                 Verantwortung zur Sicherstellung einer wohlfühlenden und gemütlichen Immobilie.
                                 Unsere detailorientierte Arbeit richtet sich nicht nur auf die Bodenfläche. Hierin sind
@@ -456,15 +557,6 @@ background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
                     </div>
                 </div>
 
-                <div class="col-lg-4 mt-4">
-                    <div class="card servicesText">
-                        <div class="card-body">
-                            <i class='fas servicesIcon fa-wrench'></i>
-                            <h4 class="card-title mt-3">Transport</h4>
-                            <p class="card-text mt-3">Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße. Ich bin allein und freue mich</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -473,16 +565,19 @@ background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
     <!-- portfolio section-->
     <section id="portfolio">
         <div class="container mt-3">
-            <h1 class="text-center">Portfolio</h1>
+            <h1 class="text-center">Portfolio&nbsp;<i id="hoverme" onclick="document.getElementById('myModal').style.display = 'block';" class="fa-solid fa-circle-info"></i></h1>
             <div class="row">
                 <div id="smaller" class="col-sm-4 mt-4">
                     <div id="card" class="card">
-                        <img class="card-img-top" src="https://i.imgur.com/7AKizqr.png" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="https://s3-eu-west-1.amazonaws.com/static.koeln.de/000/000/003/049/versions/curata-logo_5be44378872ba_556x110_5be4437a872f3.png" alt="Card image" style="width:100%">
                         <div class="card-body">
-                            <h4 class="card-title">Hausverwaltung Junkersdorg</h4>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <h4 class="card-title">CURATA
+                            </h4>
+                            <p class="card-text">
+                                Wohnungsverwaltungsgesellschaft mbH
+                            </p>
                             <div class="text-center">
-                                <a href="#" class="btn btn-dark" onclick="window.open('https://bit.ly/3sdBsqo', '_blank')">Info</a>
+                                <a href="#" class="btn btn-dark" onclick="window.open('https://www.koeln.de/branchen/eintrag/3144/hausverwaltungen/curata-wohnungsverwaltungsgesellschaft-mbh', '_blank')">Info</a>
                             </div>
                         </div>
                     </div>
@@ -490,12 +585,12 @@ background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 
                 <div id="smaller" class="col-sm-4 mt-4">
                     <div id="card" class="card portfolioContent">
-                        <img class="card-img-top" src="https://i.imgur.com/7AKizqr.png" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="https://s3-eu-west-1.amazonaws.com/static.koeln.de/000/000/002/748/versions/903eff25eeb42661be88bbd8eb4414ad_150x67_59cef6af20d03.png" alt="Card image" style="width:100%; height: 74px;">
                         <div class="card-body">
-                            <h4 class="card-title">Quiz App</h4>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <h4 class="card-title">HAUSGRUND</h4>
+                            <p class="card-text"> GmbH Hausverwaltung in Köln</p>
                             <div class="text-center">
-                                <a href="#" class="btn btn-dark" onclick="window.open('https://bit.ly/3sdBsqo', '_blank')">Info</a>
+                                <a href="#" class="btn btn-dark" onclick="window.open('https://www.koeln.de/branchen/eintrag/2830/hausverwaltungen/hausgrund-gmbh', '_blank')">Info</a>
                             </div>
                         </div>
                     </div>
@@ -503,12 +598,12 @@ background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 
                 <div id="smaller" class="col-sm-4 mt-4">
                     <div id="card" class="card portfolioContent">
-                        <img class="card-img-top" src="https://i.imgur.com/7AKizqr.png" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="https://s3-eu-west-1.amazonaws.com/static.koeln.de/000/000/001/659/versions/logo-muench-solo_207x207_5a99494920ab1.png" alt="Card image" style="width:100%; height: 74px;">
                         <div class="card-body">
-                            <h4 class="card-title">Product Landing Page</h4>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <h4 class="card-title">Münch </h4>
+                            <p class="card-text">Wohnungsverwaltung GmbH</p>
                             <div class="text-center">
-                                <a href="#" class="btn btn-dark" onclick="window.open('https://bit.ly/3sdBsqo', '_blank')">Info</a>
+                                <a href="#" class="btn btn-dark" onclick="window.open('https://www.koeln.de/branchen/eintrag/1661/hausverwaltungen/muench-wohnungsverwaltung-gmbh', '_blank')">Info</a>
                             </div>
                         </div>
                     </div>
@@ -518,12 +613,14 @@ background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
             <div class="row">
                 <div id="smaller" class="col-sm-4 mt-4">
                     <div id="card" class="card portfolioContent">
-                        <img class="card-img-top" src="https://www.magnalister.com/wp-content/uploads/2019/09/METRO_Marktplatz_Logo.jpg" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="https://s3-eu-west-1.amazonaws.com/static.koeln.de/000/000/038/586/versions/logo556_527x110_5be1680f7362f.png" alt="Card image" style="width:100%">
                         <div class="card-body">
-                            <h4 class="card-title">Metro Logistik</h4>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <h4 class="card-title">
+                                Schleumer
+                            </h4>
+                            <p class="card-text">Immobilien Treuhand Verwaltungs-OHG</p>
                             <div class="text-center">
-                                <a href="#" class="btn btn-dark" onclick="window.open('https://bit.ly/3sdBsqo', '_blank')">Info</a>
+                                <a href="#" class="btn btn-dark" onclick="window.open('https://www.koeln.de/branchen/eintrag/45057/hausverwaltungen/schleumer-immobilien-treuhand-verwaltungs-ohg', '_blank')">Info</a>
                             </div>
                         </div>
                     </div>
@@ -531,12 +628,13 @@ background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 
                 <div id="smaller" class="col-sm-4 mt-4">
                     <div id="card" class="card portfolioContent">
-                        <img class="card-img-top" src="https://www.magnalister.com/wp-content/uploads/2019/09/METRO_Marktplatz_Logo.jpg" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Activa_logo.jpg" alt="Card image" style="width:100%; height: 74px;">
                         <div class="card-body">
-                            <h4 class="card-title">Metro Logistik</h4>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <h4 class="card-title">ACTIVA</h4>
+                            <p class="card-text">Hausverwaltungs-GmbH
+                            </p>
                             <div class="text-center">
-                                <a href="#" class="btn btn-dark" onclick="window.open('https://bit.ly/3sdBsqo', '_blank')">Info</a>
+                                <a href="#" class="btn btn-dark" onclick="window.open('https://www.koeln.de/branchen/eintrag/29160/hausverwaltungen/activa-hausverwaltungs-gmbh', '_blank')">Info</a>
                             </div>
                         </div>
                     </div>
@@ -544,15 +642,31 @@ background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 
                 <div id="smaller" class="col-sm-4 mt-4">
                     <div id="card" class="card portfolioContent">
-                        <img class="card-img-top" src="https://www.magnalister.com/wp-content/uploads/2019/09/METRO_Marktplatz_Logo.jpg" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="https://s3-eu-west-1.amazonaws.com/static.koeln.de/000/000/037/161/versions/logo-mit-hintergrund_556x110_5a955199019e5.png" alt="Card image" style="width:100%">
                         <div class="card-body">
-                            <h4 class="card-title">Metro Logistik</h4>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <h4 class="card-title">Greif & Contzen</h4>
+                            <p class="card-text">Immobilien GmbH</p>
                             <div class="text-center">
-                                <a href="#" class="btn btn-dark" onclick="window.open('https://bit.ly/3sdBsqo', '_blank')">Info</a>
+                                <a href="#" class="btn btn-dark" onclick="window.open('https://www.koeln.de/branchen/eintrag/43434/immobilienmakler/greif-contzen-immobilien-gmbh', '_blank')">Info</a>
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <!-- Button trigger modal
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Launch demo modal
+                </button> -->
+
+                <!-- Modal -->
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Das sind einige unser Kunden, mit denen wir bereits gearbeitet haben!</p>
+                    </div>
+
                 </div>
             </div>
     </section>
@@ -560,7 +674,7 @@ background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
     <!-- contact section-->
     <section id="contact">
         <div class="container mt-3 contactContent">
-            <h1 class="text-center">Kontakt</h1>
+            <h1 class="text-center">Kontakt&nbsp;<i class="fa-solid fa-address-card"></i></h1>
 
             <div class="row mt-4">
                 <div class="col-lg-6" id="spacedown">
@@ -707,12 +821,46 @@ background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
             })
     }
 
+    $(document).ready(function() {
+        $("#hoverme").hover(function() {
+            console.log('Amk')
+            $('#modal').modal();
+        });
+    });
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the el that opens the modal
+    var trigger = document.getElementById("hoverme");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    trigger.onmouseover = function() {
+        modal.style.display = "block";
+    }
+
+
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    /*   window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+ */
     // var highlight = document.querySelector("#highlight");
 
     // window.addEventListener('scroll', function(e) {
     //     var y = window.scrollY;
     //     var offset = y % 30;
     //     highlight.style.marginTop = -y % 30 + "px";
-        
+
     // });
 </script>
