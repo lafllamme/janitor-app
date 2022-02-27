@@ -344,13 +344,20 @@
         }
 
         .cardcontainer {
-            max-width: 800px;
+            max-width: 500px;
             margin: auto;
             display: flex;
             justify-content: center;
             margin-top: 2em;
             position: relative;
-            margin-bottom: 50px;
+            margin-bottom: 125px;
+            margin-top: 75px;
+
+            -ms-transform: scale(1.5);
+            /* IE 9 */
+            -webkit-transform: scale(1.5);
+            /* Safari 3-8 */
+            transform: scale(1.5);
         }
 
         .cards {
