@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="http://csshake.surge.sh/csshake-slow.min.css">
-
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Hausmeisterservice</title>
 
     <!-- Fonts -->
@@ -102,14 +102,23 @@
 
         .navbar-toggler {
             background-image: linear-gradient(110.3deg, rgba(238, 179, 123, 1) 8.7%, rgba(216, 103, 77, 1) 47.5%, rgba(114, 43, 54, 1) 89.1%) !important;
-            border: 1px solid grey !important;
+            border: 2px solid black !important;
+
             opacity: 0.7;
             display: none;
-        }
 
+        }
+        .navbar-toggler {
+            background-image: linear-gradient(110.3deg, rgba(238, 179, 123, 1) 8.7%, rgba(216, 103, 77, 1) 47.5%, rgba(114, 43, 54, 1) 89.1%) !important;
+            border: 2px solid black !important;
+
+            opacity: 0.7;
+            display: none;
+
+        }
         .navbar-toggler-icon>p {
             font-size: 1.5em;
-            background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+            background-color: white;
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
