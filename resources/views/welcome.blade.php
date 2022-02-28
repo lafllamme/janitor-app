@@ -15,6 +15,9 @@
     <!-- Fonts -->
     <!-- Styles -->
     <style>
+        @import url('http://fonts.cdnfonts.com/css/saysomething');
+
+
         /* Main Font */
         @font-face {
             font-family: 'myWebFont';
@@ -28,7 +31,7 @@
 
         body {
             font-family: 'myWebFont';
-            background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%) !important;
+            background-image: linear-gradient(92.7deg, rgba(245, 212, 212, 1) 8.5%, rgba(252, 251, 224, 1) 90.2%) !important;
             width: 100%;
             overflow-x: hidden;
         }
@@ -38,16 +41,29 @@
         /* hero background image */
         .bgimage {
             height: 100vh;
-            background: url('https://im5.ezgif.com/tmp/ezgif-5-a8b9260df1.gif');
+            background: url('https://s10.gifyu.com/images/ezgif-5-a8b9260df1.gif');
             background-size: cover;
             position: relative;
 
         }
 
+
+        /* hero pc background image */
+        .bgimageDesktop {
+            height: 100vh;
+            background: url('https://s10.gifyu.com/images/ezgif-5-1d9d0951bf360928f141c97624.gif');
+            background-size: cover;
+            position: relative;
+
+        }
+
+
         /* text css above hero image*/
         .hero_title {
             font-size: 4.5rem;
+
         }
+
 
         .hero_desc {
             font-size: 2rem;
@@ -66,25 +82,33 @@
             background-image: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
         }
 
+        .hero-text:hover {
+            text-align: center;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-shadow: 2px 2px black;
+            opacity: 0.6;
+            font-family: 'myWebFont';
+            background: black;
+
+        }
+
         .nav-item>a {
             font-family: 'myWebFont';
             font-size: 2.5rem;
-            background-image: linear-gradient(110.3deg, rgba(238, 179, 123, 1) 8.7%, rgba(216, 103, 77, 1) 47.5%, rgba(114, 43, 54, 1) 89.1%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: black;
 
         }
 
         .nav-item>a:hover {
             font-family: 'myWebFont';
             font-size: 2.5rem;
-            background-image: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-
-
+            color: white;
+            -webkit-text-stroke: 0.5px black;
         }
 
         .navbar-brand {
@@ -105,26 +129,19 @@
         }
 
         .navbar-toggler {
-            background-image: linear-gradient(110.3deg, rgba(238, 179, 123, 1) 8.7%, rgba(216, 103, 77, 1) 47.5%, rgba(114, 43, 54, 1) 89.1%) !important;
-            border: 2px solid black !important;
-
-            opacity: 0.7;
-            display: none;
-
-        }
-
-        .navbar-toggler {
-            background-image: linear-gradient(110.3deg, rgba(238, 179, 123, 1) 8.7%, rgba(216, 103, 77, 1) 47.5%, rgba(114, 43, 54, 1) 89.1%) !important;
-            border: 2px solid black !important;
-
-            opacity: 0.7;
-            display: none;
+            background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%) !important;
+            border: 1px solid black !important;
+            border-radius: 20px !important;
+            font-size: 16px;
+            margin: 4px 2px;
 
         }
+
 
         .navbar-toggler-icon>p {
             font-size: 1.5em;
-            background-color: white;
+            font-weight: 900 !important;
+            background-color: black;
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -133,6 +150,7 @@
 
         .navbar-toggler-icon {
             width: 4em !important;
+
         }
 
         /* services section css */
@@ -152,37 +170,26 @@
         }
 
         .card:hover .servicesIcon {
-            background-color: #FF9A8B;
-            background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
-
-
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: white
         }
 
         .card:hover {
             color: #a85032;
             -webkit-text-stroke: 0.5px black;
-            background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 229, 168, 1) 0%, rgba(251, 174, 222, 1) 100.7%);
-
-
+            background: black;
+            opacity: 0.9b;
+            /* card */
         }
 
         .servicesText:hover {
-            background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 229, 168, 1) 0%, rgba(251, 174, 222, 1) 100.7%);
-
+            background: black;
+            opacity: 0.9;
         }
 
         /* display background color black on navbar scroll */
         .navbarScroll.navbarDark {
-            background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+            background-image: linear-gradient(92.7deg, rgba(245, 212, 212, 1) 8.5%, rgba(252, 251, 224, 1) 90.2%) !important;
         }
-
-        .navbarScroll.navbarLight {
-            background-image: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
-            opacity: 0.6;
-        }
-
 
         /* social media icons styling */
         .social-icons {
@@ -195,28 +202,35 @@
         .fa-twitter:hover,
         .fa-linkedin:hover,
         .fa-twitch:hover {
-            background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+            background: white;
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .fab {
-            color: white;
+            color: black;
         }
+
 
         /* footer styling */
         #footer {
-            background-color: orange;
+            background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
+            background-blend-mode: normal, lighten, soft-light;
             text-align: center;
         }
 
         /* spacing on all sections */
-        #about,
-        #services,
+
         #portfolio,
-        #gallery #contact {
+        #contact {
             margin-top: 4rem;
+            padding-top: 4rem;
+        }
+
+
+
+        #services {
             padding-top: 4rem;
         }
 
@@ -226,10 +240,15 @@
 
         #services,
         #about,
-        #contact,
-        #gallery #portfolio {
-            font-family: 'secondFont';
+        #gallery,
+        #portfolio {
+            font-family: 'secondFont', sans-serif;
+            font-weight: 900;
             font-size: 1rem;
+        }
+
+        #contact {
+            font-family: 'SaySomething', sans-serif;
 
         }
 
@@ -253,6 +272,7 @@
 
         .input-group-text,
         .btn {
+            background-color: #FBAB7E;
             background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
             color: black !important;
         }
@@ -322,7 +342,9 @@
             margin: auto;
             padding: 20px;
             border: 1px solid #888;
+            text-align: center;
             width: 80%;
+            font-size: 1rem;
         }
 
         /* The Close Button */
@@ -331,6 +353,8 @@
             float: right;
             font-size: 28px;
             font-weight: bold;
+            text-align: end;
+
         }
 
         .close:hover,
@@ -344,6 +368,9 @@
             font-size: 3rem !important;
             margin-bottom: 50px !important;
             position: relative !important;
+            font-family: 'SaySomething', sans-serif;
+            font-weight: 900;
+
 
         }
 
@@ -399,6 +426,99 @@
             position: relative;
             padding-bottom: 158.8235294118%;
         }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .gallery {
+            width: 250px;
+            height: 300px;
+            line-height: 0;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: perspective(400px) rotateY(0deg);
+            transition: 0.2s;
+            margin: auto;
+        }
+
+        .gallery:hover {
+            transform: perspective(450px) rotateY(25deg);
+        }
+
+        .gallery:hover div.box img {
+            filter: blur(0px);
+        }
+
+        .box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform-style: preserve-3d;
+            transition: 0.2s;
+            cursor: zoom-in;
+        }
+
+        .box:nth-of-type(1) {
+            transform: translateZ(0px) translateX(0px);
+        }
+
+        .box:nth-of-type(2) {
+            transform: translateZ(-40px) translateX(-40px);
+        }
+
+        .box:nth-of-type(2) img {
+            filter: blur(1px);
+        }
+
+        .box:nth-of-type(3) {
+            transform: translateZ(-80px) translateX(-80px);
+        }
+
+        .box:nth-of-type(3) img {
+            filter: blur(2px);
+        }
+
+        .box:nth-of-type(4) {
+            transform: translateZ(-120px) translateX(-120px);
+        }
+
+        .box:nth-of-type(4) img {
+            filter: blur(3px);
+        }
+
+        .box:nth-of-type(5) {
+            transform: translateZ(-160px) translateX(-160px);
+        }
+
+        .box:nth-of-type(5) img {
+            filter: blur(4px);
+        }
+
+        .box:nth-of-type(6) {
+            transform: translateZ(-200px) translateX(-200px);
+        }
+
+        .box:nth-of-type(6) img {
+            filter: blur(5px);
+        }
+
+        .box:focus {
+            transform: translateZ(120px) translateZ(0px);
+            outline: none;
+        }
+
+        .box:focus img {
+            filter: blur(0px);
+        }
+
+        #round {
+            border-radius: 20px !important;
+
+        }
+
+        .btn-dark {}
     </style>
 
     <link rel="stylesheet" href="{{ mix('css/app.css') }}" type="text/css">
@@ -457,14 +577,14 @@
     <!-- about section-->
     <section id="about">
         <div id="aboutText" class="container mt-4 pt-4">
-            <h1 class="text-center"><u>Über Uns</u>&nbsp;<i class="fa-solid fa-people-carry-box"></i></h1>
+            <h1 class="text-center"><u>Über Uns</u>&nbsp;<i style="font-size: 1.5rem;" class="fa-solid fa-people-carry-box"></i></h1>
             <div class="row mt-4">
                 <div class="col-lg-4">
                     <img src="https://img.freepik.com/free-photo/team-janitors-cleaning-office_392895-8040.jpg?size=626&ext=jpg" class="imageAboutPage" alt="">
                 </div>
 
-                <div class="col-lg-8">
-                    <p>Als Hausmeisterservice bieten wir für Gewerbekunden als auch privaten
+                <div class="col-lg-8 mt-4">
+                    <p style="text-align:center;">Als Hausmeisterservice bieten wir für Gewerbekunden als auch privaten
                         Haushalten eine große Auswahl an Dienstleistungen – von der Verwaltung und
                         Aufsicht von Wohnanlagen, über die Durchführung von kleinen Reparaturen,
                         Entrümpelungen und der Gartenpflege, bis hin zur Instandhaltung und Reinigung
@@ -478,29 +598,6 @@
                         anbieten.
 
                     </p>
-                    {{-- <div id="endAbout" class="row mt-3">
-                        <div class="col-md-6">
-                            <ul>
-                                <li>Name: David Parker</li>
-                                <li>Age: 28</li>
-                                <li>Occupation: Web Developer</li>
-
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <ul>
-                                <li>Name: David Parker</li>
-                                <li>Age: 28</li>
-                                <li>Occupation: Web Developer</li>
-
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row mt-3">
-                        <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                        </p>
-                    </div> --}}
                 </div>
             </div>
     </section>
@@ -508,7 +605,7 @@
     <!-- services section-->
     <section id="services">
         <div class="container">
-            <h1 class="text-center"><u>Unsere Dienstleistungen </u>&nbsp;<i class="fa-solid fa-briefcase"></i></h1>
+            <h1 class="text-center"><u>Unsere Dienstleistungen </u>&nbsp;<i style="font-size: 1.5rem;" class="fa-solid fa-briefcase"></i></h1>
             <div class="row align-items-end">
                 <div class="col-lg-4 mt-4">
                     <div class="card servicesText" style="height: 470px;">
@@ -640,11 +737,11 @@
     <!-- portfolio section-->
     <section id="portfolio">
         <div class="container mt-3">
-            <h1 class="text-center" style="margin-top: -75px;"><u>Portfolio</u>&nbsp;<i id="hoverme" onclick="document.getElementById('myModal').style.display = 'block';" class="fa-solid fa-circle-info"></i></h1>
+            <h1 class="text-center" style="margin-top: -75px;"><u>Portfolio</u>&nbsp;<i style="font-size: 1.5rem;" id="hoverme" onclick="document.getElementById('myModal').style.display = 'block';" class="fa-solid fa-circle-info"></i></h1>
             <div class="row">
-                <div id="smaller" class="col-sm-4 mt-4">
+                <div id="smaller" class="col-sm-4">
                     <div id="card" class="card">
-                        <img class="card-img-top" src="https://s3-eu-west-1.amazonaws.com/static.koeln.de/000/000/003/049/versions/curata-logo_5be44378872ba_556x110_5be4437a872f3.png" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="https://s3-eu-west-1.amazonaws.com/simg.koomio.com/p38294sp27241462963746.png" alt="Card image" style="width:100%">
                         <div class="card-body">
                             <h4 class="card-title">CURATA
                             </h4>
@@ -652,33 +749,33 @@
                                 Wohnungsverwaltungsgesellschaft mbH
                             </p>
                             <div class="text-center">
-                                <a href="#" class="btn btn-dark" onclick="window.open('https://www.koeln.de/branchen/eintrag/3144/hausverwaltungen/curata-wohnungsverwaltungsgesellschaft-mbh', '_blank')">Info</a>
+                                <a href="#" class="btn btn-dark btn-lg" id="round" onclick="window.open('https://www.koeln.de/branchen/eintrag/3144/hausverwaltungen/curata-wohnungsverwaltungsgesellschaft-mbh', '_blank')">Info</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div id="smaller" class="col-sm-4 mt-4">
+                <div id="smaller" class="col-sm-4">
                     <div id="card" class="card portfolioContent">
-                        <img class="card-img-top" src="https://s3-eu-west-1.amazonaws.com/static.koeln.de/000/000/002/748/versions/903eff25eeb42661be88bbd8eb4414ad_150x67_59cef6af20d03.png" alt="Card image" style="width:100%; height: 74px;">
+                        <img class="card-img-top" src="https://s3-eu-west-1.amazonaws.com/simg.koomio.com/p38294sp27241462963746.png" alt="Card image" style="width:100%;">
                         <div class="card-body">
                             <h4 class="card-title">HAUSGRUND</h4>
                             <p class="card-text"> GmbH Hausverwaltung in Köln</p>
                             <div class="text-center">
-                                <a href="#" class="btn btn-dark" onclick="window.open('https://www.koeln.de/branchen/eintrag/2830/hausverwaltungen/hausgrund-gmbh', '_blank')">Info</a>
+                                <a href="#" class="btn btn-dark btn-lg" id="round" onclick="window.open('https://www.koeln.de/branchen/eintrag/2830/hausverwaltungen/hausgrund-gmbh', '_blank')">Info</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div id="smaller" class="col-sm-4 mt-4">
+                <div id="smaller" class="col-sm-4">
                     <div id="card" class="card portfolioContent">
-                        <img class="card-img-top" src="https://s3-eu-west-1.amazonaws.com/static.koeln.de/000/000/001/659/versions/logo-muench-solo_207x207_5a99494920ab1.png" alt="Card image" style="width:100%; height: 74px;">
+                        <img class="card-img-top" src="https://s3-eu-west-1.amazonaws.com/simg.koomio.com/p38294sp27241462963746.png" alt="Card image">
                         <div class="card-body">
                             <h4 class="card-title">Münch </h4>
                             <p class="card-text">Wohnungsverwaltung GmbH</p>
                             <div class="text-center">
-                                <a href="#" class="btn btn-dark" onclick="window.open('https://www.koeln.de/branchen/eintrag/1661/hausverwaltungen/muench-wohnungsverwaltung-gmbh', '_blank')">Info</a>
+                                <a href="#" class="btn btn-dark btn-lg" id="round" onclick="window.open('https://www.koeln.de/branchen/eintrag/1661/hausverwaltungen/muench-wohnungsverwaltung-gmbh', '_blank')">Info</a>
                             </div>
                         </div>
                     </div>
@@ -686,43 +783,43 @@
             </div>
             <br>
             <div class="row">
-                <div id="smaller" class="col-sm-4 mt-4">
+                <div id="smaller" class="col-sm-4">
                     <div id="card" class="card portfolioContent">
-                        <img class="card-img-top" src="https://s3-eu-west-1.amazonaws.com/static.koeln.de/000/000/038/586/versions/logo556_527x110_5be1680f7362f.png" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="https://s3-eu-west-1.amazonaws.com/static.koeln.de/000/000/037/161/versions/logo-mit-hintergrund_556x110_5a955199019e5.png" alt="Card image" style="width:100%">
                         <div class="card-body">
                             <h4 class="card-title">
                                 Schleumer
                             </h4>
                             <p class="card-text">Immobilien Treuhand Verwaltungs-OHG</p>
                             <div class="text-center">
-                                <a href="#" class="btn btn-dark" onclick="window.open('https://www.koeln.de/branchen/eintrag/45057/hausverwaltungen/schleumer-immobilien-treuhand-verwaltungs-ohg', '_blank')">Info</a>
+                                <a href="#" class="btn btn-dark btn-lg" id="round" onclick="window.open('https://www.koeln.de/branchen/eintrag/45057/hausverwaltungen/schleumer-immobilien-treuhand-verwaltungs-ohg', '_blank')">Info</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div id="smaller" class="col-sm-4 mt-4">
+                <div id="smaller" class="col-sm-4">
                     <div id="card" class="card portfolioContent">
-                        <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Activa_logo.jpg" alt="Card image" style="width:100%; height: 74px;">
+                        <img class="card-img-top" src="https://s3-eu-west-1.amazonaws.com/static.koeln.de/000/000/037/161/versions/logo-mit-hintergrund_556x110_5a955199019e5.png" alt="Card image" style="width:100%;">
                         <div class="card-body">
                             <h4 class="card-title">ACTIVA</h4>
                             <p class="card-text">Hausverwaltungs-GmbH
                             </p>
                             <div class="text-center">
-                                <a href="#" class="btn btn-dark" onclick="window.open('https://www.koeln.de/branchen/eintrag/29160/hausverwaltungen/activa-hausverwaltungs-gmbh', '_blank')">Info</a>
+                                <a href="#" class="btn btn-dark btn-lg" id="round" onclick="window.open('https://www.koeln.de/branchen/eintrag/29160/hausverwaltungen/activa-hausverwaltungs-gmbh', '_blank')">Info</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div id="smaller" class="col-sm-4 mt-4">
+                <div id="smaller" class="col-sm-4">
                     <div id="card" class="card portfolioContent">
                         <img class="card-img-top" src="https://s3-eu-west-1.amazonaws.com/static.koeln.de/000/000/037/161/versions/logo-mit-hintergrund_556x110_5a955199019e5.png" alt="Card image" style="width:100%">
                         <div class="card-body">
                             <h4 class="card-title">Greif & Contzen</h4>
                             <p class="card-text">Immobilien GmbH</p>
                             <div class="text-center">
-                                <a href="#" class="btn btn-dark" onclick="window.open('https://www.koeln.de/branchen/eintrag/43434/immobilienmakler/greif-contzen-immobilien-gmbh', '_blank')">Info</a>
+                                <a href="#" class="btn btn-dark btn-lg" id="round" onclick="window.open('https://www.koeln.de/branchen/eintrag/43434/immobilienmakler/greif-contzen-immobilien-gmbh', '_blank')">Info</a>
                             </div>
                         </div>
                     </div>
@@ -742,19 +839,29 @@
     </section>
 
     <section id="gallery">
-        <div class="container mt-4 pt-4">
-            <h1 class="text-center"><u>Galerie</u>&nbsp;<i class="fa-solid fa-images"></i></h1>
-            <div class="row mt-4">
+        <div class="container pt-4">
+            <h1 class="text-center mb-10"><u>Galerie</u>&nbsp;<i style="font-size: 1.5rem;" class="fa-solid fa-images"></i></h1>
+            <br>
+            <div class="row justify-content-center">
                 <div class="col">
-                    <div class="cardcontainer">
-                        <div class="cards" style="background-image: url('https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')">
-                            <div class="cards__inner"></div>
+                    <div class="gallery">
+                        <div class="box" tabindex="1" autofocus>
+                            <img src="http://unsplash.it/500/600?image=1" />
                         </div>
-                        <div class="cards" style="background-image: url('https://images.pexels.com/photos/5231138/pexels-photo-5231138.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')">
-                            <div class="cards__inner"></div>
+                        <div class="box" tabindex="2">
+                            <img src="http://unsplash.it/500/600?image=2" />
                         </div>
-                        <div class="cards" style="background-image: url('https://images.pexels.com/photos/209271/pexels-photo-209271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')">
-                            <div class="cards__inner"></div>
+                        <div class="box" tabindex="3">
+                            <img src="http://unsplash.it/500/600?image=3" />
+                        </div>
+                        <div class="box" tabindex="4">
+                            <img src="http://unsplash.it/500/600?image=4" />
+                        </div>
+                        <div class="box" tabindex="5">
+                            <img src="http://unsplash.it/500/600?image=5" />
+                        </div>
+                        <div class="box" tabindex="6">
+                            <img src="http://unsplash.it/500/600?image=6" />
                         </div>
                     </div>
                 </div>
@@ -765,7 +872,7 @@
     <!-- contact section-->
     <section id="contact">
         <div class="container mt-3 contactContent">
-            <h1 class="text-center"><u>Kontakt</u>&nbsp;<i class="fa-solid fa-address-card"></i></h1>
+            <h1 class="text-center"><u>Kontakt</u>&nbsp;<i style="font-size: 1.5rem;" class="fa-solid fa-address-card"></i></h1>
 
             <div class="row mt-4">
                 <div class="col-lg-6" id="spacedown">
@@ -812,7 +919,7 @@
 
                         <div class="input-group  mb-3 input-group-lg">
                             <select name="service" class="form-select" id="inputGroupSelect02" required>
-                                <option selected value="">Auswählen...</option>
+                                <option selected value="">Auswahl...</option>
                                 <option value="Gartenpflege">Gartenpflege</option>
                                 <option value="Winterdienst">Winterdienst</option>
                                 <option value="Objektbetreung">Objektbetreung</option>
@@ -831,8 +938,8 @@
                         <div class=" input-group-lg mt-3">
                             <textarea name="description" class="form-control" rows="5" id="comment" name="text" placeholder="Weitere Infos" required></textarea>
                         </div>
-                        <button class="btn btn-dark mt-3" type="submit">Senden</button>
-
+                        <div class="row justify-content-center"> <button class="btn btn-dark mt-3" style="border-radius: 20px;" type="submit">Senden</button>
+                        </div>
                     </form>
 
                 </div>
@@ -977,4 +1084,12 @@
     })
 
     setClasses();
+
+    if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
+        // if pc user
+
+        var bgImage = document.getElementById('home');
+        bgImage.className = 'bgimageDesktop'
+
+    }
 </script>
