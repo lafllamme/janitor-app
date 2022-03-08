@@ -6,7 +6,10 @@
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="storage/js/jquery.min.js"></script>
+    <script src="storage/js/boostrap.min.js"></script>
+    <script src="storage/js/popper.min.js"></script>
+
     <link rel="stylesheet" type="text/css" href="http://csshake.surge.sh/csshake-slow.min.css">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -41,7 +44,7 @@
         /* hero background image */
         .bgimage {
             height: 100vh;
-            background: url('https://s10.gifyu.com/images/ezgif-5-a8b9260df1.gif');
+            background: url('/storage/bg/b.gif');
             background-size: cover;
             position: relative;
 
@@ -51,7 +54,7 @@
         /* hero pc background image */
         .bgimageDesktop {
             height: 100vh;
-            background: url('https://s10.gifyu.com/images/ezgif-5-1d9d0951bf360928f141c97624.gif');
+            background: url('/storage/bg/a.gif');
             background-size: cover;
             position: relative;
 
@@ -97,19 +100,22 @@
 
         }
 
-        .nav-item>a {
+        /* .nav-item>a {
             font-family: 'myWebFont';
             font-size: 2.5rem;
             color: black;
 
-        }
+        } */
 
-        .nav-item>a:hover {
-            font-family: 'myWebFont';
-            font-size: 2.5rem;
+        .nav-item>a:hover,
+        .dropdown-item:hover {
+            /* font-family: 'myWebFont'; */
+            font-size: 1.5rem;
             color: white;
             -webkit-text-stroke: 0.5px black;
+            transition: font 0.5s ease
         }
+
 
         .navbar-brand {
             font-family: 'myWebFont';
@@ -128,16 +134,16 @@
             margin-bottom: 20px;
         }
 
-        .navbar-toggler {
+        /* .navbar-toggler {
             background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%) !important;
             border: 1px solid black !important;
             border-radius: 20px !important;
             font-size: 16px;
             margin: 4px 2px;
 
-        }
+        } */
 
-
+        /* 
         .navbar-toggler-icon>p {
             font-size: 1.5em;
             font-weight: 900 !important;
@@ -146,12 +152,12 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
 
-        }
-
+        } */
+        /* 
         .navbar-toggler-icon {
             width: 4em !important;
 
-        }
+        } */
 
         /* services section css */
         .servicesText.card {
@@ -518,7 +524,44 @@
 
         }
 
-        .btn-dark {}
+        .dropdown-toggle::after {
+            display: none !important;
+        }
+
+        .text-decoration-none {
+            text-decoration: none !important;
+        }
+
+        /* Font Awesome Icons have variable width. Added fixed width to fix that.*/
+        .icon-width {
+            width: 2rem !important;
+        }
+
+        .fa-brands,
+        .fab {
+            margin-right: 1.2rem !important;
+        }
+
+
+
+
+        .navbar-collapse {
+            font-size: 1rem !important;
+            margin-left: 0.5rem !important;
+            margin-right: 0.5rem !important;
+
+
+        }
+
+        .btn:focus,
+        .btn:active {
+            outline: none !important;
+            box-shadow: none;
+        }
+
+        #startButton:hover {
+            background: rgba(253, 193, 104, 1) !important;
+        }
     </style>
 
     <link rel="stylesheet" href="{{ mix('css/app.css') }}" type="text/css">
@@ -529,7 +572,7 @@
     <div id="app"></div>
 
     <!-- NAVBAR -->
-    <nav class="navbar navbar-xs navbar-expand-lg    fixed-top navbarScroll">
+    <!-- <nav class="navbar navbar-xs navbar-expand-lg    fixed-top navbarScroll">
         <div class="container">
             <a id="icon" class="navbar-brand" href="#">
                 <div id="opacityAnimation"><img src="imgs/icon.png" class="rounded mx-auto d-block" height="100px" width="100px"></div>
@@ -558,7 +601,83 @@
 
             </div>
         </div>
+    </nav> -->
+
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm bg-light fixed-top">
+        <div class="container"> <a class="navbar-brand d-flex align-items-center" href="#">
+                <svg width="40px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                    <g>
+                        <g>
+                            <path d="M511.981,118.509c-0.135-2.956-1.892-5.726-4.565-7.04l-159.24-79.62c-3.776-1.887-8.363-0.64-10.664,2.898 L229.916,200.282l-55.413-85.891c-0.796-1.235-1.945-2.264-3.259-2.922l-159.24-79.62C6.582,29.138,0,33.218,0,39.268v79.621 c0,4.581,3.712,8.294,8.294,8.294c4.581,0,8.294-3.712,8.294-.294V52.687l142.652,71.326v335.32L16.587,388.008V154.277	c0-4.581-3.712-8.294-8.294-8.294c-4.581,0-8.294,3.712-8.294,8.294v238.857c0,3.142,1.775,6.013,4.585,7.418l159.24,79.62	c5.427,2.714,12.003-1.375,12.003-7.418V318.087l324.17,162.085c5.427,2.714,12.003-1.375,12.003-7.418V118.888	C512,118.76,511.987,118.636,511.981,118.509z M175.827,299.541v-152.5l145.239,225.12L175.827,299.541z M495.413,459.335
+l-139.34-69.671l108.576-186.993c2.299-3.961,0.952-9.037-3.009-11.337c-3.96-2.298-9.036-0.953-11.337,3.009L344.094,377.258
+L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,9.037,3.009,11.337	c3.958,2.297,9.035,0.953,11.337-3.009l15.354-26.443V459.335z" fill="#000" />
+                        </g>
+                    </g>
+                </svg>
+                <span class="ml-3 font-weight-bold">Logo</apan>
+            </a> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar4">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbar4">
+                <ul class="navbar-nav mr-auto pl-lg-4">
+                    <li class="nav-item px-lg-2 active"> <a class="nav-link" href="#about"> <span class="d-inline-block d-lg-none icon-width"><i class="fas fa-home"></i></span>Über Uns</a> </li>
+                    <li class="nav-item px-lg-2"> <a class="nav-link" href="#services"><span class="d-inline-block d-lg-none icon-width"><i class="fas fa-spa"></i></span>Services</a> </li>
+                    <li class="nav-item px-lg-2"> <a class="nav-link" href="#home"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-user"></i></i></span>Home</a> </li>
+
+                    <li class="nav-item px-lg-2 dropdown d-menu">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-caret-square-down"></i></span>Info
+                            <svg id="arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu shadow-sm sm-menu" aria-labelledby="dropdown01">
+                            <a class="dropdown-item" id="dropdown-nav" href="#gallery">Galerie</a>
+                            <a class="dropdown-item" id="dropdown-nav1" href="#portfolio">Portfolio</a>
+                            <a class="dropdown-item" id="dropdown-nav2" href="#gallery">Something else here</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item px-lg-2"> <a class="nav-link" href="#contact"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-envelope"></i></span>Kontakt</a> </li>
+                </ul>
+
+            </div>
+            <ul class="navbar-nav mr-auto ml-auto ml-20 mt-3 mt-lg-0" id="ficons">
+                <li class="nav-item"> <a class="nav-link" href="#">
+                        <i class="fab fa-twitter"></i><span class="d-lg-none ml-3">Twitter</span>
+                    </a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#">
+                        <i class="fab fa-facebook"></i><span class="d-lg-none ml-3">Facebook</span>
+                    </a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#">
+                        <i class="fab fa-instagram"></i><span class="d-lg-none ml-3">Instagram</span>
+                    </a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#">
+                        <i class="fab fa-linkedin"></i><span class="d-lg-none ml-3">Linkedin</span>
+                    </a> </li>
+            </ul>
+
+
+        </div>
     </nav>
+
+
+    <!--The html below this line is for display purpose only-->
+
+    <div class="py-5 text-center text-white bg-dark">
+        <div class="container py-5">
+            <div class="row py-5">
+                <div class="mx-auto col-lg-10">
+                    <h1 class="display-4 mb-4 ">Das ist ein Titel als Info </h1>
+                    <p class="lead mb-5">There is nothing more rare, nor more beautiful,
+                        than a woman being unapologetically herself; comfortable in her perfect imperfection.
+                        To me, that is the true essence of beauty. </p>
+                    <a href="#home" id="startButton" class="btn btn-lg btn-outline-light mx-1" style="border-radius: 40px; background: white;">Mehr Erfahren</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -577,7 +696,7 @@
     <!-- about section-->
     <section id="about">
         <div id="aboutText" class="container mt-4 pt-4">
-            <h1 class="text-center"><u>Über Uns</u>&nbsp;<i style="font-size: 1.5rem;" class="fa-solid fa-people-carry-box"></i></h1>
+            <h1 class="text-center"><u>Unser Team</u>&nbsp;<i style="font-size: 1.5rem;" class="fa-solid fa-people-carry-box"></i></h1>
             <div class="row mt-4">
                 <div class="col-lg-4">
                     <img src="https://img.freepik.com/free-photo/team-janitors-cleaning-office_392895-8040.jpg?size=626&ext=jpg" class="imageAboutPage" alt="">
@@ -605,7 +724,7 @@
     <!-- services section-->
     <section id="services">
         <div class="container">
-            <h1 class="text-center"><u>Unsere Dienstleistungen </u>&nbsp;<i style="font-size: 1.5rem;" class="fa-solid fa-briefcase"></i></h1>
+            <h1 class="text-center"><u>Dienstleistungen </u>&nbsp;<i style="font-size: 1.5rem;" class="fa-solid fa-briefcase"></i></h1>
             <div class="row align-items-end">
                 <div class="col-lg-4 mt-4">
                     <div class="card servicesText" style="height: 470px;">
@@ -966,36 +1085,36 @@
 </html>
 <script>
     // Adds Title for Mobile Navbar
-    var el = document.getElementsByClassName('navbar-toggler-icon')[0]
+    // var el = document.getElementsByClassName('navbar-toggler-icon')[0]
 
-    if (el) {
-        const para = document.createElement("p");
-        const node = document.createTextNode("Menu");
-        para.appendChild(node);
-        el.appendChild(para);
+    // if (el) {
+    //     const para = document.createElement("p");
+    //     const node = document.createTextNode("Menu");
+    //     para.appendChild(node);
+    //     el.appendChild(para);
 
-    }
+    // }
 
 
     // Adds class navbarDark on navbar scroll
-    const header = document.querySelector('.navbar');
+    // const header = document.querySelector('.navbar');
 
-    const navButton = document.querySelector('.navbar-toggler')
+    // const navButton = document.querySelector('.navbar-toggler')
 
-    window.onscroll = function() {
-        var top = window.scrollY
-        navButton.style.display = "none"
+    // window.onscroll = function() {
+    //     var top = window.scrollY
+    //     navButton.style.display = "none"
 
 
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && top > 99) {
-            navButton.style.display = "flex"
-        }
-        if (top >= 100) {
-            header.classList.add('navbarDark');
-        } else {
-            header.classList.remove('navbarDark');
-        }
-    }
+    //     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && top > 99) {
+    //         navButton.style.display = "flex"
+    //     }
+    //     if (top >= 100) {
+    //         header.classList.add('navbarDark');
+    //     } else {
+    //         header.classList.remove('navbarDark');
+    //     }
+    // }
 
 
     //sends formular if clicked
@@ -1092,4 +1211,27 @@
         bgImage.className = 'bgimageDesktop'
 
     }
+
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        // if smartphone user
+        const ficon = document.getElementById('ficons');
+        ficon.style.display = 'none';
+
+    }
+
+    $(document).ready(function() {
+        if ($(window).width() > 991) {
+            $('.navbar-light .d-menu').hover(function() {
+                $(this).find('.sm-menu').first().stop(true, true).slideDown(150);
+            }, function() {
+                $(this).find('.sm-menu').first().stop(true, true).delay(120).slideUp(100);
+            });
+        }
+    });
+    $(document).ready(function() {
+        // Handler for .ready() called.
+        $('html, body').animate({
+            scrollTop: $('#home').offset().top
+        }, 'slow');
+    });
 </script>

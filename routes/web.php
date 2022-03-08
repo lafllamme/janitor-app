@@ -16,7 +16,9 @@ use Illuminate\Support\Facades\URL;
 */
 
 Route::get('/', function () {
+    Artisan::call('storage:link');
     return view('welcome');
+    
 });
 
 Route::post('sendFormular', [ContactController::class, 'index']);
