@@ -1231,7 +1231,16 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
     $(document).ready(function() {
         // Handler for .ready() called.
         $('html, body').animate({
-            scrollTop: $('#home').offset().top
-        }, 'slow');
+            scrollTop: $('#contact').offset().top
+        }, 3000);
     });
+
+    try {
+        console.log('OK')
+        var type = "{{ json_encode(Session::get('success'))}"
+        console.log(type);
+
+    } catch (err) {
+        console.log(err);
+    }
 </script>
