@@ -641,22 +641,22 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
 
                     <li class="nav-item px-lg-2"> <a class="nav-link" href="#contact"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-envelope"></i></span>Kontakt</a> </li>
                 </ul>
-
+                <ul class="navbar-nav mr-auto ml-auto ml-20 mt-3 mt-lg-0" id="ficons">
+                    <li class="nav-item"> <a class="nav-link" href="#">
+                            <i class="fab fa-twitter"></i><span class="d-lg-none ml-3">Twitter</span>
+                        </a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#">
+                            <i class="fab fa-facebook"></i><span class="d-lg-none ml-3">Facebook</span>
+                        </a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#">
+                            <i class="fab fa-instagram"></i><span class="d-lg-none ml-3">Instagram</span>
+                        </a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#">
+                            <i class="fab fa-linkedin"></i><span class="d-lg-none ml-3">Linkedin</span>
+                        </a> </li>
+                </ul>
             </div>
-            <ul class="navbar-nav mr-auto ml-auto ml-20 mt-3 mt-lg-0" id="ficons">
-                <li class="nav-item"> <a class="nav-link" href="#">
-                        <i class="fab fa-twitter"></i><span class="d-lg-none ml-3">Twitter</span>
-                    </a> </li>
-                <li class="nav-item"> <a class="nav-link" href="#">
-                        <i class="fab fa-facebook"></i><span class="d-lg-none ml-3">Facebook</span>
-                    </a> </li>
-                <li class="nav-item"> <a class="nav-link" href="#">
-                        <i class="fab fa-instagram"></i><span class="d-lg-none ml-3">Instagram</span>
-                    </a> </li>
-                <li class="nav-item"> <a class="nav-link" href="#">
-                        <i class="fab fa-linkedin"></i><span class="d-lg-none ml-3">Linkedin</span>
-                    </a> </li>
-            </ul>
+
 
 
         </div>
@@ -1212,12 +1212,12 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
 
     }
 
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        // if smartphone user
-        const ficon = document.getElementById('ficons');
-        ficon.style.display = 'none';
+    // if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    //     // if smartphone user
+    //     const ficon = document.getElementById('ficons');
+    //     ficon.style.display = 'none';
 
-    }
+    // }
 
     $(document).ready(function() {
         if ($(window).width() > 991) {
