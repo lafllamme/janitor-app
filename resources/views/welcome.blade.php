@@ -562,6 +562,12 @@
         #startButton:hover {
             background: rgba(253, 193, 104, 1) !important;
         }
+
+        .btn:focus,
+        .btn:active {
+            outline: none !important;
+            box-shadow: none !important;
+        }
     </style>
 
     <link rel="stylesheet" href="{{ mix('css/app.css') }}" type="text/css">
@@ -615,7 +621,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                     </g>
                 </svg>
                 <span class="ml-3 font-weight-bold">Logo</span> -->
-                <img src="storage/icons/icon.png" width="50" height="50" alt>
+                <img src="storage/icons/icon.png" width="75" height="75" id="opacityAnimation" alt>
             </a> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar4">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -965,7 +971,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
             <div class="row justify-content-center">
                 <div class="col">
                     <div class="gallery">
-                        <div class="box" tabindex="1" autofocus>
+                        <div class="box" tabindex="1">
                             <img src="http://unsplash.it/500/600?image=1" />
                         </div>
                         <div class="box" tabindex="2">
@@ -1230,11 +1236,10 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
         }
     });
 
-    // $(document).ready(function() {
-    //     // Handler for .ready() called.
-    //     $('html, body').animate({
-    //         scrollTop: $('#contact').offset().top
-    //     }, 3000);
-    // });
-
+    $(document).ready(function() {
+        // Handler for .ready() called.
+        $('html, body').animate({
+            scrollTop: $('#home').offset().top
+        }, 'slow');
+    });
 </script>
