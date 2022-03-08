@@ -10,7 +10,7 @@
     <script src="storage/js/boostrap.min.js"></script>
     <script src="storage/js/popper.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="http://csshake.surge.sh/csshake-slow.min.css">
+    <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake-slow.min.css">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Hausmeisterservice</title>
@@ -18,7 +18,7 @@
     <!-- Fonts -->
     <!-- Styles -->
     <style>
-        @import url('http://fonts.cdnfonts.com/css/saysomething');
+        @import url('https://fonts.cdnfonts.com/css/saysomething');
 
 
         /* Main Font */
@@ -1176,7 +1176,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
         const error = document.getElementById("error")
         setTimeout(() => {
             msg.style.display = 'none';
-        }, 3500)
+        }, 6000)
     }
 
     const cards = document.querySelectorAll('.cards');
