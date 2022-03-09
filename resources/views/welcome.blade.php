@@ -1134,7 +1134,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
 
 
     <!-- contact section-->
-    <section id="contact">
+    <section>
         <div class="container mt-3 contactContent">
             <h1 class="text-center"><u>Kontakt</u>&nbsp;<i style="font-size: 1.5rem;" class="fa-solid fa-address-card"></i></h1>
 
@@ -1154,7 +1154,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                 </div>
 
 
-                <div class="col-lg-6">
+                <div class="col-lg-6" id="contact"  >
                     <!-- form fields -->
 
                     @if(Session::has('error'))
