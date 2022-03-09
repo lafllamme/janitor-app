@@ -42,6 +42,7 @@
 
         .navbar {
             font-family: 'Antipasto Pro', sans-serif !important;
+            opacity: 0.9;
         }
 
 
@@ -725,7 +726,7 @@
         </div>
     </nav> -->
 
-    <nav class="navbar navbar-expand-lg navbar-light shadow-sm bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm bg-light fixed-top" id="nav">
         <div class="container"> <a class="navbar-brand d-flex align-items-center" href="#">
                 <!-- <svg width="40px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
                     <g>
@@ -745,9 +746,9 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
 
             <div class="collapse navbar-collapse" id="navbar4">
                 <ul class="navbar-nav mr-auto pl-lg-4">
-                    <li class="nav-item px-lg-2 active"> <a class="nav-link" href="#about"> <span class="d-inline-block d-lg-none icon-width"><i class="fas fa-home" id="far"></i></span>Über Uns</a> </li>
-                    <li class="nav-item px-lg-2"> <a class="nav-link" href="#services"><span class="d-inline-block d-lg-none icon-width"><i class="fas fa-spa" id="far"></i></span>Services</a> </li>
-                    <li class="nav-item px-lg-2"> <a class="nav-link" href="#home"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-user" id="far"></i></i></span>Home</a> </li>
+                    <li class="nav-item px-lg-2 active"> <a class="nav-link" id="nav-link" href="#about"> <span class="d-inline-block d-lg-none icon-width"><i class="fas fa-home" id="far"></i></span>Über Uns</a> </li>
+                    <li class="nav-item px-lg-2"> <a class="nav-link" id="nav-link" href="#services"><span class="d-inline-block d-lg-none icon-width"><i class="fas fa-spa" id="far"></i></span>Services</a> </li>
+                    <li class="nav-item px-lg-2"> <a class="nav-link" id="nav-link" href="#home"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-user" id="far"></i></i></span>Home</a> </li>
 
                     <li class="nav-item px-lg-2 dropdown d-menu">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-caret-square-down"></i></span>Info
@@ -756,25 +757,25 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                             </svg>
                         </a>
                         <div class="dropdown-menu shadow-sm sm-menu" aria-labelledby="dropdown01">
-                            <a class="dropdown-item" id="dropdown-nav" href="#gallery">Galerie</a>
-                            <a class="dropdown-item" id="dropdown-nav1" href="#portfolio">Portfolio</a>
-                            <a class="dropdown-item" id="dropdown-nav2" href="#gallery">Something else here</a>
+                            <a class="dropdown-item" id="nav-link" href="#gallery">Galerie</a>
+                            <a class="dropdown-item" id="nav-link" href="#portfolio">Portfolio</a>
+                            <a class="dropdown-item" id="nav-link" href="#gallery">Something else here</a>
                         </div>
                     </li>
 
-                    <li class="nav-item px-lg-2"> <a class="nav-link" href="#contact"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-envelope"></i></span>Kontakt</a> </li>
+                    <li class="nav-item px-lg-2"> <a class="nav-link" id="nav-link" href="#contact"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-envelope"></i></span>Kontakt</a> </li>
                 </ul>
                 <ul class="navbar-nav mr-auto ml-auto ml-20 mt-3 mt-lg-0" id="ficons1">
-                    <li class="nav-item"> <a class="nav-link" href="#">
+                    <li class="nav-item"> <a class="nav-link" id="nav-link" href="#">
                             <i class="fab fa-twitter"></i><span class="d-lg-none ml-3">Twitter</span>
                         </a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="#">
+                    <li class="nav-item"> <a class="nav-link" id="nav-link" href="#">
                             <i class="fab fa-facebook"></i><span class="d-lg-none ml-3">Facebook</span>
                         </a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="#">
+                    <li class="nav-item"> <a class="nav-link" id="nav-link" href="#">
                             <i class="fab fa-instagram"></i><span class="d-lg-none ml-3">Instagram</span>
                         </a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="#">
+                    <li class="nav-item"> <a class="nav-link" id="nav-link" href="#">
                             <i class="fab fa-linkedin"></i><span class="d-lg-none ml-3">Linkedin</span>
                         </a> </li>
                 </ul>
@@ -1399,4 +1400,16 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
             }
         });
     });
+
+    // $('#nav-link').on('click', function() {
+    //     $('.navbar-collapse').collapse('hide');
+    // });
+
+    document.querySelectorAll("#nav-link")
+        .forEach(function(el) {
+            el.onclick = function() {
+                console.log(this.id)
+                $('.navbar-collapse').collapse('hide');
+            }
+        })
 </script>
