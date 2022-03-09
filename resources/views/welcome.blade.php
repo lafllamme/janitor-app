@@ -114,11 +114,11 @@
         }
 
         .nav-item>a {
-            font-size: 1.5rem;
+            font-size: 1rem;
         }
 
         .dropdown-item {
-            font-size: 1.5rem;
+            font-size: 1rem;
 
 
         }
@@ -126,7 +126,7 @@
         .nav-item>a:hover,
         .dropdown-item:hover {
             /* font-family: 'myWebFont'; */
-            font-size: 2rem;
+            font-size: 1.5rem;
             color: white;
             -webkit-text-stroke: 0.5px black;
             transition: font 0.6s ease
