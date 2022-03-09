@@ -1188,9 +1188,9 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
             <h1 class="text-center shake" style="margin-top: 10rem;"><u>Kontakt</u>&nbsp;<i style="font-size: 2rem;" class="fa-solid fa-address-card"></i></h1>
 
             <div class="row">
-                <div class="col">
+                <div class="col-lg-6">
                     <!-- to edit google map goto https://www.embed-map.com type your location, generate html code and copy the html  -->
-                    <div style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:500px;height:500px;margin-top:7rem;">
+                    <div style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:500px;height:500px;margin-top:7rem; padding-bottom: -5rem;">
                         <div id="googlemaps-display" style="height:100%; width:100%;max-width:100%;">
                             <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Hansaring+32,+Köln&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
                             </iframe>
@@ -1206,8 +1206,8 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                 </div>
 
 
-                <div class="col-6" id="contact">
-                    <div class="alert alert-light" role="alert">
+                <div class="col-lg-6" id="contact">
+                    <div class="alert alert-light mb-4" role="alert">
                         Beschreiben Sie ihr Anliegen! Wo brauchen Sie Hilfe?
                     </div>
                 
@@ -1257,7 +1257,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                     <div class=" input-group-lg mt-3">
                         <textarea name="description" class="form-control" rows="5" id="comment" name="text" placeholder="Weitere Infos" required></textarea>
                     </div>
-                    <div class="row justify-content-center"> <button class="btn btn-dark mt-3" style="border-radius: 20px;" type="submit">Senden</button>
+                    <div class="row justify-content-center"> <button class="btn btn-dark mt-3" style="border-radius: 20px; width: 10rem;" type="submit">Senden</button>
                     </div>
                 </form>
 
