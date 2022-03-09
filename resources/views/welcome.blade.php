@@ -113,7 +113,7 @@
             font-size: 1.5rem;
             color: white;
             -webkit-text-stroke: 0.5px black;
-            transition: font 0.5s ease
+            transition: font 0.6s ease
         }
 
 
@@ -648,7 +648,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
 
                     <li class="nav-item px-lg-2"> <a class="nav-link" href="#contact"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-envelope"></i></span>Kontakt</a> </li>
                 </ul>
-                <ul class="navbar-nav mr-auto ml-auto ml-20 mt-3 mt-lg-0" id="ficons">
+                <ul class="navbar-nav mr-auto ml-auto ml-20 mt-3 mt-lg-0" id="ficons1">
                     <li class="nav-item"> <a class="nav-link" href="#">
                             <i class="fab fa-twitter"></i><span class="d-lg-none ml-3">Twitter</span>
                         </a> </li>
@@ -663,6 +663,21 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                         </a> </li>
                 </ul>
             </div>
+            <ul class="navbar-nav mr-auto ml-auto ml-20 mt-3 mt-lg-0" id="ficons">
+                <li class="nav-item"> <a class="nav-link" href="#">
+                        <i class="fab fa-twitter"></i><span class="d-lg-none ml-3">Twitter</span>
+                    </a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#">
+                        <i class="fab fa-facebook"></i><span class="d-lg-none ml-3">Facebook</span>
+                    </a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#">
+                        <i class="fab fa-instagram"></i><span class="d-lg-none ml-3">Instagram</span>
+                    </a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#">
+                        <i class="fab fa-linkedin"></i><span class="d-lg-none ml-3">Linkedin</span>
+                    </a> </li>
+            </ul>
+
 
 
 
@@ -672,7 +687,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
 
     <!--The html below this line is for display purpose only-->
 
-    <div class="py-5 text-center text-white bg-dark">
+    <!-- <div class="py-5 text-center text-white bg-dark">
         <div class="container py-5">
             <div class="row py-5">
                 <div class="mx-auto col-lg-10">
@@ -684,7 +699,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
 
@@ -1216,6 +1231,11 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
 
         var bgImage = document.getElementById('home');
         bgImage.className = 'bgimageDesktop'
+        document.getElementById("ficons1").style.display = 'none';
+
+    }
+    else {
+        document.getElementById("ficons").style.display = 'none';
 
     }
 
@@ -1236,10 +1256,10 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
         }
     });
 
-    $(document).ready(function() {
-        // Handler for .ready() called.
-        $('html, body').animate({
-            scrollTop: $('#home').offset().top
-        }, 'slow');
-    });
+    // $(document).ready(function() {
+    //     // Handler for .ready() called.
+    //     $('html, body').animate({
+    //         scrollTop: $('#home').offset().top
+    //     }, 'slow');
+    // });
 </script>
