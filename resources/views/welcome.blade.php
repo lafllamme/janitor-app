@@ -15,11 +15,12 @@
 
     <title>Hausmeisterservice</title>
 
+
     <!-- Fonts -->
     <!-- Styles -->
     <style>
         @import url('https://fonts.cdnfonts.com/css/saysomething');
-
+        @import url('http://fonts.cdnfonts.com/css/antipasto-pro');
 
         /* Main Font */
         @font-face {
@@ -37,6 +38,18 @@
             background-image: linear-gradient(92.7deg, rgba(245, 212, 212, 1) 8.5%, rgba(252, 251, 224, 1) 90.2%) !important;
             width: 100%;
             overflow-x: hidden;
+        }
+
+        .navbar {
+            font-family: 'Antipasto Pro', sans-serif !important;
+        }
+
+
+        a:active {
+            background-color: #FBAB7E !important;
+            background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%) !important;
+            border-radius: 1.2rem;
+            color: black !important;
         }
 
 
@@ -63,7 +76,7 @@
 
         /* text css above hero image*/
         .hero_title {
-            font-size: 4.5rem;
+            font-size: 3.5rem;
 
         }
 
@@ -100,17 +113,20 @@
 
         }
 
-        /* .nav-item>a {
-            font-family: 'myWebFont';
-            font-size: 2.5rem;
-            color: black;
+        .nav-item>a {
+            font-size: 1.5rem;
+        }
 
-        } */
+        .dropdown-item {
+            font-size: 1.5rem;
+
+
+        }
 
         .nav-item>a:hover,
         .dropdown-item:hover {
             /* font-family: 'myWebFont'; */
-            font-size: 1.5rem;
+            font-size: 2rem;
             color: white;
             -webkit-text-stroke: 0.5px black;
             transition: font 0.6s ease
@@ -216,6 +232,11 @@
 
         .fab {
             color: black;
+        }
+
+        .far {
+            color: black;
+            margin-right: 1.2rem !important;
         }
 
 
@@ -568,6 +589,101 @@
             outline: none !important;
             box-shadow: none !important;
         }
+
+        @import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+
+        #div {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        #div:first-of-type {
+            /* For increasing performance 
+                       ID/Class should've been used. 
+                       For a small demo 
+                       it's okaish for now */
+            animation: showup 7s infinite;
+        }
+
+        #div:last-of-type {
+            width: 0px;
+            animation: reveal 7s infinite;
+        }
+
+        #div:last-of-type span {
+            margin-left: -355px;
+            animation: slidein 7s infinite;
+        }
+
+        @keyframes showup {
+            0% {
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes slidein {
+            0% {
+                margin-left: -800px;
+            }
+
+            20% {
+                margin-left: -800px;
+            }
+
+            35% {
+                margin-left: 0px;
+            }
+
+            100% {
+                margin-left: 0px;
+            }
+        }
+
+        @keyframes reveal {
+            0% {
+                opacity: 0;
+                width: 0px;
+            }
+
+            20% {
+                opacity: 1;
+                width: 0px;
+            }
+
+            30% {
+                width: 355px;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+                width: 355px;
+            }
+        }
+
+
+        #p {
+            font-size: 12px;
+            color: #999;
+            margin-top: 200px;
+        }
     </style>
 
     <link rel="stylesheet" href="{{ mix('css/app.css') }}" type="text/css">
@@ -629,9 +745,9 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
 
             <div class="collapse navbar-collapse" id="navbar4">
                 <ul class="navbar-nav mr-auto pl-lg-4">
-                    <li class="nav-item px-lg-2 active"> <a class="nav-link" href="#about"> <span class="d-inline-block d-lg-none icon-width"><i class="fas fa-home"></i></span>Über Uns</a> </li>
-                    <li class="nav-item px-lg-2"> <a class="nav-link" href="#services"><span class="d-inline-block d-lg-none icon-width"><i class="fas fa-spa"></i></span>Services</a> </li>
-                    <li class="nav-item px-lg-2"> <a class="nav-link" href="#home"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-user"></i></i></span>Home</a> </li>
+                    <li class="nav-item px-lg-2 active"> <a class="nav-link" href="#about"> <span class="d-inline-block d-lg-none icon-width"><i class="fas fa-home" id="far"></i></span>Über Uns</a> </li>
+                    <li class="nav-item px-lg-2"> <a class="nav-link" href="#services"><span class="d-inline-block d-lg-none icon-width"><i class="fas fa-spa" id="far"></i></span>Services</a> </li>
+                    <li class="nav-item px-lg-2"> <a class="nav-link" href="#home"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-user" id="far"></i></i></span>Home</a> </li>
 
                     <li class="nav-item px-lg-2 dropdown d-menu">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-caret-square-down"></i></span>Info
@@ -707,9 +823,16 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
     <section class="bgimage" id="home">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
-                    <h2 class="hero_title">Herzlich Willkommen </h2>
-                    <p class="hero_desc">bei Hausmeisterservice Augustin
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text" onclick="scrollDown()">
+                    <!-- <h2 class="hero_title">Herzlich Willkommen </h2>
+                    <p class="hero_desc">bei Hausmeisterservice Augustin -->
+                    <div id="div" class="hero_title" onclick="scrollDown()">Herzlich Willkommen</div>
+                    <div id="div" class="hero_desc" onclick="scrollDown()">
+                        <span>bei Hausmeisterservice Augustin</span>
+                    </div>
+
+
+                    <!-- <p id="p">a css3 animation demo</p> -->
                 </div>
             </div>
         </div>
@@ -1233,8 +1356,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
         bgImage.className = 'bgimageDesktop'
         document.getElementById("ficons1").style.display = 'none';
 
-    }
-    else {
+    } else {
         document.getElementById("ficons").style.display = 'none';
 
     }
@@ -1256,10 +1378,25 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
         }
     });
 
-    // $(document).ready(function() {
-    //     // Handler for .ready() called.
-    //     $('html, body').animate({
-    //         scrollTop: $('#home').offset().top
-    //     }, 'slow');
-    // });
+    const scrollDown = () => {
+        // Handler for .ready() called.
+        $('html, body').animate({
+            scrollTop: $('#about').offset().top
+        }, 200, 'swing');
+    }
+
+    $(function() {
+        $('a[href*=\\#]:not([href=\\#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 500);
+                    return false;
+                }
+            }
+        });
+    });
 </script>
