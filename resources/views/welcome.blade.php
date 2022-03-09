@@ -10,7 +10,7 @@
     <script src="storage/js/boostrap.min.js"></script>
     <script src="storage/js/popper.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake-slow.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake-slow.min.css"> -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Hausmeisterservice</title>
@@ -258,14 +258,13 @@
 
 
         #services {
-            padding-top: 4rem;
+            padding-top: 2rem;
         }
 
         #contact {
             padding-bottom: 4rem;
         }
 
-        #services,
         #about,
         #gallery,
         #portfolio {
@@ -273,6 +272,13 @@
             font-weight: 900;
             font-size: 1rem;
         }
+
+        #services {
+            font-family: 'secondFont', sans-serif;
+            font-weight: 900;
+            font-size: 0.95rem;
+        }
+
 
         #contact {
             font-family: 'SaySomething', sans-serif;
@@ -326,9 +332,6 @@
             transform: scale(0.9);
         }
 
-        #spacedown {
-            margin-bottom: 3rem;
-        }
 
         #highlight {
             position: fixed;
@@ -392,9 +395,9 @@
         }
 
         h1 {
-            font-size: 3rem !important;
+            font-size: 2.3rem !important;
             margin-bottom: 50px !important;
-            position: relative !important;
+            position: flex !important;
             font-family: 'SaySomething', sans-serif;
             font-weight: 900;
 
@@ -684,6 +687,52 @@
             color: #999;
             margin-top: 200px;
         }
+
+        .shake {
+            animation: shake-animation 4.72s ease infinite;
+            transform-origin: 50% 50%;
+        }
+
+        .element {
+            margin: 0 auto;
+            width: 150px;
+            height: 150px;
+            background: red;
+        }
+
+        @keyframes shake-animation {
+            0% {
+                transform: translate(0, 0)
+            }
+
+            1.78571% {
+                transform: translate(5px, 0)
+            }
+
+            3.57143% {
+                transform: translate(0, 0)
+            }
+
+            5.35714% {
+                transform: translate(5px, 0)
+            }
+
+            7.14286% {
+                transform: translate(0, 0)
+            }
+
+            8.92857% {
+                transform: translate(5px, 0)
+            }
+
+            10.71429% {
+                transform: translate(0, 0)
+            }
+
+            100% {
+                transform: translate(0, 0)
+            }
+        }
     </style>
 
     <link rel="stylesheet" href="{{ mix('css/app.css') }}" type="text/css">
@@ -841,7 +890,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
     <!-- about section-->
     <section id="about">
         <div id="aboutText" class="container mt-4 pt-4">
-            <h1 class="text-center"><u>Unser Team</u>&nbsp;<i style="font-size: 1.5rem;" class="fa-solid fa-people-carry-box"></i></h1>
+            <h1 class="text-center shake"><u>Unser Team</u>&nbsp;<i style="font-size: 1.5rem;" class="fa-solid fa-people-carry-box"></i></h1>
             <div class="row mt-4">
                 <div class="col-lg-4">
                     <img src="https://img.freepik.com/free-photo/team-janitors-cleaning-office_392895-8040.jpg?size=626&ext=jpg" class="imageAboutPage" alt="">
@@ -869,7 +918,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
     <!-- services section-->
     <section id="services">
         <div class="container">
-            <h1 class="text-center"><u>Dienstleistungen </u>&nbsp;<i style="font-size: 1.5rem;" class="fa-solid fa-briefcase"></i></h1>
+            <h1 class="text-center shake"><u>Dienstleistungen </u>&nbsp;<i style="font-size: 1.5rem;" class="fa-solid fa-briefcase"></i></h1>
             <div class="row align-items-end">
                 <div class="col-lg-4 mt-4">
                     <div class="card servicesText" style="height: 470px;">
@@ -1001,7 +1050,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
     <!-- portfolio section-->
     <section id="portfolio">
         <div class="container mt-3">
-            <h1 class="text-center" style="margin-top: -75px;"><u>Portfolio</u>&nbsp;<i style="font-size: 1.5rem;" id="hoverme" onclick="document.getElementById('myModal').style.display = 'block';" class="fa-solid fa-circle-info"></i></h1>
+            <h1 class="text-center shake" style="margin-top: -75px;"><u>Portfolio</u>&nbsp;<i style="font-size: 1.5rem;" id="hoverme" onclick="document.getElementById('myModal').style.display = 'block';" class="fa-solid fa-circle-info"></i></h1>
             <div class="row">
                 <div id="smaller" class="col-sm-4">
                     <div id="card" class="card">
@@ -1104,7 +1153,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
 
     <section id="gallery">
         <div class="container pt-4">
-            <h1 class="text-center mb-10"><u>Galerie</u>&nbsp;<i style="font-size: 1.5rem;" class="fa-solid fa-images"></i></h1>
+            <h1 class="text-center mb-10 shake" style="margin-top: 6rem;"><u>Galerie</u>&nbsp;<i style="font-size: 2rem;" class="fa-solid fa-images"></i></h1>
             <br>
             <div class="row justify-content-center">
                 <div class="col">
@@ -1135,14 +1184,17 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
 
     <!-- contact section-->
     <section>
-        <div class="container mt-3 contactContent">
-            <h1 class="text-center"><u>Kontakt</u>&nbsp;<i style="font-size: 1.5rem;" class="fa-solid fa-address-card"></i></h1>
+        <div class="container">
+            <h1 class="text-center shake" style="margin-top: 10rem;"><u>Kontakt</u>&nbsp;<i style="font-size: 2rem;" class="fa-solid fa-address-card"></i></h1>
 
-            <div class="row mt-4">
-                <div class="col-lg-6" id="spacedown">
+            <div class="row">
+                <div class="col">
                     <!-- to edit google map goto https://www.embed-map.com type your location, generate html code and copy the html  -->
-                    <div style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:500px;height:500px;">
-                        <div id="googlemaps-display" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Hansaring+32,+Köln&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="googlehtml" rel="nofollow" href="https://www.embed-map.com" id="grab-mapdata">https://www.embed-map.com</a>
+                    <div style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:500px;height:500px;margin-top:7rem;">
+                        <div id="googlemaps-display" style="height:100%; width:100%;max-width:100%;">
+                            <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Hansaring+32,+Köln&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
+                            </iframe>
+                        </div><a class="googlehtml" rel="nofollow" href="https://www.embed-map.com" id="grab-mapdata">https://www.embed-map.com</a>
                         <style>
                             .map-generator {
                                 max-width: 100%;
@@ -1154,63 +1206,67 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                 </div>
 
 
-                <div class="col-lg-6" id="contact"  >
-                    <!-- form fields -->
-
-                    @if(Session::has('error'))
-                    <div id="error" class="alert alert-danger">
-                        {{ Session::get('error')}}
+                <div class="col-6" id="contact">
+                    <div class="alert alert-light" role="alert">
+                        Beschreiben Sie ihr Anliegen! Wo brauchen Sie Hilfe?
                     </div>
-                    @endif
+                
+                <!-- form fields -->
 
-                    @if(Session::has('success'))
-                    <div id="success" class="alert alert-success">
-                        {{ Session::get('success')}}
-                    </div>
-                    @endif
-
-
-                    <form id="form" name="contact" action="{{url('sendFormular')}}" class="needs-validation" method="post">
-                        @csrf
-
-                        <input type="text" class="form-control mb-3 form-control-lg" name="name" placeholder="Name, Vorname" required>
-
-                        <div class="input-group  mb-3 input-group-lg">
-                            <input type="text" class="form-control" name="email" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" required>
-                            <span class="input-group-text" id="basic-addon1">@</span>
-
-                        </div>
-
-                        <div class="input-group  mb-3 input-group-lg">
-                            <select name="service" class="form-select" id="inputGroupSelect02" required>
-                                <option selected value="">Auswahl...</option>
-                                <option value="Gartenpflege">Gartenpflege</option>
-                                <option value="Winterdienst">Winterdienst</option>
-                                <option value="Objektbetreung">Objektbetreung</option>
-                                <option value="Entrümpelung">Entrümpelung</option>
-                                <option value="Klein Reparaturen">Klein Reparaturen</option>
-                                <option value="Objektreinigung">Objektreinigung</option>
-                                <option value="Sonstiges">Sonstiges</option>
-                            </select>
-                            <label class="input-group-text" for="inputGroupSelect02">Service</label>
-                        </div>
-
-                        <div class="input-group mb-3">
-                            <span class="input-group-text" id="basic-addon1"><i class="bi bi-telephone"></i></span>
-                            <input type="number" name="phonenumber" class="form-control" placeholder="+49....">
-                        </div>
-                        <div class=" input-group-lg mt-3">
-                            <textarea name="description" class="form-control" rows="5" id="comment" name="text" placeholder="Weitere Infos" required></textarea>
-                        </div>
-                        <div class="row justify-content-center"> <button class="btn btn-dark mt-3" style="border-radius: 20px;" type="submit">Senden</button>
-                        </div>
-                    </form>
-
+                @if(Session::has('error'))
+                <div id="error" class="alert alert-danger">
+                    {{ Session::get('error')}}
                 </div>
+                @endif
+
+                @if(Session::has('success'))
+                <div id="success" class="alert alert-success">
+                    {{ Session::get('success')}}
+                </div>
+                @endif
+
+
+
+                <form id="form" name="contact" action="{{url('sendFormular')}}" class="needs-validation" method="post">
+                    @csrf
+                    <input type="text" class="form-control mb-3 form-control-lg" name="name" placeholder="Name, Vorname" required>
+                    <div class="input-group  mb-3 input-group-lg">
+                        <input type="text" class="form-control" name="email" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" required>
+                        <span class="input-group-text" id="basic-addon1">@</span>
+
+                    </div>
+
+                    <div class="input-group  mb-3 input-group-lg">
+                        <select name="service" class="form-select" id="inputGroupSelect02" required>
+                            <option selected value="">Auswahl...</option>
+                            <option value="Gartenpflege">Gartenpflege</option>
+                            <option value="Winterdienst">Winterdienst</option>
+                            <option value="Objektbetreung">Objektbetreung</option>
+                            <option value="Entrümpelung">Entrümpelung</option>
+                            <option value="Klein Reparaturen">Klein Reparaturen</option>
+                            <option value="Objektreinigung">Objektreinigung</option>
+                            <option value="Sonstiges">Sonstiges</option>
+                        </select>
+                        <label class="input-group-text" for="inputGroupSelect02">Service</label>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="bi bi-telephone"></i></span>
+                        <input type="number" name="phonenumber" class="form-control" placeholder="+49....">
+                    </div>
+                    <div class=" input-group-lg mt-3">
+                        <textarea name="description" class="form-control" rows="5" id="comment" name="text" placeholder="Weitere Infos" required></textarea>
+                    </div>
+                    <div class="row justify-content-center"> <button class="btn btn-dark mt-3" style="border-radius: 20px;" type="submit">Senden</button>
+                    </div>
+                </form>
 
             </div>
+
+        </div>
         </div>
     </section>
+
     <!-- footer section-->
     <footer id="footer">
         <div class="container-fluid">
