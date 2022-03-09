@@ -42,7 +42,6 @@
 
         .navbar {
             font-family: 'Antipasto Pro', sans-serif !important;
-            opacity: 0.9;
         }
 
 
