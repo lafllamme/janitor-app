@@ -266,7 +266,7 @@ $(document).ready(function () {
 if ($('#success').length > 0) {
     $("#regular").remove();
     $([document.documentElement, document.body]).animate({
-        scrollTop: $("#success").offset().top - 50
+        scrollTop: $("#success").offset().top - 75
     }, 2000);
 }
 
@@ -274,7 +274,7 @@ if ($('#error').length > 0) {
     $("#regular").remove();
     $("#regular").remove();
     $([document.documentElement, document.body]).animate({
-        scrollTop: $("#error").offset().top
+        scrollTop: $("#error").offset().top - 75
     }, 2000);
 }
 
