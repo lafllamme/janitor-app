@@ -6,13 +6,12 @@
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <link rel="shortcut icon" href="/storage/icons/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/storage/icons/favicon.ico" type="image/x-icon">
     <script src="js/app.js" defer></script>
     <script src="js/scripts.js" defer></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" defer></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" defer></script>
+    <script src="storage/js/jquery.min.js" defer></script>
+    <script src="storage/js/bootstrap.min.js" defer></script>
     <link href="css/app.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="storage/css/app.css">
 
@@ -302,7 +301,7 @@
             <div class="row">
                 <div id="smaller" class="col-sm-4">
                     <div id="card" class="card">
-                        <img class="card-img-top" src="storage/images/a.jpeg" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="storage/images/a.webp" alt="Card image" style="width:100%">
                         <div class="card-body">
                             <h4 class="card-title">CURATA
                             </h4>
@@ -327,7 +326,7 @@
 
                 <div id="smaller" class="col-sm-4">
                     <div id="card" class="card portfolioContent">
-                        <img class="card-img-top" src="storage/images/b.jpeg" alt="Card image" style="width:100%;">
+                        <img class="card-img-top" src="storage/images/b.webp" alt="Card image" style="width:100%;">
                         <div class="card-body">
                             <h4 class="card-title">HAUSGRUND</h4>
                             <p class="card-text"> GmbH Hausverwaltung in Köln</p>
@@ -349,7 +348,7 @@
 
                 <div id="smaller" class="col-sm-4">
                     <div id="card" class="card portfolioContent">
-                        <img class="card-img-top" src="storage/images/c.jpeg"" alt=" Card image">
+                        <img class="card-img-top" src="storage/images/c.webp"" alt=" Card image">
                         <div class="card-body">
                             <h4 class="card-title">Münch </h4>
                             <p class="card-text">Wohnungsverwaltung GmbH</p>
@@ -383,7 +382,7 @@
             <div class="row">
                 <div id="smaller" class="col-sm-4">
                     <div id="card" class="card portfolioContent">
-                        <img class="card-img-top" src="storage/images/d.jpeg"" alt=" Card image" style="width:100%">
+                        <img class="card-img-top" src="storage/images/d.webp"" alt=" Card image" style="width:100%">
                         <div class="card-body">
                             <h4 class="card-title">
                                 Schleumer
@@ -407,7 +406,7 @@
 
                 <div id="smaller" class="col-sm-4">
                     <div id="card" class="card portfolioContent">
-                        <img class="card-img-top" src="storage/images/e.jpeg"" alt=" Card image" style="width:100%;">
+                        <img class="card-img-top" src="storage/images/e.webp"" alt=" Card image" style="width:100%;">
                         <div class="card-body">
                             <h4 class="card-title">ACTIVA</h4>
                             <p class="card-text">Hausverwaltungs-GmbH
@@ -430,7 +429,7 @@
 
                 <div id="smaller" class="col-sm-4">
                     <div id="card" class="card portfolioContent">
-                        <img class="card-img-top" src="storage/images/f.jpeg"" alt=" Card image" style="width:100%">
+                        <img class="card-img-top" src="storage/images/f.webp"" alt=" Card image" style="width:100%">
                         <div class="card-body">
                             <h4 class="card-title">Greif & Contzen</h4>
                             <p class="card-text">Immobilien GmbH</p>
@@ -469,15 +468,15 @@
 
         <div class="entire-content">
             <div class="content-carrousel">
-                <figure class="shadow"><img src="storage/images/1.jpg" /></figure>
-                <figure class="shadow"><img src="storage/images/2.jpeg" /></figure>
-                <figure class="shadow"><img src="storage/images/3.jpeg" /></figure>
-                <figure class="shadow"><img src="storage/images/4.jpeg" /></figure>
-                <figure class="shadow"><img src="storage/images/5.jpeg" /></figure>
-                <figure class="shadow"><img src="storage/images/6.jpeg" /></figure>
-                <figure class="shadow"><img src="storage/images/7.jpeg" /></figure>
-                <figure class="shadow"><img src="storage/images/8.jpeg" /></figure>
-                <figure class="shadow"><img src="storage/images/9.jpeg" /></figure>
+                <figure class="shadow"><img src="storage/images/1.webp" /></figure>
+                <figure class="shadow"><img src="storage/images/2.webp" /></figure>
+                <figure class="shadow"><img src="storage/images/3.webp" /></figure>
+                <figure class="shadow"><img src="storage/images/4.webp" /></figure>
+                <figure class="shadow"><img src="storage/images/5.webp" /></figure>
+                <figure class="shadow"><img src="storage/images/6.webp" /></figure>
+                <figure class="shadow"><img src="storage/images/7.webp" /></figure>
+                <figure class="shadow"><img src="storage/images/8.webp" /></figure>
+                <figure class="shadow"><img src="storage/images/9.webp" /></figure>
             </div>
         </div>
     </section>
