@@ -1604,6 +1604,151 @@
             border-color: transparent;
             background-color: currentColor;
         }
+
+        .slideshow-title {
+            font-family: 'Allerta Stencil';
+            font-size: 62px;
+            color: #fff;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 25%;
+            letter-spacing: 3px;
+            font-weight: 300;
+        }
+
+        .sub-heading {
+            padding-top: 50px;
+            font-size: 18px;
+        }
+
+        .sub-heading-two {
+            font-size: 15px;
+        }
+
+        .sub-heading-three {
+            font-size: 13px;
+        }
+
+        .sub-heading-four {
+            font-size: 11px;
+        }
+
+        .sub-heading-five {
+            font-size: 9px;
+        }
+
+        .sub-heading-six {
+            font-size: 7px;
+        }
+
+        .sub-heading-seven {
+            font-size: 5px;
+        }
+
+        .sub-heading-eight {
+            font-size: 3px;
+        }
+
+        .sub-heading-nine {
+            font-size: 1px;
+        }
+
+        .entire-content {
+            margin: auto;
+            width: 190px;
+            perspective: 1000px;
+            position: relative;
+            padding-top: 80px;
+        }
+
+        .content-carrousel {
+            width: 100%;
+            position: absolute;
+            float: right;
+            animation: rotar 15s infinite linear;
+            transform-style: preserve-3d;
+        }
+
+        .content-carrousel:hover {
+            animation-play-state: paused;
+            cursor: pointer;
+        }
+
+        .content-carrousel figure {
+            width: 100%;
+            height: 120px;
+            border: 1px solid #3b444b;
+            overflow: hidden;
+            position: absolute;
+        }
+
+        .content-carrousel figure:nth-child(1) {
+            transform: rotateY(0deg) translateZ(300px);
+        }
+
+        .content-carrousel figure:nth-child(2) {
+            transform: rotateY(40deg) translateZ(300px);
+        }
+
+        .content-carrousel figure:nth-child(3) {
+            transform: rotateY(80deg) translateZ(300px);
+        }
+
+        .content-carrousel figure:nth-child(4) {
+            transform: rotateY(120deg) translateZ(300px);
+        }
+
+        .content-carrousel figure:nth-child(5) {
+            transform: rotateY(160deg) translateZ(300px);
+        }
+
+        .content-carrousel figure:nth-child(6) {
+            transform: rotateY(200deg) translateZ(300px);
+        }
+
+        .content-carrousel figure:nth-child(7) {
+            transform: rotateY(240deg) translateZ(300px);
+        }
+
+        .content-carrousel figure:nth-child(8) {
+            transform: rotateY(280deg) translateZ(300px);
+        }
+
+        .content-carrousel figure:nth-child(9) {
+            transform: rotateY(320deg) translateZ(300px);
+        }
+
+        .content-carrousel figure:nth-child(10) {
+            transform: rotateY(360deg) translateZ(300px);
+        }
+
+        .shadow {
+            position: absolute;
+            box-shadow: 0px 0px 20px 0px #000;
+            border-radius: 1px;
+        }
+
+        .content-carrousel img {
+            image-rendering: auto;
+            transition: all 300ms;
+            width: 100%;
+            height: 100%;
+        }
+
+        .content-carrousel img:hover {
+            transform: scale(1.2);
+            transition: all 300ms;
+        }
+
+        @keyframes rotar {
+            from {
+                transform: rotateY(0deg);
+            }
+
+            to {
+                transform: rotateY(360deg);
+            }
+        }
     </style>
 
     <link rel="stylesheet" href="{{ mix('css/app.css') }}" type="text/css">
@@ -1682,7 +1827,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                         </div>
                     </li>
 
-                    <li class="nav-item px-lg-2"> <a class="nav-link" id="nav-link" href="#kontakt"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-envelope"></i></span>Kontakt</a> </li>
+                    <li class="nav-item px-lg-2"> <a class="nav-link" id="nav-link" href="#contact"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-envelope"></i></span>Kontakt</a> </li>
                 </ul>
                 <ul class="navbar-nav mr-auto ml-auto ml-20 mt-3 mt-lg-0" id="ficons1">
                     <li class="nav-item"> <a class="nav-link" id="nav-link" href="#">
@@ -2086,41 +2231,31 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
             </div>
     </section>
 
-    <section id="gallery">
-        <div class="container pt-4">
-            <h1 class="text-center mb-10 shake" style="margin-top: 6rem;"><u>Galerie</u>&nbsp;<i style="font-size: 2rem;" class="fa-solid fa-images"></i></h1>
-            <br>
-            <div class="row justify-content-center">
-                <div class="col">
-                    <div class="gallery">
-                        <div class="box" tabindex="1">
-                            <img src="storage/images/3.jpeg" />
-                        </div>
-                        <div class="box" tabindex="2">
-                            <img src="storage/images/4.jpeg" />
-                        </div>
-                        <div class="box" tabindex="3">
-                            <img src="storage/images/6.jpeg" />
-                        </div>
-                        <div class="box" tabindex="4">
-                            <img src="storage/images/2.jpeg" />
-                        </div>
-                        <div class="box" tabindex="5">
-                            <img src="storage/images/5.jpeg" />
-                        </div>
-                        <div class="box" tabindex="6">
-                            <img src="storage/images/1.jpeg" />
-                        </div>
-                    </div>
-                </div>
+    <section id="gallery"">
+        <section id=" slideshow">
+        <h1 class="text-center shake" style="margin-top: 6rem;"><u>Galerie</u>&nbsp;<i style="font-size: 2rem;" class="fa-solid fa-images"></i></h1>
+
+        <div class="entire-content">
+            <div class="content-carrousel">
+                <figure class="shadow"><img src="storage/images/1.jpg" /></figure>
+                <figure class="shadow"><img src="storage/images/2.jpeg" /></figure>
+                <figure class="shadow"><img src="storage/images/3.jpeg" /></figure>
+                <figure class="shadow"><img src="storage/images/4.jpeg" /></figure>
+                <figure class="shadow"><img src="storage/images/5.jpeg" /></figure>
+                <figure class="shadow"><img src="storage/images/6.jpeg" /></figure>
+                <figure class="shadow"><img src="storage/images/7.jpeg" /></figure>
+                <figure class="shadow"><img src="storage/images/8.jpeg" /></figure>
+                <figure class="shadow"><img src="storage/images/9.jpeg" /></figure>
             </div>
+        </div>
+    </section>
     </section>
 
 
     <!-- contact section-->
     <section>
         <div class="container">
-            <h1 class="text-center shake" style="margin-top: 11rem;"><u>Kontakt</u>&nbsp;<i style="font-size: 2rem;" class="fa-solid fa-address-card"></i></h1>
+            <h1 class="text-center shake mt-11" style="margin-top: 16rem;"><u>Kontakt</u>&nbsp;<i style="font-size: 2rem;" class="fa-solid fa-address-card"></i></h1>
 
             <div class="row">
                 <div class="col-lg-6">
@@ -2163,6 +2298,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
 
                     <!-- form fields -->
 
+
                     @if(Session::has('error'))
                     <div class="d-flex justify-content-center">
 
@@ -2200,7 +2336,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                     </div>
                     @endif
 
-                    <section class="contact-wrap" id="kontakt">
+                    <section class="contact-wrap"">
                         <form class="material-form needs-validation" id="form" name="contact" action="{{url('sendFormular')}}" method="post">
                             @csrf
                             <div class="input-block floating-field">
@@ -2496,10 +2632,17 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
 
     if ($('#success').length > 0) {
         $("#regular").remove();
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#success").offset().top
+        }, 2000);
     }
 
     if ($('#error').length > 0) {
         $("#regular").remove();
+        $("#regular").remove();
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#error").offset().top
+        }, 2000);
     }
 
 
