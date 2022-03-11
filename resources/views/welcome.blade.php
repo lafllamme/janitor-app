@@ -300,7 +300,7 @@
 
 
         #contact {
-            font-family: 'SaySomething', sans-serif;
+            font-family: 'Roboto', sans-serif;
 
         }
 
@@ -896,11 +896,15 @@
             display: table;
             position: relative;
             width: 23rem;
+            height: 1rem;
             background-color: #0074d9;
             color: #fff;
             transition: all 0.2s ease;
-            top: -7rem;
+            top: -4rem;
             border-radius: 10px;
+            font-size: 1rem !important;
+
+
         }
 
         .Message.is-hidden {
@@ -944,7 +948,8 @@
         .Message-body {
             display: table-cell;
             vertical-align: middle;
-            padding: 30px 20px 30px 10px;
+            padding-bottom: 1rem;
+            padding-top: 1rem;
 
         }
 
@@ -1004,6 +1009,600 @@
 
         .u-italic {
             font-style: italic;
+        }
+
+        @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900);
+
+        .material-form {
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 10px;
+
+        }
+
+        .material-form .input-block {
+            background-color: #fff;
+            border-bottom: solid 1px #c8c8c8;
+            width: 100%;
+            height: 50px;
+            padding: 0;
+            position: relative;
+            margin-bottom: 20px;
+            -moz-transition: all 0.3s ease-out;
+            -o-transition: all 0.3s ease-out;
+            -webkit-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+        }
+
+        .material-form .input-block::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            width: 0%;
+            bottom: 0;
+            height: 2px;
+            -moz-transition: all 0.3s ease-out;
+            -o-transition: all 0.3s ease-out;
+            -webkit-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+            background-color: #E69138;
+        }
+
+        .material-form .input-block.focus {
+            border-color: #fff;
+        }
+
+        .material-form .input-block.focus label {
+            color: #E69138;
+            top: 0;
+            font-size: 13px;
+        }
+
+        .material-form .input-block.focus::before {
+            left: 0%;
+            width: 100%;
+        }
+
+        .material-form .input-block.has-value {
+            background-color: #fff;
+        }
+
+        .material-form .input-block.has-value label {
+            top: 0;
+            font-size: 13px;
+        }
+
+        .material-form .input-block.error {
+            border-color: #fff;
+        }
+
+        .material-form .input-block.error::before {
+            left: 0%;
+            width: 100%;
+            background-color: #d50000;
+        }
+
+        .material-form .input-block.textarea {
+            height: auto;
+        }
+
+        .material-form .input-block.textarea .form-control {
+            height: auto;
+            resize: none;
+            padding-top: 20px;
+            font-family: "Roboto", sans-serif;
+        }
+
+        .material-form .input-block.floating-field {
+            padding: 2px 0 0;
+            height: 62px;
+        }
+
+        .material-form .input-block.floating-field.textarea {
+            height: auto;
+        }
+
+        .material-form .input-block label {
+            position: absolute;
+            left: 0;
+            top: 29px;
+            width: 100%;
+            height: 20px;
+            margin: 0;
+            font-weight: 500;
+            z-index: 1;
+            color: #939393;
+            font-size: 13px;
+            -moz-transition: all 0.3s ease-out;
+            -o-transition: all 0.3s ease-out;
+            -webkit-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+            line-height: 16px;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .material-form .input-block .form-control {
+            background-color: transparent;
+            padding: 4px 0 0;
+            border: none;
+            -moz-border-radius: 0;
+            -webkit-border-radius: 0;
+            border-radius: 0;
+            -moz-box-shadow: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            height: 100%;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+            font-size: 14px;
+            font-weight: 500;
+            color: #3c3c3c;
+        }
+
+        .material-form .input-block .form-control:focus {
+            outline: none;
+        }
+
+        .material-form .input-block .form-control:focus label {
+            top: 0;
+        }
+
+        .material-form .error-label {
+            color: #d50000;
+            margin-top: -15px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .material-form .form-note {
+            font-size: 13px;
+            color: #939393;
+            margin-top: -15px;
+            margin-bottom: 15px;
+        }
+
+        .material-form .square-button {
+            background-color: #39a1f4;
+            color: #fff;
+            font-size: 20px;
+            text-transform: uppercase;
+            font-weight: 700;
+            text-align: center;
+            -moz-border-radius: 0;
+            -webkit-border-radius: 0;
+            border-radius: 0;
+            -moz-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            padding: 0;
+            height: 60px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .material-form .square-button:hover,
+        .material-form .square-button:focus {
+            background-color: #0d8aee;
+        }
+
+        /*dropdown list as ul li method*/
+        .select-block {
+            background-color: #fff;
+            width: 100%;
+            padding: 12px 0 0;
+            position: relative;
+            margin-bottom: 20px;
+            -moz-transition: all 0.3s ease-out;
+            -o-transition: all 0.3s ease-out;
+            -webkit-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+        }
+
+        .select-block label {
+            position: absolute;
+            left: 0;
+            top: 32px;
+            height: 20px;
+            width: 100%;
+            -moz-transition: all 0.3s ease-out;
+            -o-transition: all 0.3s ease-out;
+            -webkit-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+            margin: 0;
+            font-weight: 500;
+            z-index: 1;
+            color: #939393;
+            font-size: 12px;
+            line-height: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .select-block .active-list {
+            width: 100%;
+            height: 52px;
+            padding: 0;
+            color: #c9c9c9;
+            position: relative;
+            z-index: 2;
+            font-weight: 500;
+            cursor: pointer;
+            font-size: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            padding-right: 20px;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .select-block .active-list:after {
+            content: "▼";
+            position: absolute;
+            right: 0;
+            background-color: #fff;
+            top: 50%;
+            width: 20px;
+            padding-left: 5px;
+            text-align: left;
+            height: 52px;
+            line-height: 52px;
+            color: #939393;
+            font-size: 14px;
+            margin-top: -26px;
+        }
+
+        .select-block.added label {
+            top: 0;
+            font-size: 13px;
+        }
+
+        .select-block.added .active-list {
+            color: #3c3c3c;
+            font-size: 12px;
+        }
+
+        .select-block.added.focus label {
+            top: 0;
+        }
+
+        .select-block.focus label {
+            top: 0;
+            font-size: 13px;
+            color: #E69138;
+        }
+
+        .select-block.focus .active-list {
+            font-size: 12px;
+        }
+
+        .select-block.focus .custom-select {
+            border-color: #fff;
+        }
+
+        .select-block.focus .active-list:after {
+            content: "▲";
+            color: #3c3c3c;
+        }
+
+        .select-block.focus .custom-select::before {
+            left: 0%;
+            width: 100%;
+        }
+
+        .select-block .custom-select {
+            border-bottom: solid 1px #c8c8c8;
+            display: inline-block;
+            height: 52px;
+            position: relative;
+            padding: 0;
+            width: 100%;
+            line-height: 52px;
+        }
+
+        .select-block .custom-select::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            width: 0%;
+            bottom: 0;
+            height: 2px;
+            -moz-transition: all 0.3s ease-out;
+            -o-transition: all 0.3s ease-out;
+            -webkit-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+            background-color: #E69138;
+        }
+
+        .select-block .custom-select .list-field {
+            width: 100%;
+            height: 52px;
+            padding: 0 15px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+
+        .select-block .custom-select .drop-down-list {
+            width: 100%;
+            height: auto;
+            max-height: 250px;
+            overflow-x: auto;
+            z-index: 99;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 100%;
+            margin-top: 2px;
+            left: 0;
+            background-color: white;
+            display: none;
+            -moz-box-shadow: rgba(0, 0, 0, 0.11765) 0px 1px 6px, rgba(0, 0, 0, 0.11765) 0px 1px 4px;
+            -webkit-box-shadow: rgba(0, 0, 0, 0.11765) 0px 1px 6px, rgba(0, 0, 0, 0.11765) 0px 1px 4px;
+            box-shadow: rgba(0, 0, 0, 0.11765) 0px 1px 6px, rgba(0, 0, 0, 0.11765) 0px 1px 4px;
+        }
+
+        .select-block .custom-select .drop-down-list li {
+            padding: 10.5px 15px;
+            cursor: pointer;
+            font-size: 12px;
+            line-height: normal;
+            background-color: #fafafa;
+            background-color: #fff;
+            -moz-transition: all 0.3s ease-out;
+            -o-transition: all 0.3s ease-out;
+            -webkit-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+        }
+
+        .select-block .custom-select .drop-down-list li input[type="checkbox"] {
+            margin: 0;
+            margin-right: 8px;
+            position: relative;
+            top: 1px;
+        }
+
+        .select-block .custom-select .drop-down-list li label {
+            font-weight: normal;
+            cursor: pointer;
+            display: block;
+        }
+
+        .select-block .custom-select .drop-down-list li:hover {
+            color: #3c3c3c;
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .select-block .custom-select .drop-down-list .add-new {
+            border-top: solid 1px #c8c8c8;
+            padding: 15px;
+            color: #3c3c3c;
+        }
+
+        .select-block .custom-select .drop-down-list .add-new i {
+            font-size: 16px;
+            margin-top: 3px;
+            color: #939393;
+        }
+
+        @media (min-width: 768px) {
+            .contact-wrap {
+                width: 600px;
+                margin: auto;
+            }
+
+            .material-form .input-block label {
+                font-size: 18px;
+                line-height: 14px;
+            }
+
+            .material-form .input-block .form-control {
+                font-size: 18px;
+            }
+
+            .select-block label {
+                font-size: 18px;
+                line-height: 14px;
+            }
+
+            .select-block.added .active-list {
+                font-size: 18px;
+            }
+
+            .select-block.focus .active-list {
+                font-size: 18px;
+            }
+
+            .select-block .custom-select .drop-down-list li {
+                font-size: 15px;
+            }
+
+            .material-form {
+                padding: 30px;
+            }
+        }
+
+        /*----page styles---*/
+
+        @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900);
+
+        .contact-wrap {
+            padding: 15px;
+        }
+
+
+        .made-with-love {
+            margin-top: 40px;
+            padding: 10px;
+            clear: left;
+            text-align: center;
+            font-size: 10px;
+            font-family: arial;
+            color: #fff;
+        }
+
+        .made-with-love i {
+            font-style: normal;
+            color: #fff;
+            font-size: 14px;
+            position: relative;
+            top: 2px;
+        }
+
+        .made-with-love a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .made-with-love a:hover {
+            text-decoration: underline;
+        }
+
+        .pure-material-checkbox {
+            z-index: 0;
+            position: relative;
+            display: inline-block;
+            color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
+            font-family: var(--pure-material-font, "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system);
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* Input */
+        .pure-material-checkbox>input {
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            z-index: -1;
+            position: absolute;
+            left: -10px;
+            top: -8px;
+            display: block;
+            margin: 0;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+            box-shadow: none;
+            outline: none;
+            opacity: 0;
+            transform: scale(1);
+            pointer-events: none;
+            transition: opacity 0.3s, transform 0.2s;
+        }
+
+        /* Span */
+        .pure-material-checkbox>span {
+            display: inline-block;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        /* Box */
+        .pure-material-checkbox>span::before {
+            content: "";
+            display: inline-block;
+            box-sizing: border-box;
+            margin: 3px 11px 3px 1px;
+            border: solid 2px;
+            /* Safari */
+            border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+            border-radius: 2px;
+            width: 18px;
+            height: 18px;
+            vertical-align: top;
+            transition: border-color 0.2s, background-color 0.2s;
+        }
+
+        /* Checkmark */
+        .pure-material-checkbox>span::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 3px;
+            left: 1px;
+            width: 10px;
+            height: 5px;
+            border: solid 2px transparent;
+            border-right: none;
+            border-top: none;
+            transform: translate(3px, 4px) rotate(-45deg);
+        }
+
+        /* Checked, Indeterminate */
+        .pure-material-checkbox>input:checked,
+        .pure-material-checkbox>input:indeterminate {
+            background-color: #E69138;
+        }
+
+        .pure-material-checkbox>input:checked+span::before,
+        .pure-material-checkbox>input:indeterminate+span::before {
+            border-color: #E69138;
+            background-color: #E69138;
+        }
+
+        .pure-material-checkbox>input:checked+span::after,
+        .pure-material-checkbox>input:indeterminate+span::after {
+            border-color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255));
+        }
+
+        .pure-material-checkbox>input:indeterminate+span::after {
+            border-left: none;
+            transform: translate(4px, 3px);
+        }
+
+        /* Hover, Focus */
+        .pure-material-checkbox:hover>input {
+            opacity: 0.04;
+        }
+
+        .pure-material-checkbox>input:focus {
+            opacity: 0.12;
+        }
+
+        .pure-material-checkbox:hover>input:focus {
+            opacity: 0.16;
+        }
+
+        /* Active */
+        .pure-material-checkbox>input:active {
+            opacity: 1;
+            transform: scale(0);
+            transition: transform 0s, opacity 0s;
+        }
+
+        .pure-material-checkbox>input:active+span::before {
+            border-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+        }
+
+        .pure-material-checkbox>input:checked:active+span::before {
+            border-color: transparent;
+            background-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+        }
+
+        /* Disabled */
+        .pure-material-checkbox>input:disabled {
+            opacity: 0;
+        }
+
+        .pure-material-checkbox>input:disabled+span {
+            color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38);
+            cursor: initial;
+        }
+
+        .pure-material-checkbox>input:disabled+span::before {
+            border-color: currentColor;
+        }
+
+        .pure-material-checkbox>input:checked:disabled+span::before,
+        .pure-material-checkbox>input:indeterminate:disabled+span::before {
+            border-color: transparent;
+            background-color: currentColor;
         }
     </style>
 
@@ -1548,7 +2147,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
 
                         <div id="regular" class="Message Message--orange">
                             <div class="Message-icon">
-                                <i class="fa-solid fa-bell"></i>
+                                <i class="fa-solid fa-bell shake"></i>
                             </div>
                             <div class="Message-body">
                                 <p>Beschreiben Sie ihr Anliegen!
@@ -1568,14 +2167,16 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                     <div class="d-flex justify-content-center">
 
                         <div id="error" class="Message Message--red">
-                            <div class="Message-icon">
+                            <div class="Message-icon shake">
                                 <i class="fa fa-times"></i>
                             </div>
                             <div class="Message-body">
                                 <p> {{ Session::get('error')}}
                                 </p>
-                                <button class="Message-button" id="js-helpMe">Fehler?!</button>
-                                <button class="Message-button js-messageClose">Okay</button>
+
+                                <div class="mx-auto" style="width: 200px;"> <button class="Message-button" id="js-helpMe">Fehler?!</button>
+                                    <button id="closeBtn" class="Message-button js-messageClose">Okay</button>
+                                </div>
                             </div>
                             <button class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
                         </div>
@@ -1587,7 +2188,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                     <div class="d-flex justify-content-center">
 
                         <div id="success" class="Message Message--green">
-                            <div class="Message-icon">
+                            <div class="Message-icon shake">
                                 <i class="fa fa-check"></i>
                             </div>
                             <div class="Message-body">
@@ -1599,49 +2200,85 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                     </div>
                     @endif
 
+                    <section class="contact-wrap" id="kontakt">
+                        <form class="material-form needs-validation" id="form" name="contact" action="{{url('sendFormular')}}" method="post">
+                            @csrf
+                            <div class="input-block floating-field">
+                                <label>Name, Vorname</label>
+                                <input name="name" type="text" class="form-control">
+                            </div>
+                            <div class="input-block floating-field">
+                                <label>Email</label>
+                                <input name="email" value="ihre@email.com" type="text" class="form-control">
+                            </div>
+                            <!-- <div class="error-label">Email ID already exists.</div> -->
+                            <!-- <div class="input-block">
+                                <input placeholder="Enter Something" value="Non-Floating Field" type="text" class="form-control">
+                            </div> -->
+                            <div class="select-block">
+                                <label>Services</label>
+                                <div class="custom-select">
+                                    <div class="active-list">Auswahl...</div>
+                                    <input type="text" class="list-field" name="service" />
+                                    <ul class="drop-down-list">
+                                        <li value="Gartenpflege">Gartenpflege</li>
+                                        <li value="Winterdienst">Winterdienst</li>
+                                        <li value="Objektbetreung">Objektbetreung</li>
+                                        <li value="Entrümpelung">Entrümpelung</li>
+                                        <li value="Klein Reparaturen<">Klein Reparaturen</li>
+                                        <li value="Objektreinigung">Objektreinigung</li>
+                                        <li value="Sonstiges">Sonstiges</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form-note">Suchen Sie ihren gewählten Service.</div>
+                            <div class="input-block floating-field">
+                                <label>Telefonummer</label>
+                                <input name="phonenumber" type="phone" class="form-control">
+                            </div>
 
-                    <form id="form" name="contact" action="{{url('sendFormular')}}" class="needs-validation" method="post">
-                        @csrf
-                        <input id="kontakt" type="text" class="form-control mb-3 form-control-lg" name="name" placeholder="Name, Vorname" required>
-                        <div class="input-group  mb-3 input-group-lg">
-                            <input type="text" class="form-control" name="email" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" required>
-                            <span class="input-group-text" id="basic-addon1">@</span>
+                            <label class="pure-material-checkbox mb-3">
+                                <input type="checkbox" onclick="document.getElementById('formButton').disabled = !this.checked;">
+                                <span>Einverstanden mit unseren AGB</span>
+                            </label>
+                            <!-- <div class="select-block">
+                                <label>Dropdown 1</label>
+                                <div class="custom-select">
+                                    <div class="active-list">0</div>
+                                    <input type="text" class="list-field" value="0" />
+                                    <ul class="drop-down-list">
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                    </ul>
+                                </div>
+                            </div> -->
+                            <!-- <div class="select-block">
+                                <label>Dropdown 2</label>
+                                <div class="custom-select">
+                                    <div class="active-list">0</div>
+                                    <input type="text" class="list-field" value="0" />
+                                    <ul class="drop-down-list">
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                    </ul>
+                                </div>
+                            </div> -->
+                            <div class="input-block floating-field textarea">
+                                <label>Hinterlassen sie eine Nachricht...</label>
+                                <textarea name="description" rows="3" class="form-control"></textarea>
+                            </div>
+                            <button class="btn square-button material-btn" id="formButton" disabled>Senden</button>
+                        </form>
+                    </section>
 
-                        </div>
-
-                        <div class="input-group  mb-3 input-group-lg">
-                            <select name="service" class="form-select" id="inputGroupSelect02" required>
-                                <option selected value="">Auswahl...</option>
-                                <option value="Gartenpflege">Gartenpflege</option>
-                                <option value="Winterdienst">Winterdienst</option>
-                                <option value="Objektbetreung">Objektbetreung</option>
-                                <option value="Entrümpelung">Entrümpelung</option>
-                                <option value="Klein Reparaturen">Klein Reparaturen</option>
-                                <option value="Objektreinigung">Objektreinigung</option>
-                                <option value="Sonstiges">Sonstiges</option>
-                            </select>
-                            <label class="input-group-text" for="inputGroupSelect02">Service</label>
-                        </div>
-
-                        <div class="input-group mb-3">
-                            <span class="input-group-text" id="basic-addon1"><i class="bi bi-telephone"></i></span>
-                            <input type="number" name="phonenumber" class="form-control" placeholder="+49....">
-                        </div>
-                        <div class=" input-group-lg mt-3">
-                            <textarea name="description" class="form-control" rows="5" id="comment" name="text" placeholder="Weitere Infos" required></textarea>
-                        </div>
-                        <div class="d-flex justify-content-center mt-3"> <button style="width: 20rem;" class="blob-btn">
-                                Senden <span class="blob-btn__inner">
-                                    <span class="blob-btn__blobs">
-                                        <span class="blob-btn__blob"></span>
-                                        <span class="blob-btn__blob"></span>
-                                        <span class="blob-btn__blob"></span>
-                                        <span class="blob-btn__blob"></span>
-                                    </span>
-                                </span>
-                            </button>
-                        </div>
-                    </form>
+                    <!-- follow me template -->
+                    <!-- <div class="made-with-love">
+                        <a target="_blank" href="#">Dogan Teke</a> | copyright &copy; 2022 | All rights reserved.
+                    </div> -->
 
                 </div>
 
@@ -1819,11 +2456,6 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
         });
     });
 
-    closeBtn.addEventListener('click', function() {
-        $("#regular").remove();
-
-
-    })
 
     function closeMessage(el) {
         el.addClass('is-hidden');
@@ -1883,4 +2515,61 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
         setTimeout(repeatOften, 5000);
     }
     repeatOften();
+
+    var floatingField = $(".material-form .floating-field").find(".form-control");
+    var formItem = $(".material-form .input-block").find(".form-control");
+
+    //##case 1 for default style
+    //on focus
+    formItem.focus(function() {
+        $(this).parent(".input-block").addClass("focus");
+    });
+    //removing focusing
+    formItem.blur(function() {
+        $(this).parent(".input-block").removeClass("focus");
+    });
+
+    //##case 2 for floating style
+    //initiating field
+    floatingField.each(function() {
+        var targetItem = $(this).parent();
+        if ($(this).val()) {
+            $(targetItem).addClass("has-value");
+        }
+    });
+
+    //on typing
+    floatingField.blur(function() {
+        $(this).parent(".input-block").removeClass("focus");
+        //if value is not exists
+        if ($(this).val().length == 0) {
+            $(this).parent(".input-block").removeClass("has-value");
+        } else {
+            $(this).parent(".input-block").addClass("has-value");
+        }
+    });
+
+    //dropdown list
+    $("body").click(function() {
+        if ($(".custom-select .drop-down-list").is(":visible")) {
+            $(".custom-select").parent().removeClass("focus");
+        }
+        $(".custom-select .drop-down-list:visible").slideUp();
+    });
+    $(".custom-select .active-list").click(function() {
+        $(this).parent().parent().addClass("focus");
+        $(this)
+            .parent()
+            .find(".drop-down-list")
+            .stop(true, true)
+            .delay(10)
+            .slideToggle(300);
+    });
+    $(".custom-select .drop-down-list li").click(function() {
+        var listParent = $(this).parent().parent();
+        //listParent.find('.active-list').trigger("click");
+        listParent.parent(".select-block").removeClass("focus").addClass("added");
+        listParent.find(".active-list").text($(this).text());
+        listParent.find("input.list-field").attr("value", $(this).text());
+    });
 </script>
