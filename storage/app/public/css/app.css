@@ -1,7 +1,7 @@
 
 @import url('https://fonts.cdnfonts.com/css/saysomething');
 @import url('http://fonts.cdnfonts.com/css/antipasto-pro');
-
+@import 'https://fonts.googleapis.com/css?family=Noto+Sans';
 /* Main Font */
 @font-face {
     font-family: 'myWebFont';
@@ -883,7 +883,7 @@ img {
     background-color: #0074d9;
     color: #fff;
     transition: all 0.2s ease;
-    top: -4rem;
+    top: -6rem;
     border-radius: 10px;
     font-size: 1rem !important;
 
@@ -1731,6 +1731,8 @@ img {
 }
 
 .floating-chat {
+    font-family: 'Noto Sans' !important;
+
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -1824,6 +1826,10 @@ img {
     flex-grow: 1;
     flex-shrink: 1;
     padding: 0 5px;
+    text-align: center !important;
+
+
+
 }
 
 .floating-chat .chat .header button {

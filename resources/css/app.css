@@ -1,13 +1,23 @@
 
+@import url('https://fonts.cdnfonts.com/css/saysomething');
+@import url('http://fonts.cdnfonts.com/css/antipasto-pro');
+@import 'https://fonts.googleapis.com/css?family=Noto+Sans';
+/* Main Font */
+@font-face {
+    font-family: 'myWebFont';
+    src: url("fonts/mainFont.otf") format("opentype");
+}
 
-
+@font-face {
+    font-family: 'secondFont';
+    src: url("fonts/secondFont.otf") format("opentype");
+}
 
 body {
     font-family: 'myWebFont';
     background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%) !important;
-    width: 100vw;
+    width: 100%;
     overflow-x: hidden;
-    
 }
 
 .navbar {
@@ -873,7 +883,7 @@ img {
     background-color: #0074d9;
     color: #fff;
     transition: all 0.2s ease;
-    top: -4rem;
+    top: -2rem;
     border-radius: 10px;
     font-size: 1rem !important;
 
@@ -1721,6 +1731,8 @@ img {
 }
 
 .floating-chat {
+    font-family: 'Noto Sans' !important;
+
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -1814,6 +1826,10 @@ img {
     flex-grow: 1;
     flex-shrink: 1;
     padding: 0 5px;
+    text-align: center !important;
+
+
+
 }
 
 .floating-chat .chat .header button {
