@@ -35,8 +35,6 @@
             src: url("fonts/secondFont.otf") format("opentype");
         }
 
-        body {
-        }
     </style>
     <!-- Fonts -->
     <!-- Styles -->
@@ -1040,4 +1038,9 @@
         listParent.find(".active-list").text($(this).text());
         listParent.find("input.list-field").attr("value", $(this).text());
     });
+
+    // var ratio = window.devicePixelRatio || 1;
+    // var w = screen.width * ratio;
+    // var h = screen.height * ratio;
+    // console.log(ratio, w, h);
 </script>

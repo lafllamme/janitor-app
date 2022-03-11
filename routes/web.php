@@ -21,9 +21,9 @@ Route::get('/', function () {
 });
 
 
-Route::get('/test', function () {
-    $_ENV['APP_ENV'];
-    dd($_ENV);
-});
+// Route::get('/test', function () {
+//     $_ENV['APP_ENV'];
+//     dd($_ENV);
+// });
 
 Route::post('sendFormular', [ContactController::class, 'index']);

@@ -24,10 +24,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if (true) {
-        
+        if ($_ENV['APP_ENV'] == 'prod') {
 
-            //next
             URL::forceScheme('https');
         }
     }
