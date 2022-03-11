@@ -13,7 +13,6 @@
     <script src="storage/js/jquery.min.js"></script>
     <script src="storage/js/bootstrap.min.js" defer></script>
     <link href="css/app.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" href="storage/css/app.css">
 
 
 
