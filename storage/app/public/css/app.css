@@ -1,6 +1,17 @@
 
+@import url('https://fonts.cdnfonts.com/css/saysomething');
+@import url('http://fonts.cdnfonts.com/css/antipasto-pro');
 
+/* Main Font */
+@font-face {
+    font-family: 'myWebFont';
+    src: url("fonts/mainFont.otf") format("opentype");
+}
 
+@font-face {
+    font-family: 'secondFont';
+    src: url("fonts/secondFont.otf") format("opentype");
+}
 
 body {
     font-family: 'myWebFont';
