@@ -492,7 +492,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <!-- to edit google map goto https://www.embed-map.com type your location, generate html code and copy the html  -->
-                    <div id="increaseSize" style="border-radius: 20px; border: 3px solid orange; width:100%;list-style:none; transition: none;overflow:hidden;width:390px;height:30rem;">
+                    <div id="increaseSize" style="border-radius: 20px; border: 3px solid orange; width:100%;list-style:none; transition: none;overflow:hidden;width:23rem;height:30rem;">
                         <div id="googlemaps-display" style="height:100%; width:100%;max-width:100%;">
                             <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Hansaring+32,+Köln&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
                             </iframe>
