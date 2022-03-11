@@ -7,6 +7,8 @@ body {
     background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%) !important;
     width: 100%;
     overflow-x: hidden;
+    overflow:auto; 
+    position:relative;
 }
 
 .navbar {

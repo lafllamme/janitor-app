@@ -18,7 +18,12 @@ use Illuminate\Support\Facades\URL;
 Route::get('/', function () {
     Artisan::call('storage:link');
     return view('welcome');
-    
+});
+
+
+Route::get('/test', function () {
+    $_ENV['APP_ENV'];
+    dd($_ENV);
 });
 
 Route::post('sendFormular', [ContactController::class, 'index']);

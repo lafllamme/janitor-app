@@ -34,6 +34,9 @@
             font-family: 'secondFont';
             src: url("fonts/secondFont.otf") format("opentype");
         }
+
+        body {
+        }
     </style>
     <!-- Fonts -->
     <!-- Styles -->
@@ -955,7 +958,7 @@
     if ($('#success').length > 0) {
         $("#regular").remove();
         $([document.documentElement, document.body]).animate({
-            scrollTop: $("#success").offset().top
+            scrollTop: $("#success").offset().top - 50
         }, 2000);
     }
 
