@@ -9,7 +9,8 @@
     <script src="storage/js/jquery.min.js"></script>
     <script src="storage/js/boostrap.min.js"></script>
     <script src="storage/js/popper.min.js"></script>
-
+    <link rel="shortcut icon" href="/storage/icons/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/storage/icons/favicon.ico" type="image/x-icon">
     <!-- <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake-slow.min.css"> -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -1043,7 +1044,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                         </div>
                     </li>
 
-                    <li class="nav-item px-lg-2"> <a class="nav-link" id="nav-link" href="#contact"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-envelope"></i></span>Kontakt</a> </li>
+                    <li class="nav-item px-lg-2"> <a class="nav-link" id="nav-link" href="#kontakt"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-envelope"></i></span>Kontakt</a> </li>
                 </ul>
                 <ul class="navbar-nav mr-auto ml-auto ml-20 mt-3 mt-lg-0" id="ficons1">
                     <li class="nav-item"> <a class="nav-link" id="nav-link" href="#">
@@ -1286,7 +1287,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
             <div class="row">
                 <div id="smaller" class="col-sm-4">
                     <div id="card" class="card">
-                        <img class="card-img-top" src="https://s3-eu-west-1.amazonaws.com/simg.koomio.com/p38294sp27241462963746.png" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="storage/images/a.jpeg" alt="Card image" style="width:100%">
                         <div class="card-body">
                             <h4 class="card-title">CURATA
                             </h4>
@@ -1311,7 +1312,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
 
                 <div id="smaller" class="col-sm-4">
                     <div id="card" class="card portfolioContent">
-                        <img class="card-img-top" src="https://s3-eu-west-1.amazonaws.com/simg.koomio.com/p38294sp27241462963746.png" alt="Card image" style="width:100%;">
+                        <img class="card-img-top" src="storage/images/b.jpeg" alt="Card image" style="width:100%;">
                         <div class="card-body">
                             <h4 class="card-title">HAUSGRUND</h4>
                             <p class="card-text"> GmbH Hausverwaltung in Köln</p>
@@ -1333,7 +1334,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
 
                 <div id="smaller" class="col-sm-4">
                     <div id="card" class="card portfolioContent">
-                        <img class="card-img-top" src="https://s3-eu-west-1.amazonaws.com/simg.koomio.com/p38294sp27241462963746.png" alt="Card image">
+                        <img class="card-img-top" src="storage/images/c.jpeg"" alt=" Card image">
                         <div class="card-body">
                             <h4 class="card-title">Münch </h4>
                             <p class="card-text">Wohnungsverwaltung GmbH</p>
@@ -1367,7 +1368,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
             <div class="row">
                 <div id="smaller" class="col-sm-4">
                     <div id="card" class="card portfolioContent">
-                        <img class="card-img-top" src="https://s3-eu-west-1.amazonaws.com/static.koeln.de/000/000/037/161/versions/logo-mit-hintergrund_556x110_5a955199019e5.png" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="storage/images/d.jpeg"" alt=" Card image" style="width:100%">
                         <div class="card-body">
                             <h4 class="card-title">
                                 Schleumer
@@ -1391,7 +1392,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
 
                 <div id="smaller" class="col-sm-4">
                     <div id="card" class="card portfolioContent">
-                        <img class="card-img-top" src="https://s3-eu-west-1.amazonaws.com/static.koeln.de/000/000/037/161/versions/logo-mit-hintergrund_556x110_5a955199019e5.png" alt="Card image" style="width:100%;">
+                        <img class="card-img-top" src="storage/images/e.jpeg"" alt=" Card image" style="width:100%;">
                         <div class="card-body">
                             <h4 class="card-title">ACTIVA</h4>
                             <p class="card-text">Hausverwaltungs-GmbH
@@ -1414,7 +1415,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
 
                 <div id="smaller" class="col-sm-4">
                     <div id="card" class="card portfolioContent">
-                        <img class="card-img-top" src="https://s3-eu-west-1.amazonaws.com/static.koeln.de/000/000/037/161/versions/logo-mit-hintergrund_556x110_5a955199019e5.png" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="storage/images/f.jpeg"" alt=" Card image" style="width:100%">
                         <div class="card-body">
                             <h4 class="card-title">Greif & Contzen</h4>
                             <p class="card-text">Immobilien GmbH</p>
@@ -1481,7 +1482,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
     <!-- contact section-->
     <section>
         <div class="container">
-            <h1 class="text-center shake" style="margin-top: 11rem;"><u>Kontakt</u>&nbsp;<i style="font-size: 2rem;" class="fa-solid fa-address-card"></i></h1>
+            <h1 class="text-center shake" id="kontakt" style="margin-top: 11rem;"><u>Kontakt</u>&nbsp;<i style="font-size: 2rem;" class="fa-solid fa-address-card"></i></h1>
 
             <div class="row">
                 <div class="col-lg-6">
