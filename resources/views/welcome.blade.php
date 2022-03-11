@@ -35,7 +35,7 @@
 
         body {
             font-family: 'myWebFont';
-            background-image: linear-gradient(92.7deg, rgba(245, 212, 212, 1) 8.5%, rgba(252, 251, 224, 1) 90.2%) !important;
+            background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%) !important;
             width: 100%;
             overflow-x: hidden;
         }
@@ -78,6 +78,7 @@
         .hero_title {
             font-size: 3.5rem;
 
+
         }
 
 
@@ -93,9 +94,10 @@
             transform: translate(-50%, -50%);
             color: black;
             text-shadow: 2px 2px white;
-            opacity: 0.8;
+            opacity: 0.7;
             font-family: 'myWebFont';
-            background-image: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
+            background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255, 255, 255, 0.50) 47%, rgba(0, 0, 0, 0.50) 100%);
+            background-blend-mode: screen;
         }
 
         .hero-text:hover {
@@ -150,30 +152,7 @@
             margin-bottom: 20px;
         }
 
-        /* .navbar-toggler {
-            background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%) !important;
-            border: 1px solid black !important;
-            border-radius: 20px !important;
-            font-size: 16px;
-            margin: 4px 2px;
 
-        } */
-
-        /* 
-        .navbar-toggler-icon>p {
-            font-size: 1.5em;
-            font-weight: 900 !important;
-            background-color: black;
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-
-        } */
-        /* 
-        .navbar-toggler-icon {
-            width: 4em !important;
-
-        } */
 
         /* services section css */
         .servicesText.card {
@@ -224,7 +203,7 @@
         .fa-twitter:hover,
         .fa-linkedin:hover,
         .fa-twitch:hover {
-            background: white;
+            background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -232,6 +211,12 @@
 
         .fab {
             color: black;
+        }
+
+        .navbar-light {
+            background: #C9CCD3;
+            background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%);
+            background-blend-mode: lighten;
         }
 
         .far {
@@ -242,8 +227,7 @@
 
         /* footer styling */
         #footer {
-            background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
-            background-blend-mode: normal, lighten, soft-light;
+            background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
             text-align: center;
         }
 
@@ -303,8 +287,13 @@
             animation: visible 4s infinite;
         }
 
+
         .input-group-text,
         .btn {
+            line-height: 50px;
+            height: 50px;
+            text-align: center;
+            cursor: pointer;
             background-color: #FBAB7E;
             background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
             color: black !important;
@@ -317,9 +306,9 @@
 
 
         #card:hover {
-            -ms-transform: scale(1.1);
+            -ms-transform: scale(1.0);
             /* IE 9 */
-            -webkit-transform: scale(1.1);
+            -webkit-transform: scale(1.0);
             /* Safari 3-8 */
             transform: scale(1.1);
         }
@@ -733,6 +722,249 @@
                 transform: translate(0, 0)
             }
         }
+
+        .buttons {
+            margin-top: 50px;
+            text-align: center;
+            border-radius: 30px;
+            background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+        }
+
+        .blob-btn {
+            z-index: 1;
+            position: relative;
+            padding: 20px 46px;
+            text-align: center;
+            text-transform: uppercase;
+            color: black;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: transparent;
+            outline: none;
+            border: none;
+            transition: color 0.5s;
+            cursor: pointer;
+            border-radius: 30px;
+        }
+
+        .blob-btn:before {
+            content: "";
+            z-index: 1;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border: 3px solid gray;
+            border-radius: 30px;
+
+        }
+
+        .blob-btn:after {
+            content: "";
+            z-index: -2;
+            position: absolute;
+            left: 3px;
+            top: 3px;
+            width: 100%;
+            height: 100%;
+            transition: all 0.3s 0.2s;
+            border-radius: 30px;
+        }
+
+        .blob-btn:hover {
+            color: #ffffff;
+            border-radius: 30px;
+
+
+        }
+
+        .blob-btn:hover:after {
+            transition: all 0.3s;
+            left: 0;
+            top: 0;
+            border-radius: 30px;
+        }
+
+        .blob-btn__inner {
+            z-index: -1;
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 30px;
+            background: #ffffff;
+        }
+
+        .blob-btn__blobs {
+            position: relative;
+            display: block;
+            height: 100%;
+            filter: url("#goo");
+        }
+
+        .blob-btn__blob {
+            position: absolute;
+            top: 2px;
+            width: 25%;
+            height: 100%;
+            background: orange;
+            border-radius: 100%;
+            transform: translate3d(0, 150%, 0) scale(1.7);
+            transition: transform 0.45s;
+        }
+
+        @supports (filter: url("#goo")) {
+            .blob-btn__blob {
+                transform: translate3d(0, 150%, 0) scale(1.4);
+            }
+        }
+
+        .blob-btn__blob:nth-child(1) {
+            left: 0%;
+            transition-delay: 0s;
+        }
+
+        .blob-btn__blob:nth-child(2) {
+            left: 30%;
+            transition-delay: 0.08s;
+        }
+
+        .blob-btn__blob:nth-child(3) {
+            left: 60%;
+            transition-delay: 0.16s;
+        }
+
+        .blob-btn__blob:nth-child(4) {
+            left: 90%;
+            transition-delay: 0.24s;
+        }
+
+        .blob-btn:hover .blob-btn__blob {
+            transform: translateZ(0) scale(1.7);
+        }
+
+        @supports (filter: url("#goo")) {
+            .blob-btn:hover .blob-btn__blob {
+                transform: translateZ(0) scale(1.4);
+            }
+        }
+
+        .Message {
+            display: table;
+            position: relative;
+            width: 23rem;
+            background-color: #0074d9;
+            color: #fff;
+            transition: all 0.2s ease;
+            top: -3rem;
+            border-radius: 10px;
+        }
+
+        .Message.is-hidden {
+            opacity: 0;
+            height: 0;
+            font-size: 0;
+            padding: 0;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .Message--orange {
+            background-color: #f39c12;
+
+        }
+
+        .Message--red {
+            background-color: #ff4136;
+        }
+
+        .Message--green {
+            background-color: #2ecc40;
+        }
+
+        .Message-icon {
+            display: table-cell;
+            vertical-align: middle;
+            width: 60px;
+            padding: 30px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+
+        }
+
+        .Message-icon>i {
+            width: 20px;
+            font-size: 20px;
+        }
+
+        .Message-body {
+            display: table-cell;
+            vertical-align: middle;
+            padding: 30px 20px 30px 10px;
+
+        }
+
+        .Message-body>p {
+            line-height: 1.2;
+            margin-top: 6px;
+            text-align: center;
+        }
+
+        .Message-button {
+            position: relative;
+            margin: 15px 5px -10px;
+            background-color: rgba(0, 0, 0, 0.25);
+            box-shadow: 0 3px rgba(0, 0, 0, 0.4);
+            border: none;
+            border-radius: 20px;
+            padding: 10px 15px;
+            font-size: 16px;
+            font-family: "Source Sans Pro";
+            color: #fff;
+            outline: none;
+            cursor: pointer;
+
+        }
+
+        .Message-button:hover {
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .Message-button:active {
+            background: rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0px rgba(0, 0, 0, 0.4);
+            top: 3px;
+        }
+
+        .Message-close {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: #fff;
+            border: none;
+            outline: none;
+            font-size: 20px;
+            right: 5px;
+            top: 5px;
+            opacity: 0;
+            cursor: pointer;
+            border-radius: 30px;
+        }
+
+        .Message:hover .Message-close {
+            opacity: 1;
+        }
+
+        .Message-close:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .u-italic {
+            font-style: italic;
+        }
     </style>
 
     <link rel="stylesheet" href="{{ mix('css/app.css') }}" type="text/css">
@@ -1061,8 +1293,17 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                             <p class="card-text">
                                 Wohnungsverwaltungsgesellschaft mbH
                             </p>
-                            <div class="text-center">
-                                <a href="#" class="btn btn-dark btn-lg" id="round" onclick="window.open('https://www.koeln.de/branchen/eintrag/3144/hausverwaltungen/curata-wohnungsverwaltungsgesellschaft-mbh', '_blank')">Info</a>
+                            <div class="text-center" onclick="window.open('https://www.koeln.de/branchen/eintrag/3144/hausverwaltungen/curata-wohnungsverwaltungsgesellschaft-mbh', '_blank')">
+                                <button class="blob-btn">
+                                    Info <span class="blob-btn__inner">
+                                        <span class="blob-btn__blobs">
+                                            <span class="blob-btn__blob"></span>
+                                            <span class="blob-btn__blob"></span>
+                                            <span class="blob-btn__blob"></span>
+                                            <span class="blob-btn__blob"></span>
+                                        </span>
+                                    </span>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -1074,8 +1315,17 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                         <div class="card-body">
                             <h4 class="card-title">HAUSGRUND</h4>
                             <p class="card-text"> GmbH Hausverwaltung in Köln</p>
-                            <div class="text-center">
-                                <a href="#" class="btn btn-dark btn-lg" id="round" onclick="window.open('https://www.koeln.de/branchen/eintrag/2830/hausverwaltungen/hausgrund-gmbh', '_blank')">Info</a>
+                            <div class="text-center" onclick="window.open('https://www.koeln.de/branchen/eintrag/3144/hausverwaltungen/curata-wohnungsverwaltungsgesellschaft-mbh', '_blank')">
+                                <button class="blob-btn">
+                                    Info <span class="blob-btn__inner">
+                                        <span class="blob-btn__blobs">
+                                            <span class="blob-btn__blob"></span>
+                                            <span class="blob-btn__blob"></span>
+                                            <span class="blob-btn__blob"></span>
+                                            <span class="blob-btn__blob"></span>
+                                        </span>
+                                    </span>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -1087,9 +1337,28 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                         <div class="card-body">
                             <h4 class="card-title">Münch </h4>
                             <p class="card-text">Wohnungsverwaltung GmbH</p>
-                            <div class="text-center">
-                                <a href="#" class="btn btn-dark btn-lg" id="round" onclick="window.open('https://www.koeln.de/branchen/eintrag/1661/hausverwaltungen/muench-wohnungsverwaltung-gmbh', '_blank')">Info</a>
+                            <div class="text-center" onclick="window.open('https://www.koeln.de/branchen/eintrag/3144/hausverwaltungen/curata-wohnungsverwaltungsgesellschaft-mbh', '_blank')">
+                                <button class="blob-btn">
+                                    Info <span class="blob-btn__inner">
+                                        <span class="blob-btn__blobs">
+                                            <span class="blob-btn__blob"></span>
+                                            <span class="blob-btn__blob"></span>
+                                            <span class="blob-btn__blob"></span>
+                                            <span class="blob-btn__blob"></span>
+                                        </span>
+                                    </span>
+                                </button>
                             </div>
+
+                            <svg style="display:none" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                <defs>
+                                    <filter id="goo">
+                                        <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+                                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
+                                        <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+                                    </filter>
+                                </defs>
+                            </svg>
                         </div>
                     </div>
                 </div>
@@ -1104,8 +1373,17 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                                 Schleumer
                             </h4>
                             <p class="card-text">Immobilien Treuhand Verwaltungs-OHG</p>
-                            <div class="text-center">
-                                <a href="#" class="btn btn-dark btn-lg" id="round" onclick="window.open('https://www.koeln.de/branchen/eintrag/45057/hausverwaltungen/schleumer-immobilien-treuhand-verwaltungs-ohg', '_blank')">Info</a>
+                            <div class="text-center" onclick="window.open('https://www.koeln.de/branchen/eintrag/3144/hausverwaltungen/curata-wohnungsverwaltungsgesellschaft-mbh', '_blank')">
+                                <button class="blob-btn">
+                                    Info <span class="blob-btn__inner">
+                                        <span class="blob-btn__blobs">
+                                            <span class="blob-btn__blob"></span>
+                                            <span class="blob-btn__blob"></span>
+                                            <span class="blob-btn__blob"></span>
+                                            <span class="blob-btn__blob"></span>
+                                        </span>
+                                    </span>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -1118,8 +1396,17 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                             <h4 class="card-title">ACTIVA</h4>
                             <p class="card-text">Hausverwaltungs-GmbH
                             </p>
-                            <div class="text-center">
-                                <a href="#" class="btn btn-dark btn-lg" id="round" onclick="window.open('https://www.koeln.de/branchen/eintrag/29160/hausverwaltungen/activa-hausverwaltungs-gmbh', '_blank')">Info</a>
+                            <div class="text-center" onclick="window.open('https://www.koeln.de/branchen/eintrag/3144/hausverwaltungen/curata-wohnungsverwaltungsgesellschaft-mbh', '_blank')">
+                                <button class="blob-btn">
+                                    Info <span class="blob-btn__inner">
+                                        <span class="blob-btn__blobs">
+                                            <span class="blob-btn__blob"></span>
+                                            <span class="blob-btn__blob"></span>
+                                            <span class="blob-btn__blob"></span>
+                                            <span class="blob-btn__blob"></span>
+                                        </span>
+                                    </span>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -1131,8 +1418,17 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                         <div class="card-body">
                             <h4 class="card-title">Greif & Contzen</h4>
                             <p class="card-text">Immobilien GmbH</p>
-                            <div class="text-center">
-                                <a href="#" class="btn btn-dark btn-lg" id="round" onclick="window.open('https://www.koeln.de/branchen/eintrag/43434/immobilienmakler/greif-contzen-immobilien-gmbh', '_blank')">Info</a>
+                            <div class="text-center" onclick="window.open('https://www.koeln.de/branchen/eintrag/3144/hausverwaltungen/curata-wohnungsverwaltungsgesellschaft-mbh', '_blank')">
+                                <button class="blob-btn">
+                                    Info <span class="blob-btn__inner">
+                                        <span class="blob-btn__blobs">
+                                            <span class="blob-btn__blob"></span>
+                                            <span class="blob-btn__blob"></span>
+                                            <span class="blob-btn__blob"></span>
+                                            <span class="blob-btn__blob"></span>
+                                        </span>
+                                    </span>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -1159,22 +1455,22 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                 <div class="col">
                     <div class="gallery">
                         <div class="box" tabindex="1">
-                            <img src="http://unsplash.it/500/600?image=1" />
+                            <img src="storage/images/3.jpeg" />
                         </div>
                         <div class="box" tabindex="2">
-                            <img src="http://unsplash.it/500/600?image=2" />
+                            <img src="storage/images/4.jpeg" />
                         </div>
                         <div class="box" tabindex="3">
-                            <img src="http://unsplash.it/500/600?image=3" />
+                            <img src="storage/images/6.jpeg" />
                         </div>
                         <div class="box" tabindex="4">
-                            <img src="http://unsplash.it/500/600?image=4" />
+                            <img src="storage/images/2.jpeg" />
                         </div>
                         <div class="box" tabindex="5">
-                            <img src="http://unsplash.it/500/600?image=5" />
+                            <img src="storage/images/5.jpeg" />
                         </div>
                         <div class="box" tabindex="6">
-                            <img src="http://unsplash.it/500/600?image=6" />
+                            <img src="storage/images/1.jpeg" />
                         </div>
                     </div>
                 </div>
@@ -1185,12 +1481,12 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
     <!-- contact section-->
     <section>
         <div class="container">
-            <h1 class="text-center shake" style="margin-top: 10rem;"><u>Kontakt</u>&nbsp;<i style="font-size: 2rem;" class="fa-solid fa-address-card"></i></h1>
+            <h1 class="text-center shake" style="margin-top: 11rem;"><u>Kontakt</u>&nbsp;<i style="font-size: 2rem;" class="fa-solid fa-address-card"></i></h1>
 
             <div class="row">
                 <div class="col-lg-6">
                     <!-- to edit google map goto https://www.embed-map.com type your location, generate html code and copy the html  -->
-                    <div style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:500px;height:500px;margin-top:7rem; padding-bottom: -5rem;">
+                    <div style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:500px;height:500px;">
                         <div id="googlemaps-display" style="height:100%; width:100%;max-width:100%;">
                             <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Hansaring+32,+Köln&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
                             </iframe>
@@ -1206,64 +1502,103 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                 </div>
 
 
-                <div class="col-lg-6" id="contact">
-                    <div class="alert alert-light mb-4" role="alert">
-                        Beschreiben Sie ihr Anliegen! Wo brauchen Sie Hilfe?
+                <div class="col-lg-6 p9" id="contact">
+                    <div id="regular" class="Message Message--orange">
+                        <div class="Message-icon">
+                            <i class="fa-solid fa-bell"></i>
+                        </div>
+                        <div class="Message-body">
+                            <p>Beschreiben Sie ihr Anliegen!
+                            </p>
+                            <p class="u-italic">Wo brauchen Sie Hilfe?</p>
+                            <div class="mx-auto" style="width: 200px;"><button class=" Message-button" id="js-authMe">Ja</button>
+                                <button class="Message-button js-messageClose">Schließen</button>
+                            </div>
+                        </div>
+                        <button class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
                     </div>
-                
-                <!-- form fields -->
 
-                @if(Session::has('error'))
-                <div id="error" class="alert alert-danger">
-                    {{ Session::get('error')}}
+                    <!-- form fields -->
+
+                    @if(Session::has('error'))
+
+                    <div id="error" class="Message Message--red">
+                        <div class="Message-icon">
+                            <i class="fa fa-times"></i>
+                        </div>
+                        <div class="Message-body">
+                            <p> {{ Session::get('error')}}
+                            </p>
+                            <button class="Message-button" id="js-helpMe">Fehler?!</button>
+                            <button class="Message-button js-messageClose">Okay</button>
+                        </div>
+                        <button class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
+                    </div>
+
+                    @endif
+
+                    @if(Session::has('success'))
+
+                    <div id="success" class="Message Message--green">
+                        <div class="Message-icon">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <div class="Message-body">
+                            <p> {{ Session::get('success')}}
+                            </p>
+                        </div>
+                        <button class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
+                    </div>
+                    @endif
+
+
+
+                    <form id="form" name="contact" action="{{url('sendFormular')}}" class="needs-validation" method="post">
+                        @csrf
+                        <input type="text" class="form-control mb-3 form-control-lg" name="name" placeholder="Name, Vorname" required>
+                        <div class="input-group  mb-3 input-group-lg">
+                            <input type="text" class="form-control" name="email" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" required>
+                            <span class="input-group-text" id="basic-addon1">@</span>
+
+                        </div>
+
+                        <div class="input-group  mb-3 input-group-lg">
+                            <select name="service" class="form-select" id="inputGroupSelect02" required>
+                                <option selected value="">Auswahl...</option>
+                                <option value="Gartenpflege">Gartenpflege</option>
+                                <option value="Winterdienst">Winterdienst</option>
+                                <option value="Objektbetreung">Objektbetreung</option>
+                                <option value="Entrümpelung">Entrümpelung</option>
+                                <option value="Klein Reparaturen">Klein Reparaturen</option>
+                                <option value="Objektreinigung">Objektreinigung</option>
+                                <option value="Sonstiges">Sonstiges</option>
+                            </select>
+                            <label class="input-group-text" for="inputGroupSelect02">Service</label>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="bi bi-telephone"></i></span>
+                            <input type="number" name="phonenumber" class="form-control" placeholder="+49....">
+                        </div>
+                        <div class=" input-group-lg mt-3">
+                            <textarea name="description" class="form-control" rows="5" id="comment" name="text" placeholder="Weitere Infos" required></textarea>
+                        </div>
+                        <div class="d-flex justify-content-center mt-3"> <button style="width: 20rem;" class="blob-btn">
+                                Senden <span class="blob-btn__inner">
+                                    <span class="blob-btn__blobs">
+                                        <span class="blob-btn__blob"></span>
+                                        <span class="blob-btn__blob"></span>
+                                        <span class="blob-btn__blob"></span>
+                                        <span class="blob-btn__blob"></span>
+                                    </span>
+                                </span>
+                            </button>
+                        </div>
+                    </form>
+
                 </div>
-                @endif
-
-                @if(Session::has('success'))
-                <div id="success" class="alert alert-success">
-                    {{ Session::get('success')}}
-                </div>
-                @endif
-
-
-
-                <form id="form" name="contact" action="{{url('sendFormular')}}" class="needs-validation" method="post">
-                    @csrf
-                    <input type="text" class="form-control mb-3 form-control-lg" name="name" placeholder="Name, Vorname" required>
-                    <div class="input-group  mb-3 input-group-lg">
-                        <input type="text" class="form-control" name="email" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" required>
-                        <span class="input-group-text" id="basic-addon1">@</span>
-
-                    </div>
-
-                    <div class="input-group  mb-3 input-group-lg">
-                        <select name="service" class="form-select" id="inputGroupSelect02" required>
-                            <option selected value="">Auswahl...</option>
-                            <option value="Gartenpflege">Gartenpflege</option>
-                            <option value="Winterdienst">Winterdienst</option>
-                            <option value="Objektbetreung">Objektbetreung</option>
-                            <option value="Entrümpelung">Entrümpelung</option>
-                            <option value="Klein Reparaturen">Klein Reparaturen</option>
-                            <option value="Objektreinigung">Objektreinigung</option>
-                            <option value="Sonstiges">Sonstiges</option>
-                        </select>
-                        <label class="input-group-text" for="inputGroupSelect02">Service</label>
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1"><i class="bi bi-telephone"></i></span>
-                        <input type="number" name="phonenumber" class="form-control" placeholder="+49....">
-                    </div>
-                    <div class=" input-group-lg mt-3">
-                        <textarea name="description" class="form-control" rows="5" id="comment" name="text" placeholder="Weitere Infos" required></textarea>
-                    </div>
-                    <div class="row justify-content-center"> <button class="btn btn-dark mt-3" style="border-radius: 20px; width: 10rem;" type="submit">Senden</button>
-                    </div>
-                </form>
 
             </div>
-
-        </div>
         </div>
     </section>
 
@@ -1285,39 +1620,6 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
 
 </html>
 <script>
-    // Adds Title for Mobile Navbar
-    // var el = document.getElementsByClassName('navbar-toggler-icon')[0]
-
-    // if (el) {
-    //     const para = document.createElement("p");
-    //     const node = document.createTextNode("Menu");
-    //     para.appendChild(node);
-    //     el.appendChild(para);
-
-    // }
-
-
-    // Adds class navbarDark on navbar scroll
-    // const header = document.querySelector('.navbar');
-
-    // const navButton = document.querySelector('.navbar-toggler')
-
-    // window.onscroll = function() {
-    //     var top = window.scrollY
-    //     navButton.style.display = "none"
-
-
-    //     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && top > 99) {
-    //         navButton.style.display = "flex"
-    //     }
-    //     if (top >= 100) {
-    //         header.classList.add('navbarDark');
-    //     } else {
-    //         header.classList.remove('navbarDark');
-    //     }
-    // }
-
-
     //sends formular if clicked
 
     // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -1416,14 +1718,6 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
         document.getElementById("ficons").style.display = 'none';
 
     }
-
-    // if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    //     // if smartphone user
-    //     const ficon = document.getElementById('ficons');
-    //     ficon.style.display = 'none';
-
-    // }
-
     $(document).ready(function() {
         if ($(window).width() > 991) {
             $('.navbar-light .d-menu').hover(function() {
@@ -1456,10 +1750,6 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
         });
     });
 
-    // $('#nav-link').on('click', function() {
-    //     $('.navbar-collapse').collapse('hide');
-    // });
-
     document.querySelectorAll("#nav-link")
         .forEach(function(el) {
             el.onclick = function() {
@@ -1467,4 +1757,35 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                 $('.navbar-collapse').collapse('hide');
             }
         })
+
+    function closeMessage(el) {
+        el.addClass('is-hidden');
+    }
+
+
+
+    $('#js-helpMe').on('click', function(e) {
+        alert('Versuch es bitte nochmal auszufüllen!');
+        closeMessage($(this).closest('.Message'));
+    });
+
+    $('#js-authMe').on('click', function(e) {
+        alert('Kontaktieren Sie uns über unser Formular!');
+        closeMessage($(this).closest('.Message'));
+    });
+
+
+    $(document).ready(function() {
+        setTimeout(function() {
+            closeMessage($('#js-timer'));
+        }, 5000);
+    });
+
+    if ($('#success').length > 0) {
+        $("#regular").remove();
+    }
+
+    if ($('#error').length > 0) {
+        $("#regular").remove();
+    }
 </script>
