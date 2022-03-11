@@ -1294,8 +1294,8 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                             <p class="card-text">
                                 Wohnungsverwaltungsgesellschaft mbH
                             </p>
-                            <div class="text-center" onclick="window.open('https://www.koeln.de/branchen/eintrag/3144/hausverwaltungen/curata-wohnungsverwaltungsgesellschaft-mbh', '_blank')">
-                                <button class="blob-btn">
+                            <div class="text-center">
+                                <button class="blob-btn" onclick="setInterval(function(){window.open('https://www.koeln.de/branchen/eintrag/3144/hausverwaltungen/curata-wohnungsverwaltungsgesellschaft-mbh', '_blank')}, 1600)">
                                     Info <span class="blob-btn__inner">
                                         <span class="blob-btn__blobs">
                                             <span class="blob-btn__blob"></span>
@@ -1316,8 +1316,8 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                         <div class="card-body">
                             <h4 class="card-title">HAUSGRUND</h4>
                             <p class="card-text"> GmbH Hausverwaltung in Köln</p>
-                            <div class="text-center" onclick="window.open('https://www.koeln.de/branchen/eintrag/3144/hausverwaltungen/curata-wohnungsverwaltungsgesellschaft-mbh', '_blank')">
-                                <button class="blob-btn">
+                            <div class="text-center">
+                                <button class="blob-btn" onclick="setInterval(function(){window.open('https://www.koeln.de/branchen/eintrag/3144/hausverwaltungen/curata-wohnungsverwaltungsgesellschaft-mbh', '_blank')}, 1600)">
                                     Info <span class="blob-btn__inner">
                                         <span class="blob-btn__blobs">
                                             <span class="blob-btn__blob"></span>
@@ -1338,8 +1338,8 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                         <div class="card-body">
                             <h4 class="card-title">Münch </h4>
                             <p class="card-text">Wohnungsverwaltung GmbH</p>
-                            <div class="text-center" onclick="window.open('https://www.koeln.de/branchen/eintrag/3144/hausverwaltungen/curata-wohnungsverwaltungsgesellschaft-mbh', '_blank')">
-                                <button class="blob-btn">
+                            <div class="text-center">
+                                <button class="blob-btn" onclick="setInterval(function(){window.open('https://www.koeln.de/branchen/eintrag/3144/hausverwaltungen/curata-wohnungsverwaltungsgesellschaft-mbh', '_blank')}, 1600)">
                                     Info <span class="blob-btn__inner">
                                         <span class="blob-btn__blobs">
                                             <span class="blob-btn__blob"></span>
@@ -1374,8 +1374,8 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                                 Schleumer
                             </h4>
                             <p class="card-text">Immobilien Treuhand Verwaltungs-OHG</p>
-                            <div class="text-center" onclick="window.open('https://www.koeln.de/branchen/eintrag/3144/hausverwaltungen/curata-wohnungsverwaltungsgesellschaft-mbh', '_blank')">
-                                <button class="blob-btn">
+                            <div class="text-center">
+                                <button class="blob-btn" onclick="setInterval(function(){window.open('https://www.koeln.de/branchen/eintrag/3144/hausverwaltungen/curata-wohnungsverwaltungsgesellschaft-mbh', '_blank')}, 1600)">
                                     Info <span class="blob-btn__inner">
                                         <span class="blob-btn__blobs">
                                             <span class="blob-btn__blob"></span>
@@ -1397,8 +1397,8 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                             <h4 class="card-title">ACTIVA</h4>
                             <p class="card-text">Hausverwaltungs-GmbH
                             </p>
-                            <div class="text-center" onclick="window.open('https://www.koeln.de/branchen/eintrag/3144/hausverwaltungen/curata-wohnungsverwaltungsgesellschaft-mbh', '_blank')">
-                                <button class="blob-btn">
+                            <div class="text-center">
+                                <button class="blob-btn" onclick="setInterval(function(){window.open('https://www.koeln.de/branchen/eintrag/3144/hausverwaltungen/curata-wohnungsverwaltungsgesellschaft-mbh', '_blank')}, 1600)">
                                     Info <span class="blob-btn__inner">
                                         <span class="blob-btn__blobs">
                                             <span class="blob-btn__blob"></span>
@@ -1419,8 +1419,8 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                         <div class="card-body">
                             <h4 class="card-title">Greif & Contzen</h4>
                             <p class="card-text">Immobilien GmbH</p>
-                            <div class="text-center" onclick="window.open('https://www.koeln.de/branchen/eintrag/3144/hausverwaltungen/curata-wohnungsverwaltungsgesellschaft-mbh', '_blank')">
-                                <button class="blob-btn">
+                            <div class="text-center">
+                                <button class="blob-btn" onclick="setInterval(function(){window.open('https://www.koeln.de/branchen/eintrag/3144/hausverwaltungen/curata-wohnungsverwaltungsgesellschaft-mbh', '_blank')}, 1600)">
                                     Info <span class="blob-btn__inner">
                                         <span class="blob-btn__blobs">
                                             <span class="blob-btn__blob"></span>
@@ -1480,11 +1480,11 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
 
 
     <!-- contact section-->
-    <section>
+    <section id="kontakt">
         <div class="container">
-            <h1 class="text-center shake" id="kontakt" style="margin-top: 11rem;"><u>Kontakt</u>&nbsp;<i style="font-size: 2rem;" class="fa-solid fa-address-card"></i></h1>
+            <h1 class="text-center shake" style="margin-top: 11rem;"><u>Kontakt</u>&nbsp;<i style="font-size: 2rem;" class="fa-solid fa-address-card"></i></h1>
 
-            <div class="row">
+            <div class="row" >
                 <div class="col-lg-6">
                     <!-- to edit google map goto https://www.embed-map.com type your location, generate html code and copy the html  -->
                     <div style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:500px;height:500px;">
@@ -1501,6 +1501,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                         </style>
                     </div>
                 </div>
+
 
 
                 <div class="col-lg-6 p9" id="contact">
@@ -1551,7 +1552,6 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                         <button class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
                     </div>
                     @endif
-
 
 
                     <form id="form" name="contact" action="{{url('sendFormular')}}" class="needs-validation" method="post">
@@ -1759,6 +1759,13 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
             }
         })
 
+    const closeBtn = document.getElementsByClassName("Message-close")[0]
+    closeBtn.addEventListener('click', function() {
+        $("#regular").remove();
+
+
+    })
+
     function closeMessage(el) {
         el.addClass('is-hidden');
     }
@@ -1772,6 +1779,8 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
 
     $('#js-authMe').on('click', function(e) {
         alert('Kontaktieren Sie uns über unser Formular!');
+        $("#regular").remove();
+
         closeMessage($(this).closest('.Message'));
     });
 
