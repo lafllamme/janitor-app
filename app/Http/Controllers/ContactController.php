@@ -32,11 +32,11 @@ class ContactController extends Controller
 
             // dd("Email is Sent.");
             $success = 'Wir melden uns so schnell es geht! Danke für Ihr Vertrauen 👍🏻 ';
-            return redirect()->to(url()->previous() . '#success')->with('success', $success);
+            return redirect()->to(url()->previous())->with('success', $success);
         } catch (Exception $e) {
             // dd($e);
             $e = 'Deine Angaben waren entweder unvollständig oder inkorrekt 😥 ';
-            return redirect()->to(url()->previous() . '#error')->with('error', $e);
+            return redirect()->to(url()->previous())->with('error', $e);
         }
 
 

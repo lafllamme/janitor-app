@@ -336,7 +336,11 @@
 
         .btn:hover {
             color: black !important;
-            background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(253, 193, 104, 1) 0%, rgba(251, 128, 128, 1) 90%);
+            -webkit-transition: all 1s ease-in-out !important;
+            -moz-transition: all 1s ease-in-out !important;
+            -o-transition: all 1s ease-in-out !important;
+            transition: all 1s ease-in-out !important;
+            background: #f79d65 !important;
         }
 
 
@@ -1164,7 +1168,6 @@
         }
 
         .material-form .square-button {
-            background-color: #39a1f4;
             color: #fff;
             font-size: 20px;
             text-transform: uppercase;
@@ -1184,10 +1187,9 @@
             width: 100%;
         }
 
-        .material-form .square-button:hover,
+        /* .material-form .square-button:hover,
         .material-form .square-button:focus {
-            background-color: #0d8aee;
-        }
+        } */
 
         /*dropdown list as ul li method*/
         .select-block {
@@ -1244,7 +1246,6 @@
             content: "▼";
             position: absolute;
             right: 0;
-            background-color: #fff;
             top: 50%;
             width: 20px;
             padding-left: 5px;
@@ -1747,6 +1748,294 @@
 
             to {
                 transform: rotateY(360deg);
+            }
+        }
+
+        .floating-chat {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            width: 80px;
+            height: 80px;
+            transform: translateY(70px);
+            transition: all 250ms ease-out;
+            border-radius: 50%;
+            opacity: 0;
+            background: -moz-linear-gradient(-45deg, #183850 0, #183850 25%, #192C46 50%, #22254C 75%, #22254C 100%);
+            background: -webkit-linear-gradient(-45deg, #183850 0, #183850 25%, #192C46 50%, #22254C 75%, #22254C 100%);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .fa-comments {
+            font-size: 2rem;
+        }
+
+        .floating-chat.enter:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            opacity: 1;
+        }
+
+        .floating-chat.enter {
+            transform: translateY(0);
+            opacity: 0.6;
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.14);
+        }
+
+        .floating-chat.expand {
+            width: 250px;
+            max-height: 400px;
+            height: 400px;
+            border-radius: 5px;
+            cursor: auto;
+            opacity: 1;
+        }
+
+        .floating-chat :focus {
+            outline: 0;
+            box-shadow: 0 0 3pt 2pt rgba(14, 200, 121, 0.3);
+        }
+
+        .floating-chat button {
+            background: transparent;
+            border: 0;
+            color: white;
+            text-transform: uppercase;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .floating-chat .chat {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+            border-radius: 50%;
+            transition: all 250ms ease-out;
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .floating-chat .chat.enter {
+            opacity: 1;
+            border-radius: 0;
+            margin: 10px;
+            width: auto;
+            height: auto;
+        }
+
+        .floating-chat .chat .header {
+            flex-shrink: 0;
+            padding-bottom: 10px;
+            display: flex;
+            background: transparent;
+        }
+
+        .floating-chat .chat .header .title {
+            flex-grow: 1;
+            flex-shrink: 1;
+            padding: 0 5px;
+        }
+
+        .floating-chat .chat .header button {
+            flex-shrink: 0;
+        }
+
+        .floating-chat .chat .messages {
+            padding: 10px;
+            margin: 0;
+            list-style: none;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            flex-grow: 1;
+            border-radius: 4px;
+            background: transparent;
+        }
+
+        .floating-chat .chat .messages::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .floating-chat .chat .messages::-webkit-scrollbar-track {
+            border-radius: 5px;
+            background-color: rgba(25, 147, 147, 0.1);
+        }
+
+        .floating-chat .chat .messages::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            background-color: rgba(25, 147, 147, 0.2);
+        }
+
+        .floating-chat .chat .messages li {
+            position: relative;
+            clear: both;
+            display: inline-block;
+            padding: 14px;
+            margin: 0 0 20px 0;
+            font: 12px/16px "Noto Sans", sans-serif;
+            border-radius: 10px;
+            background-color: rgba(25, 147, 147, 0.2);
+            word-wrap: break-word;
+            max-width: 81%;
+        }
+
+        .floating-chat .chat .messages li:before {
+            position: absolute;
+            top: 0;
+            width: 25px;
+            height: 25px;
+            border-radius: 25px;
+            content: "";
+            background-size: cover;
+        }
+
+        .floating-chat .chat .messages li:after {
+            position: absolute;
+            top: 10px;
+            content: "";
+            width: 0;
+            height: 0;
+            border-top: 10px solid rgba(25, 147, 147, 0.2);
+        }
+
+        .floating-chat .chat .messages li.other {
+            animation: show-chat-odd 0.15s 1 ease-in;
+            -moz-animation: show-chat-odd 0.15s 1 ease-in;
+            -webkit-animation: show-chat-odd 0.15s 1 ease-in;
+            float: right;
+            margin-right: 45px;
+            color: #0AD5C1;
+        }
+
+        .floating-chat .chat .messages li.other:before {
+            right: -45px;
+            background-image: url(https://github.com/Thatkookooguy.png);
+        }
+
+        .floating-chat .chat .messages li.other:after {
+            border-right: 10px solid transparent;
+            right: -10px;
+        }
+
+        .floating-chat .chat .messages li.self {
+            animation: show-chat-even 0.15s 1 ease-in;
+            -moz-animation: show-chat-even 0.15s 1 ease-in;
+            -webkit-animation: show-chat-even 0.15s 1 ease-in;
+            float: left;
+            margin-left: 45px;
+            color: #0EC879;
+        }
+
+        .floating-chat .chat .messages li.self:before {
+            left: -45px;
+            background-image: url(https://cdn3.iconfinder.com/data/icons/vector-icons-6/96/256-1024.png);
+        }
+
+        .floating-chat .chat .messages li.self:after {
+            border-left: 10px solid transparent;
+            left: -10px;
+        }
+
+        .floating-chat .chat .footer {
+            flex-shrink: 0;
+            display: flex;
+            padding-top: 10px;
+            max-height: 90px;
+            background: transparent;
+        }
+
+        .floating-chat .chat .footer .text-box {
+            border-radius: 3px;
+            background: rgba(25, 147, 147, 0.2);
+            min-height: 100%;
+            width: 100%;
+            margin-right: 5px;
+            color: #0EC879;
+            overflow-y: auto;
+            padding: 2px 5px;
+        }
+
+        .floating-chat .chat .footer .text-box::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .floating-chat .chat .footer .text-box::-webkit-scrollbar-track {
+            border-radius: 5px;
+            background-color: rgba(25, 147, 147, 0.1);
+        }
+
+        .floating-chat .chat .footer .text-box::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            background-color: rgba(25, 147, 147, 0.2);
+        }
+
+        @keyframes show-chat-even {
+            0% {
+                margin-left: -480px;
+            }
+
+            100% {
+                margin-left: 0;
+            }
+        }
+
+        @-moz-keyframes show-chat-even {
+            0% {
+                margin-left: -480px;
+            }
+
+            100% {
+                margin-left: 0;
+            }
+        }
+
+        @-webkit-keyframes show-chat-even {
+            0% {
+                margin-left: -480px;
+            }
+
+            100% {
+                margin-left: 0;
+            }
+        }
+
+        @keyframes show-chat-odd {
+            0% {
+                margin-right: -480px;
+            }
+
+            100% {
+                margin-right: 0;
+            }
+        }
+
+        @-moz-keyframes show-chat-odd {
+            0% {
+                margin-right: -480px;
+            }
+
+            100% {
+                margin-right: 0;
+            }
+        }
+
+        @-webkit-keyframes show-chat-odd {
+            0% {
+                margin-right: -480px;
+            }
+
+            100% {
+                margin-right: 0;
             }
         }
     </style>
@@ -2337,47 +2626,47 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                     @endif
 
                     <section class="contact-wrap"">
-                        <form class="material-form needs-validation" id="form" name="contact" action="{{url('sendFormular')}}" method="post">
-                            @csrf
-                            <div class="input-block floating-field">
-                                <label>Name, Vorname</label>
-                                <input name="name" type="text" class="form-control">
-                            </div>
-                            <div class="input-block floating-field">
-                                <label>Email</label>
-                                <input name="email" value="ihre@email.com" type="text" class="form-control">
-                            </div>
-                            <!-- <div class="error-label">Email ID already exists.</div> -->
-                            <!-- <div class="input-block">
+                        <form class=" material-form needs-validation" id="form" name="contact" action="{{url('sendFormular')}}" method="post">
+                        @csrf
+                        <div class="input-block floating-field">
+                            <label>Name, Vorname</label>
+                            <input name="name" type="text" class="form-control">
+                        </div>
+                        <div class="input-block floating-field">
+                            <label>Email</label>
+                            <input name="email" value="ihre@email.com" type="text" class="form-control">
+                        </div>
+                        <!-- <div class="error-label">Email ID already exists.</div> -->
+                        <!-- <div class="input-block">
                                 <input placeholder="Enter Something" value="Non-Floating Field" type="text" class="form-control">
                             </div> -->
-                            <div class="select-block">
-                                <label>Services</label>
-                                <div class="custom-select">
-                                    <div class="active-list">Auswahl...</div>
-                                    <input type="text" class="list-field" name="service" />
-                                    <ul class="drop-down-list">
-                                        <li value="Gartenpflege">Gartenpflege</li>
-                                        <li value="Winterdienst">Winterdienst</li>
-                                        <li value="Objektbetreung">Objektbetreung</li>
-                                        <li value="Entrümpelung">Entrümpelung</li>
-                                        <li value="Klein Reparaturen<">Klein Reparaturen</li>
-                                        <li value="Objektreinigung">Objektreinigung</li>
-                                        <li value="Sonstiges">Sonstiges</li>
-                                    </ul>
-                                </div>
+                        <div class="select-block">
+                            <label>Services</label>
+                            <div class="custom-select">
+                                <div class="active-list">Auswahl...</div>
+                                <input type="text" class="list-field" name="service" />
+                                <ul class="drop-down-list">
+                                    <li value="Gartenpflege">Gartenpflege</li>
+                                    <li value="Winterdienst">Winterdienst</li>
+                                    <li value="Objektbetreung">Objektbetreung</li>
+                                    <li value="Entrümpelung">Entrümpelung</li>
+                                    <li value="Klein Reparaturen<">Klein Reparaturen</li>
+                                    <li value="Objektreinigung">Objektreinigung</li>
+                                    <li value="Sonstiges">Sonstiges</li>
+                                </ul>
                             </div>
-                            <div class="form-note">Suchen Sie ihren gewählten Service.</div>
-                            <div class="input-block floating-field">
-                                <label>Telefonummer</label>
-                                <input name="phonenumber" type="phone" class="form-control">
-                            </div>
+                        </div>
+                        <div class="form-note">Suchen Sie ihren gewählten Service.</div>
+                        <div class="input-block floating-field">
+                            <label>Telefonummer</label>
+                            <input name="phonenumber" type="phone" class="form-control">
+                        </div>
 
-                            <label class="pure-material-checkbox mb-3">
-                                <input type="checkbox" onclick="document.getElementById('formButton').disabled = !this.checked;">
-                                <span>Einverstanden mit unseren AGB</span>
-                            </label>
-                            <!-- <div class="select-block">
+                        <label class="pure-material-checkbox mb-3">
+                            <input type="checkbox" onclick="document.getElementById('formButton').disabled = !this.checked;">
+                            <span>Einverstanden mit unseren AGB</span>
+                        </label>
+                        <!-- <div class="select-block">
                                 <label>Dropdown 1</label>
                                 <div class="custom-select">
                                     <div class="active-list">0</div>
@@ -2390,7 +2679,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                                     </ul>
                                 </div>
                             </div> -->
-                            <!-- <div class="select-block">
+                        <!-- <div class="select-block">
                                 <label>Dropdown 2</label>
                                 <div class="custom-select">
                                     <div class="active-list">0</div>
@@ -2403,11 +2692,11 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                                     </ul>
                                 </div>
                             </div> -->
-                            <div class="input-block floating-field textarea">
-                                <label>Hinterlassen sie eine Nachricht...</label>
-                                <textarea name="description" rows="3" class="form-control"></textarea>
-                            </div>
-                            <button class="btn square-button material-btn" id="formButton" disabled>Senden</button>
+                        <div class="input-block floating-field textarea">
+                            <label>Hinterlassen sie eine Nachricht...</label>
+                            <textarea name="description" rows="3" class="form-control"></textarea>
+                        </div>
+                        <button class="btn square-button material-btn" id="formButton" disabled>Senden</button>
                         </form>
                     </section>
 
@@ -2421,6 +2710,40 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
             </div>
         </div>
     </section>
+    <div class="floating-chat">
+        <i class="fa fa-comments" aria-hidden="true"></i>
+        <div class="chat">
+            <div class="header">
+                <span class="title">
+                    Wie können wir helfen?
+                </span>
+                <button>
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+
+            </div>
+            <ul class="messages">
+                <li class="other" onclick="document.location='/#contact';return false;">Nutzen Sie unser Formular!</li>
+                <li class="other">Unsere Adresse ist:</li>
+                <li class="other">Hansaring 32, 50670 Köln</li>
+                <li class="other"><a>+491254373345</a></li>
+
+
+                <!-- 
+                <li class="self">no... we're human</li>
+                <li class="other">are you sure???</li>
+                <li class="self">yes.... -___-</li>
+                <li class="other">if we're not dogs.... we might be monkeys 🐵</li>
+                <li class="self">i hate you</li>
+                <li class="other">don't be so negative! here's a banana 🍌</li>
+                <li class="self">......... -___-</li> -->
+            </ul>
+            <div class="footer">
+                <div class="text-box" contenteditable="true" disabled="true"></div>
+                <button id="sendMessage">send</button>
+            </div>
+        </div>
+    </div>
 
     <!-- footer section-->
     <footer id="footer">
@@ -2490,18 +2813,90 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
         modal.style.display = "none";
     }
 
-    // if ((document.getElementById("success") || document.getElementById("error"))) {
-    //     console.log('its there')
-    //     var msg;
-    //     document.getElementById("success") ? msg = document.getElementById("success") : ''
-    //     document.getElementById("error") ? msg = document.getElementById("error") : ''
+    var element = $('.floating-chat');
+    var myStorage = localStorage;
 
-    //     const error = document.getElementById("error")
-    //     setTimeout(() => {
-    //         msg.style.display = 'none';
-    //     }, 6000)
-    // }
+    if (!myStorage.getItem('chatID')) {
+        myStorage.setItem('chatID', createUUID());
+    }
 
+    setTimeout(function() {
+        element.addClass('enter');
+    }, 1000);
+
+    element.click(openElement);
+
+    function openElement() {
+        var messages = element.find('.messages');
+        var textInput = element.find('.text-box');
+        element.find('>i').hide();
+        element.addClass('expand');
+        element.find('.chat').addClass('enter');
+        var strLength = textInput.val().length * 2;
+        textInput.keydown(onMetaAndEnter).prop("disabled", false).focus();
+        element.off('click', openElement);
+        element.find('.header button').click(closeElement);
+        element.find('#sendMessage').click(sendNewMessage);
+        messages.scrollTop(messages.prop("scrollHeight"));
+    }
+
+    function closeElement() {
+        element.find('.chat').removeClass('enter').hide();
+        element.find('>i').show();
+        element.removeClass('expand');
+        element.find('.header button').off('click', closeElement);
+        element.find('#sendMessage').off('click', sendNewMessage);
+        element.find('.text-box').off('keydown', onMetaAndEnter).prop("disabled", true).blur();
+        setTimeout(function() {
+            element.find('.chat').removeClass('enter').show()
+            element.click(openElement);
+        }, 500);
+    }
+
+    function createUUID() {
+        // http://www.ietf.org/rfc/rfc4122.txt
+        var s = [];
+        var hexDigits = "0123456789abcdef";
+        for (var i = 0; i < 36; i++) {
+            s[i] = hexDigits.substr(Math.floor(Math.random() * 0x10), 1);
+        }
+        s[14] = "4"; // bits 12-15 of the time_hi_and_version field to 0010
+        s[19] = hexDigits.substr((s[19] & 0x3) | 0x8, 1); // bits 6-7 of the clock_seq_hi_and_reserved to 01
+        s[8] = s[13] = s[18] = s[23] = "-";
+
+        var uuid = s.join("");
+        return uuid;
+    }
+
+    function sendNewMessage() {
+        var userInput = $('.text-box');
+        var newMessage = userInput.html().replace(/\<div\>|\<br.*?\>/ig, '\n').replace(/\<\/div\>/g, '').trim().replace(/\n/g, '<br>');
+
+        if (!newMessage) return;
+
+        var messagesContainer = $('.messages');
+
+        messagesContainer.append([
+            '<li class="self">',
+            newMessage,
+            '</li>'
+        ].join(''));
+
+        // clean out old message
+        userInput.html('');
+        // focus on input
+        userInput.focus();
+
+        messagesContainer.finish().animate({
+            scrollTop: messagesContainer.prop("scrollHeight")
+        }, 250);
+    }
+
+    function onMetaAndEnter(event) {
+        if ((event.metaKey || event.ctrlKey) && event.keyCode == 13) {
+            sendNewMessage();
+        }
+    }
     const cards = document.querySelectorAll('.cards');
 
     const setClasses = () => {
