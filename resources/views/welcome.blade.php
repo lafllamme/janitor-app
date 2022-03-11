@@ -113,6 +113,10 @@
             opacity: 0.6;
             font-family: 'myWebFont';
             background: black;
+            -webkit-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            transition: all 1s ease;
 
         }
 
@@ -130,7 +134,8 @@
         .dropdown-item:hover {
             /* font-family: 'myWebFont'; */
             font-size: 1.5rem;
-            color: white;
+            font-weight: 600;
+            color: #A53860 !important;
             -webkit-text-stroke: 0.5px black;
             transition: font 0.6s ease
         }
@@ -176,11 +181,36 @@
         }
 
         .card:hover {
-            color: #a85032;
-            -webkit-text-stroke: 0.5px black;
-            background: black;
-            opacity: 0.9b;
+            color: #a85032 !important;
+            -webkit-text-stroke: 0.5px black !important;
+            background: black !important;
+            opacity: 0.9 !important;
+            -webkit-transition: all 1s ease !important;
+            -moz-transition: all 1s ease !important;
+            -o-transition: all 1s ease !important;
+            transition: all 1s ease !important;
             /* card */
+        }
+
+        .randomCard {
+
+            /* color: linear-gradient(-60deg, #ff5858 0%, #f09819 100%) !important;
+            -webkit-text-stroke: 0.5px black !important;
+            opacity: 0.9 !important;
+
+            background-image: linear-gradient(to top, #e6b980 0%, #eacda3 100%) !important; */
+
+            color: #A53860 !important;
+            -webkit-text-stroke: 0.5px black !important;
+            background: #eab676 !important;
+            opacity: 0.9 !important;
+            -webkit-transition: all 2s ease !important;
+            -moz-transition: all 2s ease !important;
+            -o-transition: all 2s ease !important;
+            transition: all 2s ease !important;
+
+            /* card */
+
         }
 
         .servicesText:hover {
@@ -208,6 +238,10 @@
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
+            -webkit-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            transition: all 1s ease;
         }
 
         .fab {
@@ -312,6 +346,10 @@
             -webkit-transform: scale(1.0);
             /* Safari 3-8 */
             transform: scale(1.1);
+            -webkit-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            transition: all 1s ease;
         }
 
         #card {
@@ -365,6 +403,7 @@
             text-align: center;
             width: 80%;
             font-size: 1rem;
+
         }
 
         /* The Close Button */
@@ -860,7 +899,7 @@
             background-color: #0074d9;
             color: #fff;
             transition: all 0.2s ease;
-            top: -3rem;
+            top: -7rem;
             border-radius: 10px;
         }
 
@@ -1295,7 +1334,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                                 Wohnungsverwaltungsgesellschaft mbH
                             </p>
                             <div class="text-center">
-                                <button class="blob-btn" onclick="setInterval(function(){window.open('https://www.koeln.de/branchen/eintrag/3144/hausverwaltungen/curata-wohnungsverwaltungsgesellschaft-mbh', '_blank')}, 1600)">
+                                <button class="blob-btn" onclick="openSubpage()">
                                     Info <span class="blob-btn__inner">
                                         <span class="blob-btn__blobs">
                                             <span class="blob-btn__blob"></span>
@@ -1317,7 +1356,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                             <h4 class="card-title">HAUSGRUND</h4>
                             <p class="card-text"> GmbH Hausverwaltung in Köln</p>
                             <div class="text-center">
-                                <button class="blob-btn" onclick="setInterval(function(){window.open('https://www.koeln.de/branchen/eintrag/3144/hausverwaltungen/curata-wohnungsverwaltungsgesellschaft-mbh', '_blank')}, 1600)">
+                                <button class="blob-btn" onclick="openSubpage()">
                                     Info <span class="blob-btn__inner">
                                         <span class="blob-btn__blobs">
                                             <span class="blob-btn__blob"></span>
@@ -1339,7 +1378,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                             <h4 class="card-title">Münch </h4>
                             <p class="card-text">Wohnungsverwaltung GmbH</p>
                             <div class="text-center">
-                                <button class="blob-btn" onclick="setInterval(function(){window.open('https://www.koeln.de/branchen/eintrag/3144/hausverwaltungen/curata-wohnungsverwaltungsgesellschaft-mbh', '_blank')}, 1600)">
+                                <button class="blob-btn" onclick="openSubpage()">
                                     Info <span class="blob-btn__inner">
                                         <span class="blob-btn__blobs">
                                             <span class="blob-btn__blob"></span>
@@ -1375,7 +1414,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                             </h4>
                             <p class="card-text">Immobilien Treuhand Verwaltungs-OHG</p>
                             <div class="text-center">
-                                <button class="blob-btn" onclick="setInterval(function(){window.open('https://www.koeln.de/branchen/eintrag/3144/hausverwaltungen/curata-wohnungsverwaltungsgesellschaft-mbh', '_blank')}, 1600)">
+                                <button class="blob-btn" onclick="openSubpage()">
                                     Info <span class="blob-btn__inner">
                                         <span class="blob-btn__blobs">
                                             <span class="blob-btn__blob"></span>
@@ -1398,7 +1437,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                             <p class="card-text">Hausverwaltungs-GmbH
                             </p>
                             <div class="text-center">
-                                <button class="blob-btn" onclick="setInterval(function(){window.open('https://www.koeln.de/branchen/eintrag/3144/hausverwaltungen/curata-wohnungsverwaltungsgesellschaft-mbh', '_blank')}, 1600)">
+                                <button class="blob-btn" onclick="openSubpage()">
                                     Info <span class="blob-btn__inner">
                                         <span class="blob-btn__blobs">
                                             <span class="blob-btn__blob"></span>
@@ -1420,7 +1459,7 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
                             <h4 class="card-title">Greif & Contzen</h4>
                             <p class="card-text">Immobilien GmbH</p>
                             <div class="text-center">
-                                <button class="blob-btn" onclick="setInterval(function(){window.open('https://www.koeln.de/branchen/eintrag/3144/hausverwaltungen/curata-wohnungsverwaltungsgesellschaft-mbh', '_blank')}, 1600)">
+                                <button class="blob-btn" onclick="openSubpage()">
                                     Info <span class="blob-btn__inner">
                                         <span class="blob-btn__blobs">
                                             <span class="blob-btn__blob"></span>
@@ -1480,11 +1519,11 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
 
 
     <!-- contact section-->
-    <section id="kontakt">
+    <section>
         <div class="container">
             <h1 class="text-center shake" style="margin-top: 11rem;"><u>Kontakt</u>&nbsp;<i style="font-size: 2rem;" class="fa-solid fa-address-card"></i></h1>
 
-            <div class="row" >
+            <div class="row">
                 <div class="col-lg-6">
                     <!-- to edit google map goto https://www.embed-map.com type your location, generate html code and copy the html  -->
                     <div style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:500px;height:500px;">
@@ -1505,58 +1544,65 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
 
 
                 <div class="col-lg-6 p9" id="contact">
-                    <div id="regular" class="Message Message--orange">
-                        <div class="Message-icon">
-                            <i class="fa-solid fa-bell"></i>
-                        </div>
-                        <div class="Message-body">
-                            <p>Beschreiben Sie ihr Anliegen!
-                            </p>
-                            <p class="u-italic">Wo brauchen Sie Hilfe?</p>
-                            <div class="mx-auto" style="width: 200px;"><button class=" Message-button" id="js-authMe">Ja</button>
-                                <button class="Message-button js-messageClose">Schließen</button>
+                    <div class="d-flex justify-content-center">
+
+                        <div id="regular" class="Message Message--orange">
+                            <div class="Message-icon">
+                                <i class="fa-solid fa-bell"></i>
                             </div>
+                            <div class="Message-body">
+                                <p>Beschreiben Sie ihr Anliegen!
+                                </p>
+                                <p class="u-italic">Brauchen Sie Hilfe?</p>
+                                <div class="mx-auto" style="width: 200px;"><button class=" Message-button" id="js-authMe">Ja</button>
+                                    <button class="Message-button js-messageClose" id="closeBtn">Schließen</button>
+                                </div>
+                            </div>
+                            <button class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
                         </div>
-                        <button class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
                     </div>
 
                     <!-- form fields -->
 
                     @if(Session::has('error'))
+                    <div class="d-flex justify-content-center">
 
-                    <div id="error" class="Message Message--red">
-                        <div class="Message-icon">
-                            <i class="fa fa-times"></i>
+                        <div id="error" class="Message Message--red">
+                            <div class="Message-icon">
+                                <i class="fa fa-times"></i>
+                            </div>
+                            <div class="Message-body">
+                                <p> {{ Session::get('error')}}
+                                </p>
+                                <button class="Message-button" id="js-helpMe">Fehler?!</button>
+                                <button class="Message-button js-messageClose">Okay</button>
+                            </div>
+                            <button class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
                         </div>
-                        <div class="Message-body">
-                            <p> {{ Session::get('error')}}
-                            </p>
-                            <button class="Message-button" id="js-helpMe">Fehler?!</button>
-                            <button class="Message-button js-messageClose">Okay</button>
-                        </div>
-                        <button class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
                     </div>
 
                     @endif
 
                     @if(Session::has('success'))
+                    <div class="d-flex justify-content-center">
 
-                    <div id="success" class="Message Message--green">
-                        <div class="Message-icon">
-                            <i class="fa fa-check"></i>
+                        <div id="success" class="Message Message--green">
+                            <div class="Message-icon">
+                                <i class="fa fa-check"></i>
+                            </div>
+                            <div class="Message-body">
+                                <p> {{ Session::get('success')}}
+                                </p>
+                            </div>
+                            <button class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
                         </div>
-                        <div class="Message-body">
-                            <p> {{ Session::get('success')}}
-                            </p>
-                        </div>
-                        <button class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
                     </div>
                     @endif
 
 
                     <form id="form" name="contact" action="{{url('sendFormular')}}" class="needs-validation" method="post">
                         @csrf
-                        <input type="text" class="form-control mb-3 form-control-lg" name="name" placeholder="Name, Vorname" required>
+                        <input id="kontakt" type="text" class="form-control mb-3 form-control-lg" name="name" placeholder="Name, Vorname" required>
                         <div class="input-group  mb-3 input-group-lg">
                             <input type="text" class="form-control" name="email" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" required>
                             <span class="input-group-text" id="basic-addon1">@</span>
@@ -1671,17 +1717,17 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
         modal.style.display = "none";
     }
 
-    if ((document.getElementById("success") || document.getElementById("error"))) {
-        console.log('its there')
-        var msg;
-        document.getElementById("success") ? msg = document.getElementById("success") : ''
-        document.getElementById("error") ? msg = document.getElementById("error") : ''
+    // if ((document.getElementById("success") || document.getElementById("error"))) {
+    //     console.log('its there')
+    //     var msg;
+    //     document.getElementById("success") ? msg = document.getElementById("success") : ''
+    //     document.getElementById("error") ? msg = document.getElementById("error") : ''
 
-        const error = document.getElementById("error")
-        setTimeout(() => {
-            msg.style.display = 'none';
-        }, 6000)
-    }
+    //     const error = document.getElementById("error")
+    //     setTimeout(() => {
+    //         msg.style.display = 'none';
+    //     }, 6000)
+    // }
 
     const cards = document.querySelectorAll('.cards');
 
@@ -1759,7 +1805,20 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
             }
         })
 
-    const closeBtn = document.getElementsByClassName("Message-close")[0]
+
+    const messageClose = document.querySelectorAll('.Message-close');
+    const messages = document.querySelectorAll('.Message')
+
+    messageClose.forEach(message => {
+        message.addEventListener('click', function handleClick(event) {
+            console.log('message clicked', event);
+            $(messages).remove();
+
+
+            message.setAttribute('style', 'background-color: yellow;');
+        });
+    });
+
     closeBtn.addEventListener('click', function() {
         $("#regular").remove();
 
@@ -1768,6 +1827,12 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
 
     function closeMessage(el) {
         el.addClass('is-hidden');
+    }
+
+    function openSubpage() {
+        setTimeout(function() {
+            window.open('https://www.koeln.de/branchen/eintrag/3144/hausverwaltungen/curata-wohnungsverwaltungsgesellschaft-mbh', '_blank')
+        }, 1100)
     }
 
 
@@ -1779,6 +1844,12 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
 
     $('#js-authMe').on('click', function(e) {
         alert('Kontaktieren Sie uns über unser Formular!');
+        $("#regular").remove();
+
+        closeMessage($(this).closest('.Message'));
+    });
+
+    $('#closeBtn').on('click', function(e) {
         $("#regular").remove();
 
         closeMessage($(this).closest('.Message'));
@@ -1798,4 +1869,18 @@ L239.77,215.555L347.383,49.998l144.717,72.359l-26.387,45.446c-2.299,3.961-0.952,
     if ($('#error').length > 0) {
         $("#regular").remove();
     }
+
+
+    var ranCards = document.getElementsByClassName("card servicesText");
+    var previousRandomCard = null
+
+    function repeatOften() {
+        if (previousRandomCard) previousRandomCard.classList.toggle('randomCard')
+        var random = Math.floor(Math.random() * (ranCards.length - 1)) + 0;
+        var randomCard = ranCards[random];
+        randomCard.classList.toggle('randomCard');
+        previousRandomCard = randomCard;
+        setTimeout(repeatOften, 5000);
+    }
+    repeatOften();
 </script>
