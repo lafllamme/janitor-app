@@ -6,16 +6,15 @@
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="storage/js/jquery.min.js"></script>
-    <script src="storage/js/boostrap.min.js"></script>
-    <script src="storage/js/popper.min.js"></script>
+
     <link rel="shortcut icon" href="/storage/icons/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/storage/icons/favicon.ico" type="image/x-icon">
+
+    <link href="css/app.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="storage/css/app.css">
-    <script src="/js/app.js"></script>
-
-
-    <link href="/css/app.css" type="text/css" rel="stylesheet">
+    <script src="js/app.js" defer></script>
+    <script src="js/scripts.js" defer></script>
+    <script src="storage/js/jquery.min.js"></script>
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Hausmeisterservice</title>
@@ -34,11 +33,9 @@
             font-family: 'secondFont';
             src: url("fonts/secondFont.otf") format("opentype");
         }
-
     </style>
     <!-- Fonts -->
     <!-- Styles -->
-
 
 </head>
 
@@ -116,6 +113,7 @@
 
     <!-- main banner -->
     <section class="bgimage" id="home">
+        
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text" onclick="scrollDown()">
@@ -538,7 +536,7 @@
                                 </p>
 
                                 <div class="mx-auto" style="width: 200px;"> <button class="Message-button" id="js-helpMe">Fehler?!</button>
-                                    <button id="closeBtn" class="Message-button js-messageClose">Okay</button>
+                                    <button id="closeBtnErr" class="Message-button js-messageClose">Okay</button>
                                 </div>
                             </div>
                             <button class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
@@ -604,44 +602,13 @@
                             <input type="checkbox" onclick="document.getElementById('formButton').disabled = !this.checked;">
                             <span>Einverstanden mit unseren AGB</span>
                         </label>
-                        <!-- <div class="select-block">
-                                <label>Dropdown 1</label>
-                                <div class="custom-select">
-                                    <div class="active-list">0</div>
-                                    <input type="text" class="list-field" value="0" />
-                                    <ul class="drop-down-list">
-                                        <li>1</li>
-                                        <li>2</li>
-                                        <li>3</li>
-                                        <li>4</li>
-                                    </ul>
-                                </div>
-                            </div> -->
-                        <!-- <div class="select-block">
-                                <label>Dropdown 2</label>
-                                <div class="custom-select">
-                                    <div class="active-list">0</div>
-                                    <input type="text" class="list-field" value="0" />
-                                    <ul class="drop-down-list">
-                                        <li>1</li>
-                                        <li>2</li>
-                                        <li>3</li>
-                                        <li>4</li>
-                                    </ul>
-                                </div>
-                            </div> -->
                         <div class="input-block floating-field textarea">
-                            <label>Hinterlassen sie eine Nachricht...</label>
+                            <label>Hinterlassen Sie eine Nachricht...</label>
                             <textarea name="description" rows="3" class="form-control"></textarea>
                         </div>
                         <button class="btn square-button material-btn" id="formButton" disabled>Senden</button>
                         </form>
                     </section>
-
-                    <!-- follow me template -->
-                    <!-- <div class="made-with-love">
-                        <a target="_blank" href="#">Dogan Teke</a> | copyright &copy; 2022 | All rights reserved.
-                    </div> -->
 
                 </div>
 
@@ -946,6 +913,10 @@
         closeMessage($(this).closest('.Message'));
     });
 
+    $('#closeBtnErr').on('click', function(e) {
+        $(".Message Message--red").remove();
+        closeMessage($(this).closest('.Message'));
+    });
 
     $(document).ready(function() {
         setTimeout(function() {
@@ -964,7 +935,7 @@
         $("#regular").remove();
         $("#regular").remove();
         $([document.documentElement, document.body]).animate({
-            scrollTop: $("#error").offset().top
+            scrollTop: $("#error").offset().top - 50
         }, 2000);
     }
 

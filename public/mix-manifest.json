@@ -1,6 +1,7 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
+    "/js/scripts.js": "/js/scripts.js",
     "/fonts/mainFont.otf": "/fonts/mainFont.otf",
     "/fonts/secondFont.otf": "/fonts/secondFont.otf"
 }

@@ -12,7 +12,14 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
+    .scripts([(
+        'resources/js/bootstrap.min.js',
+        'resources/js/jquery.min.js',
+        'resources/js/popper.min.js',
+        'resources/js/custom.js')
+    ], 'public/js/scripts.js')
     .sass('resources/sass/app.scss', 'public/css')
     .sourceMaps()
     .copyDirectory('resources/fonts', 'public/fonts')
-    .vue(); 
+    .vue();
+
