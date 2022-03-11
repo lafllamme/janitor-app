@@ -257,6 +257,8 @@ $('#closeBtn').on('click', function (e) {
 });
 
 
+
+
 $(document).ready(function () {
     setTimeout(function () {
         closeMessage($('#js-timer'));
@@ -267,15 +269,14 @@ if ($('#success').length > 0) {
     $("#regular").remove();
     $([document.documentElement, document.body]).animate({
         scrollTop: $("#success").offset().top - 75
-    }, 2000);
+    }, 2000, 'swing');
 }
 
 if ($('#error').length > 0) {
     $("#regular").remove();
-    $("#regular").remove();
     $([document.documentElement, document.body]).animate({
         scrollTop: $("#error").offset().top - 75
-    }, 2000);
+    }, 2000, 'swing');
 }
 
 

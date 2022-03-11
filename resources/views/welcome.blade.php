@@ -10,7 +10,7 @@
     <link rel="icon" href="/storage/icons/favicon.ico" type="image/x-icon">
     <script src="js/app.js" defer></script>
     <script src="js/scripts.js" defer></script>
-    <script src="storage/js/jquery.min.js" defer></script>
+    <script src="storage/js/jquery.min.js"></script>
     <script src="storage/js/bootstrap.min.js" defer></script>
     <link href="css/app.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="storage/css/app.css">
@@ -664,6 +664,14 @@
 
 </html>
 <script>
+    $(document).ready(function() {
+        $("#closeBtnErr").click(function() {
+            $(".Message ").remove();
+        });
+
+    })
+
+
     // var ratio = window.devicePixelRatio || 1;
     // var w = screen.width * ratio;
     // var h = screen.height * ratio;
