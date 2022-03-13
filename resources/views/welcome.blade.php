@@ -27,6 +27,8 @@
     <style>
         @import url('https://fonts.cdnfonts.com/css/saysomething');
         @import url('http://fonts.cdnfonts.com/css/antipasto-pro');
+        @import url('http://fonts.cdnfonts.com/css/amoitar');
+
 
         /* Main Font */
         @font-face {
@@ -46,6 +48,42 @@
 
 <body>
     <div id="app"></div>
+    <div class="loader-wrapper">
+        <!-- <div id="preloader">
+            <div id="loader"></div>
+        </div> -->
+        <div id="page">
+            <div id="phrase_box">
+                <svg width="100%" height="100%">
+                    <defs>
+                        <!--<style type="text/css">
+        @font-face {
+          font-family: "Proxima";
+          src: url('');
+        }
+      </style>-->
+                        <mask id="mask" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse">
+                            <linearGradient id="linearGradient" gradientUnits="objectBoundingBox" x2="0" y2="1">
+                                <stop stop-color="white" stop-opacity="0" offset="0%" />
+                                <stop stop-color="white" stop-opacity="1" offset="30%" />
+                                <stop stop-color="white" stop-opacity="1" offset="70%" />
+                                <stop stop-color="white" stop-opacity="0" offset="100%" />
+                            </linearGradient>
+                            <rect width="100%" height="100%" fill="url(#linearGradient)" />
+                        </mask>
+                    </defs>
+                    <g width="100%" height="100%" style="mask: url(#mask);">
+                        <g id="phrases"></g>
+                    </g>
+                </svg>
+            </div>
+            <div id="footerNew">
+                <div id="logo"></div>HM. AUGUSTIN
+            </div>
+        </div>
+    </div>
+    <div id="loading"></div>
+
 
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm bg-light fixed-top" id="nav">
         <div class="container"> <a class="navbar-brand d-flex align-items-center" href="#">
@@ -663,14 +701,6 @@
 
 </html>
 <script>
-    $(document).ready(function() {
-        $("#closeBtnErr").click(function() {
-            $(".Message ").remove();
-        });
-
-    })
-
-
     // var ratio = window.devicePixelRatio || 1;
     // var w = screen.width * ratio;
     // var h = screen.height * ratio;
