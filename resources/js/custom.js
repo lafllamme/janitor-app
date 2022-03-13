@@ -166,6 +166,8 @@ if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navi
     document.getElementById("ficons1").style.display = 'none';
     document.getElementById("increaseSize").style.height = '950px';
     document.getElementById("increaseSize").style.width = '550px';
+    document.getElementById("services").style.fontSize = "0.9rem";
+
 
 } else {
     document.getElementById("ficons").style.display = 'none';
