@@ -26,12 +26,13 @@
   src: url("/resources/fonts/secondFont.otf") format("opentype");
 }
 
-body {
+html,body {
   font-family: 'myWebFont';
   background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%) !important;
-  width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
 }
+
 
 .navbar {
   font-family: 'Antipasto Pro', sans-serif !important;
