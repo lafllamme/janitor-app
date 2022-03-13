@@ -90,11 +90,11 @@
         <div class="container"> <a class="navbar-brand d-flex align-items-center" href="#">
 
                 <div class="box">
-                    <img src=" storage/icons/foreground.png" width="100" height="100" class="stack-top" alt>
+                    <img src="storage/icons/foreground.png" class="stack-top" alt>
 
                 </div>
                 <div class="box stack-top"">  
-                <img id=" opacity" src="storage/icons/background.png" width="75" height="75" class="role" alt>
+                <img id="opacity" src="storage/icons/background.png" class="role" alt>
                 </div>
 
             </a> <button class=" navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar4">

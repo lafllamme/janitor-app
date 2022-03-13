@@ -137,7 +137,7 @@ a:active {
 /* services section css */
 
 .servicesText.card {
-  height: 27rem;
+  height: 28rem;
   cursor: pointer;
   border-radius: 30px;
 
@@ -152,6 +152,9 @@ a:active {
 #services{
   padding-top:2rem;
   margin: 1.5rem;
+  font-family: 'secondFont', sans-serif;
+  font-weight: 900;
+  font-size: 0.86rem;
 }
 
 .servicesIcon {
@@ -267,21 +270,19 @@ a:active {
   font-size: 1rem;
 }
 
-#services {
-  font-family: 'secondFont', sans-serif;
-  font-weight: 900;
-  font-size: 0.95rem;
-}
+
 
 #contact {
   font-family: 'Roboto', sans-serif;
 }
 
 .card-text {
-  text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
+  text-align: center !important;
+  margin-top: 2rem !important;
+  margin-bottom: 5rem !important;
 }
+
+
 
 @keyframes visible {
   0% {
@@ -2697,18 +2698,24 @@ img {
   position: relative;
   top: 0;
   left: 0;
+  -ms-transform: scale(0.5);
 
+  /* IE 9 */
+  -webkit-transform: scale(0.5);
+
+  /* Safari 3-8 */
+  transform: scale(0.5);
   /* for demo purpose  */
 }
 
 .stack-top {
   z-index: -10;
-  left: -3.7rem;
+  left: -3.72rem;
 
   /* margin: 20px; */
   /* for demo purpose  */
 }
 
 #opacity {
-  opacity: 0.6;
+  opacity: 0.8;
 }
