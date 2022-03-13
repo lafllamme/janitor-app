@@ -352,7 +352,7 @@ $(".custom-select .drop-down-list li").click(function () {
 
 
 $(window).on('load', function () {
-    setTimeout(removeLoader, 4000); //wait for page load PLUS two seconds.
+    setTimeout(removeLoader, 2000); //wait for page load PLUS two seconds.
 });
 
 function removeLoader() {

@@ -26,9 +26,10 @@
 
     <style>
         @import url('https://fonts.cdnfonts.com/css/saysomething');
-        @import url('http://fonts.cdnfonts.com/css/antipasto-pro');
-        @import url('http://fonts.cdnfonts.com/css/amoitar');
 
+        @import url('http://fonts.cdnfonts.com/css/antipasto-pro');
+
+        @import url('http://fonts.cdnfonts.com/css/amoitar');
 
         /* Main Font */
         @font-face {
@@ -88,8 +89,15 @@
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm bg-light fixed-top" id="nav">
         <div class="container"> <a class="navbar-brand d-flex align-items-center" href="#">
 
-                <img src="storage/icons/icon.png" width="75" height="75" id="opacityAnimation" alt>
-            </a> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar4">
+                <div class="box">
+                    <img src=" storage/icons/foreground.png" width="100" height="100" class="stack-top" alt>
+
+                </div>
+                <div class="box stack-top"">  
+                <img id=" opacity" src="storage/icons/background.png" width="75" height="75" class="role" alt>
+                </div>
+
+            </a> <button class=" navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar4">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -201,133 +209,141 @@
 
     <!-- services section-->
     <section id="services">
-        <div class="container">
-            <h1 class="text-center shake"><u>Dienstleistungen </u>&nbsp;<i style="font-size: 1.5rem;" class="fa-solid fa-briefcase"></i></h1>
-            <div class="row align-items-end">
-                <div class="col-lg-4 mt-4">
-                    <div class="card servicesText" style="height: 470px;">
-                        <div class="card-body">
-                            <i class="fas servicesIcon fa-solid fa-hand-sparkles"></i>
-                            <h4 class="card-title mt-3">Gartenpflege</h4>
-                            <h5 class="card-title mt-3"> <i>Wir wissen mit dem Grünen Daumen umzugehen</i></h5>
-                            <p class="card-text mt-3">Gartenanlagen sind auf eine adäquate Pflege und Betreuung angewiesen. Auch
-                                diese Arbeiten beherrschen wir und übernehmen diese gerne für Sie. Ein gemähter
-                                Rasen, gestützte Büsche und Bäume runden die Optik und somit das Ambiente
-                                Ihrer Immobilie. Teilen Sie uns Ihre Wünsche mit und wir setzen diese um, sodass
-                                Sie jeden Blick auf Ihre Grünanlage genießen werden.</p>
+        <div class="row">
+            <div class="container">
+                <h1 class="text-center shake"><u>Dienstleistungen </u>&nbsp;<i style="font-size: 1.5rem;" class="fa-solid fa-briefcase"></i></h1>
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 mt-4 ">
+                        <div class="card servicesText">
+                            <div class="card-body">
+                                <i class="fas servicesIcon fa-solid fa-hand-sparkles"></i>
+                                <h4 class="card-title mt-3">Gartenpflege</h4>
+                                <h5 class="card-title mt-3"> <i>Wir wissen mit dem Grünen Daumen umzugehen</i></h5>
+                                <p class="card-text">Gartenanlagen sind auf eine adäquate Pflege und Betreuung angewiesen. Auch
+                                    diese Arbeiten beherrschen wir und übernehmen diese gerne für Sie. Ein gemähter
+                                    Rasen, gestützte Büsche und Bäume runden die Optik und somit das Ambiente
+                                    Ihrer Immobilie. Teilen Sie uns Ihre Wünsche mit und wir setzen diese um, sodass
+                                    Sie jeden Blick auf Ihre Grünanlage genießen werden.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 mt-4">
-                    <div class="card servicesText" style="height: 690px;">
-                        <div class="card-body">
-                            <i class="fas servicesIcon fa-solid fa-snowflake"></i>
-                            <h4 class="card-title mt-3">Winterdienst</h4>
-                            <h5 class="card-title mt-3"> <i>Ein sicherer Winter</i></h5>
+                    <div class="col-lg-4 mt-4">
+                        <div class="card servicesText">
+                            <div class="card-body">
+                                <i class="fas servicesIcon fa-solid fa-snowflake"></i>
+                                <h4 class="card-title mt-3">Winterdienst</h4>
+                                <h5 class="card-title mt-3"> <i>Ein sicherer Winter</i></h5>
 
-                            <p class="card-text mt-3">Die Schaffung eines sicheren Gehwegs rund um Ihr Gebäude ist eine große
-                                Verantwortung. Durch die Übernahme dieser Verantwortung sorgen wir mit unserer
-                                Arbeit, dass Sie sicher durch den Winter kommen. Der zunehmende Klimawandel
-                                wirkt sich auch auf den Winter aus, sodass dieser immer unberechenbarer ist.
-                                Umso schöner ist es zu wissen, dass Sie einen zuverlässigen Partner an Ihrer Seite
-                                haben, der in den Startlöchern steht, um in der Winterzeit die Enteisung und die
-                                Räumung von Schnee übernimmt. Die Räumung wird nach den aktuellen
-                                Bestimmungen in Ihrer Gemeinde durchgeführt. Hierbei werden ebenfalls die
-                                Verkehrsflächen und Gehwege gestreut, sodass die Bildung von Schnee- und
-                                Eisglätte vermieden wird.</p>
+                                <p class="card-text">Die Schaffung eines sicheren Gehwegs rund um Ihr Gebäude ist eine große
+                                    Verantwortung. Durch die Übernahme dieser Verantwortung sorgen wir mit unserer
+                                    Arbeit, dass Sie sicher durch den Winter kommen. Der zunehmende Klimawandel
+                                    wirkt sich auch auf den Winter aus, sodass dieser immer unberechenbarer ist.
+                                    Umso schöner ist es zu wissen, dass Sie einen zuverlässigen Partner an Ihrer Seite
+                                    haben, ...</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-lg-4 mt-4">
-                    <div class="card servicesText" style="height: 870px;">
-                        <div class="card-body">
-                            <i class="fas servicesIcon fa-solid fa-user-shield"></i>
-                            <h4 class="card-title mt-3">Objektbetreung</h4>
-                            <p class="card-text mt-3">Im Rahmen der Betreuung Ihres Objektes machen wir uns zu Beginn mit der
-                                Technik Ihrer gesamten Immobilie vertraut, sodass wir diese bedienen und adäquat
-                                betreuen können. Im Regelmäßen Intervallen führen wir Wartungsarbeiten an den
-                                technischen Geräten Ihrer Immobilie durch. Hierdurch wird die Vermeidung von
-                                Ausfällen sowie die langfristige Reduktion von Reparatur- und
-                                Instandhaltungskosten sichergestellt.
-                                Sollten Sie Projekte an bzw. in Ihrer Immobilie durchführen, steht Ihnen unsere
-                                Dienstleistung als Projektmanagement ebenfalls zur Verfügung. Im Rahmen von
-                                der Modernisierung Ihrer Anlagen, Renovierungs- und Umbauarbeiten unterstützen
-                                wir Sie bei der Einholung von Angeboten sowie der Kalkulation von Fachfirmen.
-                                Hierbei arbeiten wir sowohl mit den von Ihnen beauftragten Firmen als auch mit
-                                unseren Partnern. Unter der Kategorie Objektbetreuung stellen wir ebenfalls die
-                                Überwachung und die Sicherheit Ihrer Immobilie sicher und begutachten
-                                unterschiedliche Anlagen, wie beispielsweise Aufzüge, Heizungen und viele weitere
-                                Anlagen.</p>
+                    <div class="col-lg-4 mt-4">
+                        <div class="card servicesText">
+                            <div class="card-body">
+                                <i class="fas servicesIcon fa-solid fa-user-shield"></i>
+                                <h4 class="card-title mt-3">Objektbetreung</h4>
+                                <p class="card-text">Im Rahmen der Betreuung Ihres Objektes machen wir uns zu Beginn mit der
+                                    Technik Ihrer gesamten Immobilie vertraut, sodass wir diese bedienen und adäquat
+                                    betreuen können. Im Regelmäßen Intervallen führen wir Wartungsarbeiten an den
+                                    technischen Geräten Ihrer Immobilie durch. Hierdurch wird die Vermeidung von
+                                    Ausfällen sowie die langfristige Reduktion von Reparatur- und
+                                    Instandhaltungskosten sichergestellt.
+                                    Sollten Sie Projekte an bzw. in Ihrer Immobilie durchführen,...</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                    <div class="col-lg-4 mt-4">
+                        <div class="card servicesText">
+                            <div class="card-body">
+                                <i class="fas servicesIcon fa-solid fa-broom"></i>
 
-            <div class="row">
-                <div class="col-lg-4 mt-4">
-                    <div class="card servicesText" style="height: 370px;">
-                        <div class="card-body">
-                            <i class="fas servicesIcon fa-solid fa-broom"></i>
-
-                            <h4 class="card-title mt-3">Entrümpelung</h4>
-                            <h5 class="card-title mt-3"> <i>Auch bei den unangenehmen Arbeiten können Sie auf uns zählen</i></h5>
-                            <p class="card-text mt-3">Es tritt nicht allzu selten auf, dass in einem Haus oder einer Wohnung eine Vielzahl
-                                an Dingen über viele Jahre hinweg gesammelt werden. Hierbei übernehmen wir die
-                                häufig aufwendigen und mühsamen Entrümpelungsarbeiten.</p>
+                                <h4 class="card-title mt-3">Entrümpelung</h4>
+                                <h5 class="card-title mt-3"> <i>Auch bei den unangenehmen Arbeiten können Sie auf uns zählen</i></h5>
+                                <p class="card-text">Es tritt nicht allzu selten auf, dass in einem Haus oder einer Wohnung eine Vielzahl
+                                    an Dingen über viele Jahre hinweg gesammelt werden. Hierbei übernehmen wir die
+                                    häufig aufwendigen und mühsamen Entrümpelungsarbeiten.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
 
-                <div class="col-lg-4 mt-4">
-                    <div class="card servicesText" style="height: 370px;">
-                        <div class="card-body">
-                            <i class="as servicesIcon fa-solid fa-circle-question"></i>
-                            <h4 class="card-title mt-3">Dienstleistung jeglicher Art</h4>
-                            <p class="card-text mt-3">Ist in unserem Dienstleistungsportfolio nicht das richtige dabei gewesen?
-                                Dann senden Sie uns eine Anfrage über unser Anfragenformular oder kontaktieren
-                                Sie uns einfach und lassen Sie sich ein unverbindliches Angebot zu der von Ihnen
-                                gewünschten Dienstleistung zukommen.</p>
+
+                    <div class="col-lg-4 mt-4">
+                        <div class="card servicesText">
+                            <div class="card-body">
+                                <i class='fas servicesIcon fa-wrench'></i>
+                                <h4 class="card-title mt-3">Kleine Reparaturen</h4>
+                                <p class="card-text">Egal, ob kleinere Malerarbeiten (Ausbessern), die Montage einer Waschmaschine
+                                    oder die Einstellung der Heizung. Kleine Reparaturarbeiten werden von uns im
+                                    Handumdrehen schnell und kompetent durchgeführt.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-lg-4 mt-4">
-                    <div class="card servicesText" style="height: 370px;">
-                        <div class="card-body">
-                            <i class='fas servicesIcon fa-wrench'></i>
-                            <h4 class="card-title mt-3">Kleine Reparaturen</h4>
-                            <p class="card-text mt-3">Egal, ob kleinere Malerarbeiten (Ausbessern), die Montage einer Waschmaschine
-                                oder die Einstellung der Heizung. Kleine Reparaturarbeiten werden von uns im
-                                Handumdrehen schnell und kompetent durchgeführt.</p>
+
+
+                    <div class="col-lg-4 mt-4">
+                        <div class="card servicesText">
+                            <div class="card-body">
+                                <i class="servicesIcon fa-solid fa-dumpster-fire"></i>
+                                <h4 class="card-title mt-3">Service 3</h4>
+                                <h5 class="card-title mt-3"><i>Ein Beispieltitel könnte hier stehen</i></h5>
+
+                                <p class="card-text">Hier könnte eine passende Beschreibung stehen.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 mt-4 offset-md-4 ">
-                    <div class="card servicesText">
-                        <div class="card-body">
-                            <i class="fas servicesIcon fa-solid fa-spray-can-sparkles"></i>
-                            <h4 class="card-title mt-3">Objektreinigung</h4>
-                            <h5 class="card-title mt-3"><i>Ein gepflegter Zustand führt zu Zufriedenheit</i></h5>
 
-                            <p class="card-text mt-3">Dieser Leitsatz gilt sowohl am Arbeitsplatz als auch in Ihrem Eigenheim. Gepflegte
-                                Räumlichkeiten sorgen nicht nur für Ihr Wohlbefinden. Vielmehr trägt es zu einem
-                                positiven Eindruck Ihrer Immobilie bei. Durch die Reinigung von Treppenhäusern,
 
-                                Tiefgaragen, Kellern und weiteren Allgemeinflächen übernehmen wir die
-                                Verantwortung zur Sicherstellung einer wohlfühlenden und gemütlichen Immobilie.
-                                Unsere detailorientierte Arbeit richtet sich nicht nur auf die Bodenfläche. Hierin sind
-                                auch die Türen, Geländer, Fenster, Briefkästen und alles was zu einem Gebäude
-                                zählt enthalten. Für die Reinigung Ihrer Arbeitsräume werden wir im Rahmen der
-                                Anforderungsanalyse auf Ihre Bedürfnisse eingehen, sodass unsere
-                                Reinigungsarbeiten nicht zur Störung Ihrer Arbeit führen werden.</p>
+
+                    <div class="col-lg-4 mt-4">
+                        <div class="card servicesText">
+                            <div class="card-body">
+                                <i class=" servicesIcon fa-solid fa-book-open-reader"></i>
+                                <h4 class="card-title mt-3">Service 1</h4>
+                                <h5 class="card-title mt-3"><i>Ein Beispieltitel könnte hier stehen</i></h5>
+
+                                <p class="card-text">Hier könnte eine passende Beschreibung stehen.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <div class="col-lg-4 mt-4">
+                        <div class="card servicesText">
+                            <div class="card-body">
+                                <i class="servicesIcon fa-solid fa-couch"></i>
 
+                                <h4 class="card-title mt-3">Service 2</h4>
+                                <h5 class="card-title mt-3"><i>Ein Beispieltitel könnte hier stehen</i></h5>
+
+                                <p class="card-text">Hier könnte eine passende Beschreibung stehen.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mt-4">
+                        <div class="card servicesText">
+                            <div class="card-body">
+                                <i class="as servicesIcon fa-solid fa-circle-question"></i>
+                                <h4 class="card-title mt-3">Dienstleistung jeglicher Art</h4>
+                                <p class="card-text">Ist in unserem Dienstleistungsportfolio nicht das richtige dabei gewesen?
+                                    Dann senden Sie uns eine Anfrage über unser Anfragenformular oder kontaktieren
+                                    Sie uns einfach und lassen Sie sich ein unverbindliches Angebot zu der von Ihnen
+                                    gewünschten Dienstleistung zukommen.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
+
     </section>
 
 

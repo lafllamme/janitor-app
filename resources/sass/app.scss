@@ -137,8 +137,21 @@ a:active {
 /* services section css */
 
 .servicesText.card {
-  height: 740px;
+  height: 27rem;
   cursor: pointer;
+  border-radius: 30px;
+
+}
+.card-body{
+  padding-top: 2rem !important;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+}
+
+#services{
+  padding-top:2rem;
+  margin: 1.5rem;
 }
 
 .servicesIcon {
@@ -169,11 +182,6 @@ a:active {
 }
 
 .randomCard {
-    /* color: linear-gradient(-60deg, #ff5858 0%, #f09819 100%) !important;
-    -webkit-text-stroke: 0.5px black !important;
-    opacity: 0.9 !important;
-
-    background-image: linear-gradient(to top, #e6b980 0%, #eacda3 100%) !important; */
 
   color: #A53860 !important;
   -webkit-text-stroke: 0.5px black !important;
@@ -245,9 +253,9 @@ a:active {
   padding-top: 4rem;
 }
 
-#services {
-  padding-top: 2rem;
-}
+// #services {
+//   padding-top: 2rem;
+// }
 
 #contact {
   padding-bottom: 4rem;
@@ -271,6 +279,8 @@ a:active {
 
 .card-text {
   text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
 }
 
 @keyframes visible {
@@ -317,6 +327,8 @@ a:active {
 }
 
 #card {
+  border-radius: 30px;
+
   &:hover {
     -ms-transform: scale(1);
 
@@ -340,6 +352,10 @@ a:active {
   transform: scale(0.9);
 }
 
+.card-img-top{
+  border-radius: 30px 30px 0px 0px;
+
+}
 #highlight {
   position: fixed;
   top: 50%;
@@ -1072,7 +1088,7 @@ img {
         height: auto;
       }
     }
-
+    
     label {
       position: absolute;
       left: 0;
@@ -2647,4 +2663,52 @@ img {
   100% {
       fill: #FF6D92;
   }
+}
+
+
+
+.role {
+  width: 100px;
+  height: 100px;
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  /* transform: rotate(3deg); */
+  /* transform: rotate(0.3rad);/ */
+  /* transform: rotate(3grad); */
+  /* transform: rotate(.03turn);  */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 0;
+  left: 0;
+
+  /* for demo purpose  */
+}
+
+.stack-top {
+  z-index: -10;
+  left: -3.7rem;
+
+  /* margin: 20px; */
+  /* for demo purpose  */
+}
+
+#opacity {
+  opacity: 0.6;
 }
