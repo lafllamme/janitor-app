@@ -13,17 +13,8 @@
     <script src="storage/js/jquery.min.js"></script>
     <script src="storage/js/bootstrap.min.js" defer></script>
     <link href="css/app.css" type="text/css" rel="stylesheet">
-
-
-
-
-
-
-
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <title>Hausmeisterservice</title>
-
     <style>
         @import url('https://fonts.cdnfonts.com/css/saysomething');
 
@@ -44,25 +35,15 @@
     </style>
     <!-- Fonts -->
     <!-- Styles -->
-
 </head>
 
 <body>
     <div id="app"></div>
     <div class="loader-wrapper">
-        <!-- <div id="preloader">
-            <div id="loader"></div>
-        </div> -->
         <div id="page">
             <div id="phrase_box">
                 <svg width="100%" height="100%">
                     <defs>
-                        <!--<style type="text/css">
-        @font-face {
-          font-family: "Proxima";
-          src: url('');
-        }
-      </style>-->
                         <mask id="mask" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse">
                             <linearGradient id="linearGradient" gradientUnits="objectBoundingBox" x2="0" y2="1">
                                 <stop stop-color="white" stop-opacity="0" offset="0%" />
@@ -94,7 +75,7 @@
 
                 </div>
                 <div class="box stack-top"">  
-                <img id="opacity" src="storage/icons/background.png" class="role" alt>
+                <img id=" opacity" src="storage/icons/background.png" class="role" alt>
                 </div>
 
             </a> <button class=" navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar4">
@@ -243,19 +224,24 @@
                             </div>
                         </div>
                     </div>
+                </div>
 
+                <div class="row justify-content-center">
                     <div class="col-lg-4 mt-4">
                         <div class="card servicesText">
                             <div class="card-body">
                                 <i class="fas servicesIcon fa-solid fa-user-shield"></i>
                                 <h4 class="card-title mt-3">Objektbetreung</h4>
-                                <p class="card-text">Im Rahmen der Betreuung Ihres Objektes machen wir uns zu Beginn mit der
-                                    Technik Ihrer gesamten Immobilie vertraut, sodass wir diese bedienen und adäquat
-                                    betreuen können. Im Regelmäßen Intervallen führen wir Wartungsarbeiten an den
-                                    technischen Geräten Ihrer Immobilie durch. Hierdurch wird die Vermeidung von
-                                    Ausfällen sowie die langfristige Reduktion von Reparatur- und
-                                    Instandhaltungskosten sichergestellt.
-                                    Sollten Sie Projekte an bzw. in Ihrer Immobilie durchführen,...</p>
+                                <p class="card-text">Ein gepflegter Zustand führt zu Zufriedenheit
+
+                                    Dieser Leitsatz gilt sowohl am Arbeitsplatz als auch in Ihrem Eigenheim.
+                                    Gepflegte Räumlichkeiten sorgen nicht nur für Ihr Wohlbefinden. Vielmehr
+                                    trägt es zu einem positiven Eindruck Ihrer Immobilie bei. Durch die Reinigung von Treppenhäusern,
+                                    Tiefgaragen, Kellern und weiteren Allgemeinflächen übernehmen wir die Verantwortung zur Sicherstellung einer wohlfühlenden und
+                                    gemütlichen Immobilie. Unsere detailorientierte Arbeit richtet sich nicht nur auf die Bodenfläche. Hierin sind auch die Türen,
+                                    Geländer, Fenster, Briefkästen und alles was zu einem Gebäude zählt enthalten. Für die Reinigung Ihrer Arbeitsräume werden wir im
+                                    Rahmen der Anforderungsanalyse auf Ihre Bedürfnisse eingehen, sodass unsere Reinigungsarbeiten nicht zur Störung Ihrer Arbeit
+                                    führen werden.</p>
                             </div>
                         </div>
                     </div>
@@ -272,8 +258,10 @@
                             </div>
                         </div>
                     </div>
+                </div>
 
 
+                <div class="row justify-content-center">
 
                     <div class="col-lg-4 mt-4">
                         <div class="card servicesText">
@@ -293,15 +281,20 @@
                         <div class="card servicesText">
                             <div class="card-body">
                                 <i class="servicesIcon fa-solid fa-dumpster-fire"></i>
-                                <h4 class="card-title mt-3">Service 3</h4>
+                                <h4 class="card-title mt-3">Kontrollaufgaben</h4>
                                 <h5 class="card-title mt-3"><i>Ein Beispieltitel könnte hier stehen</i></h5>
 
-                                <p class="card-text">Hier könnte eine passende Beschreibung stehen.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                                <p class="card-text">Wir behalten den Überblick
+
+                                    Im Rahmen der Kontrollaufgaben übernehmen wir die Kontrolle und Bedienung der Heizungsanlagen und der Warmwasserversorgung. Zudem übernehmen wir die Organisation
+                                    der Müllentsorgung, indem wir diese so bereitstellen, dass die Müllcontainer von der Müllabfuhr geleert werden können und Ihre Mülltonnen anschließend gereinigt
+                                    am richtigen Ort stehen </p>
                             </div>
                         </div>
                     </div>
+                </div>
 
-
+                <div class="row justify-content-center">
 
                     <div class="col-lg-4 mt-4">
                         <div class="card servicesText">
@@ -317,19 +310,6 @@
                     <div class="col-lg-4 mt-4">
                         <div class="card servicesText">
                             <div class="card-body">
-                                <i class="servicesIcon fa-solid fa-couch"></i>
-
-                                <h4 class="card-title mt-3">Service 2</h4>
-                                <h5 class="card-title mt-3"><i>Ein Beispieltitel könnte hier stehen</i></h5>
-
-                                <p class="card-text">Hier könnte eine passende Beschreibung stehen.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mt-4">
-                        <div class="card servicesText">
-                            <div class="card-body">
                                 <i class="as servicesIcon fa-solid fa-circle-question"></i>
                                 <h4 class="card-title mt-3">Dienstleistung jeglicher Art</h4>
                                 <p class="card-text">Ist in unserem Dienstleistungsportfolio nicht das richtige dabei gewesen?
@@ -341,7 +321,11 @@
                     </div>
 
                 </div>
+
+
+
             </div>
+        </div>
         </div>
 
     </section>
