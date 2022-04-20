@@ -231,8 +231,8 @@
                         <div class="card servicesText">
                             <div class="card-body">
                                 <i class="fas servicesIcon fa-solid fa-user-shield"></i>
-                                <h4 class="card-title mt-3">Objektbetreung</h4>
-                                <p class="card-text">Ein gepflegter Zustand führt zu Zufriedenheit
+                                <h4 class="card-title mt-3">Objektbetreuung</h4>
+                                <p class="card-text" id="shortedServices">Ein gepflegter Zustand führt zu Zufriedenheit
 
                                     Dieser Leitsatz gilt sowohl am Arbeitsplatz als auch in Ihrem Eigenheim.
                                     Gepflegte Räumlichkeiten sorgen nicht nur für Ihr Wohlbefinden. Vielmehr
@@ -300,10 +300,19 @@
                         <div class="card servicesText">
                             <div class="card-body">
                                 <i class=" servicesIcon fa-solid fa-book-open-reader"></i>
-                                <h4 class="card-title mt-3">Service 1</h4>
-                                <h5 class="card-title mt-3"><i>Ein Beispieltitel könnte hier stehen</i></h5>
+                                <h4 class="card-title mt-3">Objektreinigung</h4>
+                                <h5 class="card-title mt-3"><i>Ein gepflegter Zustand führt zu Zufriedenheit
+                                    </i></h5>
 
-                                <p class="card-text">Hier könnte eine passende Beschreibung stehen.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                                <p class="card-text" id="shortedServices">Dieser Leitsatz gilt sowohl am Arbeitsplatz als auch in Ihrem Eigenheim.
+                                    Gepflegte Räumlichkeiten sorgen nicht nur für Ihr Wohlbefinden. Vielmehr trägt es zu einem
+                                    positiven Eindruck Ihrer Immobilie bei. Durch die Reinigung von Treppenhäusern, Tiefgaragen,
+                                    Kellern und weiteren Allgemeinflächen übernehmen wir die Verantwortung zur Sicherstellung einer
+                                    wohlfühlenden und gemütlichen Immobilie. Unsere detailorientierte Arbeit richtet sich nicht nur
+                                    auf die Bodenfläche. Hierin sind auch die Türen, Geländer, Fenster, Briefkästen und alles was zu
+                                    einem Gebäude zählt enthalten. Für die Reinigung Ihrer Arbeitsräume werden wir im Rahmen der
+                                    Anforderungsanalyse auf Ihre Bedürfnisse eingehen, sodass unsere Reinigungsarbeiten nicht zur Störung
+                                    Ihrer Arbeit führen werden. </p>
                             </div>
                         </div>
                     </div>
@@ -542,7 +551,7 @@
                         </style>
                     </div>
 
-                    
+
                 </div>
 
 
@@ -629,7 +638,7 @@
                                 <ul class="drop-down-list">
                                     <li value="Gartenpflege">Gartenpflege</li>
                                     <li value="Winterdienst">Winterdienst</li>
-                                    <li value="Objektbetreung">Objektbetreung</li>
+                                    <li value="Objektbetreuung">Objektbetreuung</li>
                                     <li value="Entrümpelung">Entrümpelung</li>
                                     <li value="Klein Reparaturen<">Klein Reparaturen</li>
                                     <li value="Objektreinigung">Objektreinigung</li>
